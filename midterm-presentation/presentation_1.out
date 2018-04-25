@@ -1,0 +1,13 @@
+\BOOKMARK [2][]{Outline0.1}{1. Refractory density q\(,t\)}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.7}{1.1 Refractory density equation}{Outline0.1}% 2
+\BOOKMARK [3][]{Outline0.1.2.7}{1.2 The refractory density for a LIF neuron }{Outline0.1}% 3
+\BOOKMARK [2][]{Outline0.2}{2. Theoretical derivation}{}% 4
+\BOOKMARK [3][]{Outline0.2.1.15}{2.1 Eigenfunction expansion of the refractory density}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.2.22}{2.2 Definition and property of the adjoint operator L+}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.3.26}{2.3 Recover the Activity}{Outline0.2}% 7
+\BOOKMARK [3][]{Outline0.2.4.30}{2.4 Resume of the theoretical derivation}{Outline0.2}% 8
+\BOOKMARK [2][]{Outline0.3}{3. Spectral expansion for different processes}{}% 9
+\BOOKMARK [3][]{Outline0.3.1.35}{3.1 LIF neuron with exponential link function}{Outline0.3}% 10
+\BOOKMARK [3][]{Outline0.3.2.38}{3.2 Inverse Gaussian process}{Outline0.3}% 11
+\BOOKMARK [3][]{Outline0.3.3.45}{3.3 Gamma process}{Outline0.3}% 12
+\BOOKMARK [2][]{Outline0.4}{4. Summary and Future Work}{}% 13

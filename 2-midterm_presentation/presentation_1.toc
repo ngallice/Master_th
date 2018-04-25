@@ -1,0 +1,10 @@
+\beamer@sectionintoc {1}{1. Theory}{7}{0}{1}
+\beamer@subsectionintoc {1}{1}{1.1 Refractory density equation}{7}{0}{1}
+\beamer@subsectionintoc {1}{2}{1.2 Eigenfunction expansion of the refractory density}{10}{0}{1}
+\beamer@subsectionintoc {1}{3}{1.3 Definition and property of the adjoint operator $\mathcal {L}^+$}{17}{0}{1}
+\beamer@subsectionintoc {1}{4}{1.4 Recover the Activity}{21}{0}{1}
+\beamer@subsectionintoc {1}{5}{2.5 Resume of the theoretical derivation}{25}{0}{1}
+\beamer@sectionintoc {2}{2 Spectral expansion for different processes}{30}{0}{2}
+\beamer@subsectionintoc {2}{1}{2.1 Gamma process}{30}{0}{2}
+\beamer@subsectionintoc {2}{2}{2.2 Inverse Gaussian process}{34}{0}{2}
+\beamer@sectionintoc {3}{4. Summary and Future Work}{39}{0}{3}

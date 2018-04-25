@@ -1,0 +1,261 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7765,        253]
+NotebookOptionsPosition[      6874,        218]
+NotebookOutlinePosition[      7233,        234]
+CellTagsIndexPosition[      7190,        231]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{"1", "-", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"1", "+", "x"}], "]"}]}], "]"}], "\[Equal]", "1"}], ",", "x"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.7305453639360437`*^9, 3.730545394478056*^9}, {
+  3.7310451180672207`*^9, 3.731045120595436*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ifun",
+   "\"Inverse functions are being used by \
+\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\), so some solutions may not be found; use \
+Reduce for complete solution information.\"",2,1,1,24174419444444896329,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7306135808535147`*^9, 3.7310451217905083`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"x", "\[Rule]", "0"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.731045121797961*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "0"}], "}"}], "}"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Resolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{"1", "-", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"1", "+", "x"}], "]"}]}], "]"}], "\[Equal]", "1"}], ",", "x"}],
+   "]"}]}], "Input",
+ CellChangeTimes->{{3.730613601173087*^9, 3.730613611659848*^9}, {
+  3.731045128996065*^9, 3.731045131961444*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"x", "\[Rule]", "0"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.730613614391141*^9, 3.7310451326753073`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"1", "-", 
+    SqrtBox[
+     RowBox[{"1", "+", "x"}]]}]], "\[Equal]", "1"}]], "Output",
+ CellChangeTimes->{3.730613614391141*^9, 3.731045132682858*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"1", "-", 
+     RowBox[{"Re", "[", 
+      SqrtBox[
+       RowBox[{"1", "+", "x"}]], "]"}]}]], "\[Equal]", "1"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Abs", "[", 
+     RowBox[{"Exp", "[", 
+      RowBox[{"a", "*", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"1", "+", "x"}], "]"}]}], ")"}]}], "]"}], "]"}], "\[Equal]",
+     "1"}], ",", "x"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.730614358111904*^9, 3.730614369262972*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"1", "-", 
+    RowBox[{"Re", "[", 
+     SqrtBox[
+      RowBox[{"1", "+", "x"}]], "]"}]}]], "\[Equal]", "1"}]], "Output",
+ CellChangeTimes->{3.7306143726285686`*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve","ifun",
+   "\"Inverse functions are being used by \
+\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\), so some solutions may not be found; use \
+Reduce for complete solution information.\"",2,5,2,24171617498646583104,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7306143726561728`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "0"}], "}"}], "}"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Resolve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"1", "+", 
+          RowBox[{"a", "*", 
+           RowBox[{"x", "/", "R"}]}]}], "]"}]}], ")"}], "/", "a"}], 
+     "\[Equal]", 
+     RowBox[{"2", "*", "Pi", "*", "i", "*", "n"}]}], ",", "x"}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{"1", "-", 
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Exp", "[", 
+         RowBox[{"-", "lx"}], "]"}], "*", "v", "*", 
+        RowBox[{
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"mu", "*", "x"}], "-", "v"}], ")"}], "^", "2"}]}], "/", 
+           RowBox[{"(", 
+            RowBox[{"4", "*", "d", "*", "x"}], ")"}]}], "]"}], "/", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"4", "*", "d", "*", "Pi", "*", 
+           RowBox[{"x", "^", "3"}]}], "]"}]}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "t"}], "}"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "Infinity"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7306143798133593`*^9, 3.7306143804457397`*^9}, {
+   3.7317354916817513`*^9, 3.731735491832569*^9}, {3.7317355991614437`*^9, 
+   3.7317357374589376`*^9}, {3.7317358322332153`*^9, 3.731735925912437*^9}, {
+   3.7317359576077003`*^9, 3.731735986964028*^9}, {3.733037570334115*^9, 
+   3.733037691904438*^9}, 3.73303773312498*^9, {3.733037773350268*^9, 
+   3.733037802392054*^9}, 3.73303783620506*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"x", "\[Rule]", "0"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.731735668669685*^9, 3.731735686921287*^9}, 
+   3.731735739779633*^9, {3.731735862699071*^9, 3.731735872385832*^9}, 
+   3.731735955161605*^9, {3.733037683128421*^9, 3.73303769698989*^9}, 
+   3.733037734087811*^9, 3.733037803359091*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox[
+   RowBox[{"1", "-", 
+    SqrtBox[
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{"a", " ", "x"}], "R"]}]]}], "a"], "\[Equal]", 
+  RowBox[{"2", " ", "i", " ", "n", " ", "\[Pi]"}]}]], "Output",
+ CellChangeTimes->{{3.731735668669685*^9, 3.731735686921287*^9}, 
+   3.731735739779633*^9, {3.731735862699071*^9, 3.731735872385832*^9}, 
+   3.731735955161605*^9, {3.733037683128421*^9, 3.73303769698989*^9}, 
+   3.733037734087811*^9, 3.73303780337145*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.730613621894314*^9, 3.7306136388343887`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7306135946856318`*^9, 3.730613595667753*^9}}]
+},
+WindowSize->{808, 600},
+WindowMargins->{{Automatic, 29}, {Automatic, 18}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 355, 10, 46, "Input"],
+Cell[938, 34, 364, 8, 42, "Message"],
+Cell[1305, 44, 145, 4, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1487, 53, 499, 15, 88, "Input"],
+Cell[1989, 70, 169, 4, 32, "Output"],
+Cell[2161, 76, 223, 6, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2421, 87, 639, 20, 95, "Input"],
+Cell[3063, 109, 236, 7, 35, "Output"],
+Cell[3302, 118, 340, 8, 42, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3679, 131, 1964, 52, 303, "Input"],
+Cell[5646, 185, 360, 7, 32, "Output"],
+Cell[6009, 194, 498, 12, 54, "Output"]
+}, Open  ]],
+Cell[6522, 209, 197, 3, 117, "Input"],
+Cell[6722, 214, 148, 2, 75, "Input"]
+}
+]
+*)
+

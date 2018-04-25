@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Report_Noe_Gallice.aux
+The style file: unsrt.bst
+Database file #1: biblio.bib
+Name 1 in "Kolossa, A, and Fingscheidt, T and Wessel, K and Kopp, B" has a comma at the end for entry a_kolossa
+while executing---line 944 of file unsrt.bst
+You've used 4 entries,
+            1791 wiz_defined-function locations,
+            467 strings with 4172 characters,
+and the built_in function-call counts, 797 in all, are:
+= -- 60
+> -- 50
+< -- 0
++ -- 18
+- -- 14
+* -- 52
+:= -- 148
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 33
+empty$ -- 70
+format.name$ -- 14
+if$ -- 166
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 4
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 33
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 5
+width$ -- 5
+write$ -- 43
+(There was 1 error message)

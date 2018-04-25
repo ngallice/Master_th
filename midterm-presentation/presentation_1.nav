@@ -1,0 +1,82 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/5}{}{0}}
+\headcommand {\beamer@framepages {2}{5}}
+\headcommand {\slideentry {0}{0}{3}{6/6}{}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\sectionentry {1}{1. Refractory density $q(\tau ,t)$}{7}{1. Refractory density $q(\tau ,t)$}{0}}
+\headcommand {\beamer@sectionpages {1}{6}}
+\headcommand {\beamer@subsectionpages {1}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{7}{1.1 Refractory density equation}}\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{7}{1.2 The refractory density for a LIF neuron }}\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\slideentry {1}{2}{1}{7/10}{1.2 The refractory density for a LIF neuron }{0}}
+\headcommand {\beamer@framepages {7}{10}}
+\headcommand {\slideentry {1}{2}{2}{11/11}{1.2 The refractory density for a LIF neuron }{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {1}{2}{3}{12/12}{1.2 The refractory density for a LIF neuron }{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {1}{2}{4}{13/13}{1.2 The refractory density for a LIF neuron }{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {1}{2}{5}{14/14}{1.2 The refractory density for a LIF neuron }{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\sectionentry {2}{2. Theoretical derivation}{15}{2. Theoretical derivation}{0}}
+\headcommand {\beamer@sectionpages {7}{14}}
+\headcommand {\beamer@subsectionpages {7}{14}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{15}{2.1 Eigenfunction expansion of the refractory density}}\headcommand {\beamer@subsectionpages {15}{14}}
+\headcommand {\slideentry {2}{1}{1}{15/17}{2.1 Eigenfunction expansion of the refractory density}{0}}
+\headcommand {\beamer@framepages {15}{17}}
+\headcommand {\slideentry {2}{1}{2}{18/21}{2.1 Eigenfunction expansion of the refractory density}{0}}
+\headcommand {\beamer@framepages {18}{21}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{22}{2.2 Definition and property of the adjoint operator $\mathcal {L}^+$}}\headcommand {\beamer@subsectionpages {15}{21}}
+\headcommand {\slideentry {2}{2}{1}{22/25}{2.2 Definition and property of the adjoint operator $\mathcal {L}^+$}{0}}
+\headcommand {\beamer@framepages {22}{25}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{26}{2.3 Recover the Activity}}\headcommand {\beamer@subsectionpages {22}{25}}
+\headcommand {\slideentry {2}{3}{1}{26/29}{2.3 Recover the Activity}{0}}
+\headcommand {\beamer@framepages {26}{29}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{30}{2.4 Resume of the theoretical derivation}}\headcommand {\beamer@subsectionpages {26}{29}}
+\headcommand {\slideentry {2}{4}{1}{30/33}{2.4 Resume of the theoretical derivation}{0}}
+\headcommand {\beamer@framepages {30}{33}}
+\headcommand {\slideentry {2}{4}{2}{34/34}{2.4 Resume of the theoretical derivation}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\sectionentry {3}{3. Spectral expansion for different processes}{35}{3. Spectral expansion for different processes}{0}}
+\headcommand {\beamer@sectionpages {15}{34}}
+\headcommand {\beamer@subsectionpages {30}{34}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{35}{3.1 LIF neuron with exponential link function}}\headcommand {\beamer@subsectionpages {35}{34}}
+\headcommand {\slideentry {3}{1}{1}{35/36}{3.1 LIF neuron with exponential link function}{0}}
+\headcommand {\beamer@framepages {35}{36}}
+\headcommand {\slideentry {3}{1}{2}{37/37}{3.1 LIF neuron with exponential link function}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{38}{3.2 Inverse Gaussian process}}\headcommand {\beamer@subsectionpages {35}{37}}
+\headcommand {\slideentry {3}{2}{1}{38/38}{3.2 Inverse Gaussian process}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {3}{2}{2}{39/41}{3.2 Inverse Gaussian process}{0}}
+\headcommand {\beamer@framepages {39}{41}}
+\headcommand {\slideentry {3}{2}{3}{42/42}{3.2 Inverse Gaussian process}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {3}{2}{4}{43/43}{3.2 Inverse Gaussian process}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {3}{2}{5}{44/44}{3.2 Inverse Gaussian process}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{45}{3.3 Gamma process}}\headcommand {\beamer@subsectionpages {38}{44}}
+\headcommand {\slideentry {3}{3}{1}{45/47}{3.3 Gamma process}{0}}
+\headcommand {\beamer@framepages {45}{47}}
+\headcommand {\sectionentry {4}{4. Summary and Future Work}{48}{4. Summary and Future Work}{0}}
+\headcommand {\beamer@sectionpages {35}{47}}
+\headcommand {\beamer@subsectionpages {45}{47}}
+\headcommand {\slideentry {4}{0}{1}{48/51}{}{0}}
+\headcommand {\beamer@framepages {48}{51}}
+\headcommand {\slideentry {4}{0}{2}{52/52}{}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\slideentry {4}{0}{3}{53/53}{}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {4}{0}{4}{54/54}{}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\slideentry {4}{0}{5}{55/55}{}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {4}{0}{6}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {48}{56}}
+\headcommand {\beamer@sectionpages {48}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\def \inserttotalframenumber {28}}
