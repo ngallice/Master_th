@@ -125,6 +125,42 @@
 %%%%%%%%%%%%%%%%
 \newpage
 
+
+\section{Renewal process}
+
+Renewal processes keep memory of the last event, las firing time $t^f$. For those processes the spikes are generated according to a stochastic intensity called the hazard rate
+\be
+\rho(t|\hat{t})=\rho(\tau)
+\ee
+
+which depends on the age of the neuron $\tau$, i.e the time since the last spike $\tau=t-\hat{\tau}$.
+
+The renewal theory allows to define the probability of the next event given the age of the system,  to calculate the interspike-interval (ISI) distribution, i.e the Probability 
+
+\be 
+P(\tau)=P(t^f+\tau| t^f)
+\ee
+
+The ISI distribution satisfy
+
+\be 
+\int_0^\infty P(\tau)d\tau=1 
+\ee
+
+and allows to compute the moment:
+
+
+\be 
+<\tau^n>=\int_0^\infty \tau^nP(\tau)d\tau
+\ee
+
+
+
+\subsection{Survivor function}
+
+\be
+\ee
+
 Master equation
 
 \be
@@ -164,7 +200,7 @@ where $\phi_n(\tau)$ are the eigenfunctions of the operator $\mathcal{L}=-\parti
 
 if the eigenvalues $\lambda_n$ are complex, the complex conjugate of an eigenvalue is also an eigenvalue beacause $\mathcal{L}$ is a real operator
 
-Because $\mathcal{L}$ cannot be generally brought to an Hermitian form we also need  the eigenfunction $\psi_n$ of the ajoint operator  $\mathcal{L}^{+}$
+Because $\mathcal{L}$ cannot be generally brought to an Hermitian form we also need  the eigenfunction $\psi_n$ of the adjoint operator  $\mathcal{L}^{+}$
 
 \be
 \label{Ldegaoperator}
@@ -268,7 +304,7 @@ The solution eq.\eqref{Loperator}  and eq.\eqref{Ldegaoperator2} with initial re
 
 \begin{align}
 \label{psin}
-\psi_n(\tau)&=\psi_n(0)\exp\big(\lambda_n\tau+\int_0^\tau\rho(s)ds\big)\nonumber\big[1-\int^\tau_0 \rho(x) \exp\big(-\lambda_nx-\int_0^\tau\rho(s)ds\big)dx\big]\\
+\psi_n(\tau)&=\psi_n(0)\exp\big(\lambda_n\tau+\int_0^\tau\rho(s)ds\big)\nonumber\big[1-\int^\tau_0 \rho(x) \exp\big(-\lambda_nx-\int_0^x\rho(s)ds\big)dx\big]\\
 &=\psi_n(0)\exp(\lambda_n\tau)S^{-1}(\tau)\big[1-\int^\tau_0 P(x) \exp\big(-\lambda_nx)dx\big]
 \end{align}
 
@@ -294,7 +330,142 @@ Inserting eq.\eqref{phin} for $n=0$ in eq.\ref{dij} we have:
 \phi_0(0) =& \frac{1}{\int_0^{\infty}S(\tau)}
 \end{align}
 
-Inserting eq. \eqref{ant} in eq.\eqref{todo}
+\be
+A(t)=\sum_n a_n(t)\phi_n(0)
+\ee
+
+keeping only the first mode we have:
+
+\be
+A(t)=\phi_0(0) + a_1(t)\phi_1(0) +a_{-1}(t)\phi_{-1}(0)
+\ee
+
+Where the term $a_{-1}(t)\phi_{-1}(0)$ is the complex conjugate  of the term $a_1(t)\phi_1(0)$. 
+
+
+\begin{align}
+\dot{a}_n&=(\psi_n,\partial_tq) + \dot{\mu}\: (\partial_{\mu}\psi_n,q)   \nonumber \\
+&=(\psi_n,\mathcal{L}q)  +   \dot{\mu}\:\psi_n,\sum_ma_m\phi_m\nonumber \\
+&=(\mathcal{L}^+\psi_n,q)+ \dot{\mu}\sum_ma_m\:(\partial_{\mu}\:\psi_n,\phi_m) \nonumber \\
+&=\lambda_n(\psi_n,q) +  \dot{\mu}\sum_mc_{nm}a_m \nonumber \\
+&=\lambda_na_n   +  \dot{\mu}\sum_mc_{nm}a_m
+\end{align}
+
+Where we define $c_{nm} = \:(\partial_{\mu}\:\psi_n,\phi_m)$
+
+So we can define 
+\be
+\mathcal{A}(t)=\phi_0(0) + 2a_1(t)\phi_1(0) 
+\ee
+
+such that
+
+\be
+A(t)=\Re(\mathcal{A}(t)) 
+\ee
+
+\be
+\dot{\mathcal{A}}(t)=\dot{\mu}\partial_{\mu}\phi_0(0) + 2\dot{a}_1(t)\dot{\mu}\partial_{\mu}\phi_1(0) 
+\ee
+
+with
+
+\begin{align}
+\dot{a}_1=&\lambda_1 a_1 + \dot{\mu}(c_{10}+(c_{10}+c_{11}a_1+c_{1-1}a_{-1}) \nonumber \\
+=&\lambda_1 a_1 + \dot{\mu}(c_{10}+(c_{10}+c_{11}a_1+c_{-11}a_{1}) 
+\end{align}
+
+\be
+\dot{\mathcal{A}}(t)=[\lambda_1+ \dot{\mu}(\partial_{\mu}\log(\phi_1(0))+c_{11}+c_{-11})][\mathcal{A}(t) -\phi_0(0) ]+ \dot{\mu}[c_{10} + \partial_{\mu}\phi_0(0)]
+\ee
+
+Writing $\mathcal{A}(t)=A(t)+\i B(t)$ we obtained two non linear differential equation
+
+\begin{align}
+\dot{A}(t)=&f(t)(A(t)-\phi_0(0))-g(t)B(t) +h(t)\\
+\dot{B}(t)=&f(t)B(t) + g(t)(A(t)-\phi_0(0)) +m(t)\\
+\end{align}
+
+with
+\begin{align}
+f(t)=&\Re[\lambda_1+ \dot{\mu}(\partial_{\mu}\log(\phi_1(0))+c_{11}+c_{-11})]\\
+g(t)=&\Im[\lambda_1+ \dot{\mu}(\partial_{\mu}\log(\phi_1(0))+c_{11}+c_{-11})]\\
+h(t)=&\Re[\dot{\mu}(c_{10} + \partial_{\mu}\phi_0(0))]\\
+m(t)=&\Im[\dot{\mu}(c_{10} + \partial_{\mu}\phi_0(0))]
+\end{align}
+
+\section{poisson proccess with absolute refarctoriness}
+
+\be
+\rho(\tau)=\nu\:\Theta(\tau-\Delta)
+\ee
+
+\be
+P(\tau)=\nu \Theta(\tau-\Delta) \exp(-\nu(\tau-\Delta))
+\ee
+
+
+\be
+S(\tau)=\Theta(\Delta-\tau) +  \Theta(\tau-\Delta) \exp(-\nu(\tau-\Delta))
+\ee
+
+\begin{align}
+P_L(\lambda)=&\int_0^\infty P(\tau)e^{-\lambda \tau}\\
+=&\int_\Delta^\infty \nu \exp(-(\lambda+\nu)\tau))\exp(\nu \Delta)\\
+=&\frac{\nu}{\nu+\lambda}exp(-\lambda \Delta)
+\end{align}
+
+\be
+\frac{\nu}{\nu+\lambda}exp(-\lambda_n \Delta)=1
+\ee
+
+\be
+\Delta \nu e^{\nu\Delta}=we^{w} \hspace{1cm} w=(\nu+\lambda_n)\Delta
+\ee
+
+\be
+w=W(\Delta \nu e^{\nu\Delta},n)
+\ee
+
+\be
+\lambda_n=\frac{1}{\Delta}W(\Delta \nu e^{\nu\Delta},n) - \nu
+\ee
+
+\begin{align}
+\phi_n(0) =&\frac{1}{\int_0^{\infty}\big[1-\int^\tau_0 \nu \Theta(x-\Delta) \exp(-\nu(x-\Delta)) \exp\big(-\lambda_nx)dx\big]d\tau}\\
+=& \frac{\nu+\lambda_n}{1+\Delta(\nu+\lambda_n)}
+\end{align}
+
+\be
+\phi_n(\tau)= \frac{\nu+\lambda_n}{1+\Delta(\nu+\lambda_n)}\exp(-\lambda_n\tau)\big[\Theta(\Delta-\tau) +  \Theta(\tau-\Delta) \exp(-\nu(\tau-\Delta))\big]
+\ee
+
+
+\begin{align}
+\psi_n(\tau)=&\Theta(\Delta-\tau)\exp(\lambda_n\tau) +  \Theta(\tau-\Delta) \frac{\nu}{\nu+\lambda_n}\\
+=&\Theta(\Delta-\tau)\exp(\lambda_n\tau) +  \Theta(\tau-\Delta) \exp(\lambda_n\Delta)\\
+\end{align}
+
+
+\be
+\frac{d\psi_n(\tau)}{d\nu}=\frac{\lambda_n}{\nu[1+\Delta(\nu+\lambda_n)]}\big[\Theta(\Delta-\tau)\tau\exp(\lambda_n\tau) +  \Theta(\tau-\Delta)\Delta \exp(\lambda_n\Delta)\big]\\
+\ee
+
+
+\begin{align}
+c_{nn}=&\int_0^\infty\frac{d\psi_n(\tau)}{d\nu}\phi_n(\tau)d\tau\\
+=&\frac{\lambda_n\Delta(1+\frac{1}{2}\lambda_n(\nu+\lambda_n))}{\nu(1+\Delta(\nu+\lambda_n))}
+\end{align}
+
+
+\begin{align}
+c_{nm}=&\int_0^\infty\frac{d\psi_n(\tau)}{d\nu}\phi_m(\tau)d\tau\\
+=&\frac{\lambda_n(\nu+\lambda_m)}{\nu(\lambda_n-\lambda_m)(\nu+\lambda_n)(1+\Delta(\nu+\lambda_m))}
+\end{align}
+
+
+
+
 
 
 For a LIF neuron with exponential link function the hazard rate is given by:
