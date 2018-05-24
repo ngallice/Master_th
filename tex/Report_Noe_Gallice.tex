@@ -353,45 +353,30 @@ Where the term $a_{-1}(t)\phi_{-1}(0)$ is the complex conjugate  of the term $a_
 
 Where we define $c_{nm} = \:(\partial_{\mu}\:\psi_n,\phi_m)$
 
-So we can define 
-\be
-\mathcal{A}(t)=\phi_0(0) + 2a_1(t)\phi_1(0) 
-\ee
+Keeping only the first modes the activity is given by:
 
-such that
+$A(t)= phi_0(0)+a_1(t)phi_1(0)+a_{-1}\phi_{-1}(0)$ 
 
-\be
-A(t)=\Re(\mathcal{A}(t)) 
-\ee
+As $a_{-1}\phi_{-1}(0)$ is the complex conjugate of $a_1(t)phi_1(0)$ the activity can be written as:
+
+$A(t)= phi_0(0)+\Re{a_1(t)}\Re{phi_1(0)}-\Im{a_1(t)}\Im{phi_1(0)}$ 
+
 
 \be
-\dot{\mathcal{A}}(t)=\dot{\mu}\partial_{\mu}\phi_0(0) + 2\dot{a}_1(t)\dot{\mu}\partial_{\mu}\phi_1(0) 
+\dot{a}_1=\lambda_1 a_1 + \dot{\mu}(c_{10}+(c_{10}+c_{11}a_1+c_{1-1}a_{-1}) \nonumber \\
 \ee
 
-with
+Writting $a_1(t)= X(t) +iY(t)$ where $X(t)$ and $Y(t)$ are two real function we obtained two non linear differential equation
 
 \begin{align}
-\dot{a}_1=&\lambda_1 a_1 + \dot{\mu}(c_{10}+(c_{10}+c_{11}a_1+c_{1-1}a_{-1}) \nonumber \\
-=&\lambda_1 a_1 + \dot{\mu}(c_{10}+(c_{10}+c_{11}a_1+c_{-11}a_{1}) 
-\end{align}
-
-\be
-\dot{\mathcal{A}}(t)=[\lambda_1+ \dot{\mu}(\partial_{\mu}\log(\phi_1(0))+c_{11}+c_{-11})][\mathcal{A}(t) -\phi_0(0) ]+ \dot{\mu}[c_{10} + \partial_{\mu}\phi_0(0)]
-\ee
-
-Writing $\mathcal{A}(t)=A(t)+\i B(t)$ we obtained two non linear differential equation
-
-\begin{align}
-\dot{A}(t)=&f(t)(A(t)-\phi_0(0))-g(t)B(t) +h(t)\\
-\dot{B}(t)=&f(t)B(t) + g(t)(A(t)-\phi_0(0)) +m(t)\\
+\dot{X}(t)=&\Re[f(t)]X(t)-\Im[g(t)]Y(t) +\Re[c_{10}]\dot{\mu}\\
+\dot{Y}(t)=&\Re[g(t)]Y(t)+\Im[f(t)]X(t) +\Im[c_{10}]\dot{\mu}\\
 \end{align}
 
 with
 \begin{align}
-f(t)=&\Re[\lambda_1+ \dot{\mu}(\partial_{\mu}\log(\phi_1(0))+c_{11}+c_{-11})]\\
-g(t)=&\Im[\lambda_1+ \dot{\mu}(\partial_{\mu}\log(\phi_1(0))+c_{11}+c_{-11})]\\
-h(t)=&\Re[\dot{\mu}(c_{10} + \partial_{\mu}\phi_0(0))]\\
-m(t)=&\Im[\dot{\mu}(c_{10} + \partial_{\mu}\phi_0(0))]
+f(t)=&\lambda_1+ \dot{\mu}(c_{11}+c_{1-1})\\
+g(t)=&\lambda_1+ \dot{\mu}(c_{11}-c_{1-1})\\
 \end{align}
 
 \section{poisson proccess with absolute refarctoriness}
