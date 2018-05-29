@@ -1,0 +1,33 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Firing rate models}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Renewal spiking neuron model}{3}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Moment of the interspike interval distribution $P(\tau )$}{3}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Interval distribution and Survivor function}{4}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Examples }{4}{subsubsection.1.2.3}
+\contentsline {paragraph}{Simple model with recovery function}{5}{section*.2}
+\contentsline {paragraph}{Gamma process}{6}{section*.4}
+\contentsline {paragraph}{Perfect integrate-and-fire model driven by white noise}{6}{section*.6}
+\contentsline {subsection}{\numberline {1.3}Populations of neurons and refractory density equations}{6}{subsection.1.3}
+\contentsline {paragraph}{Network model}{6}{section*.8}
+\contentsline {paragraph}{Refractory density equation}{7}{section*.9}
+\contentsline {subsection}{\numberline {1.4}Spectral decomposition method}{8}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Spectral decomposition of the Fokker-Planck equation}{8}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}General properties of the Fokker-Planck operator}{8}{subsubsection.1.4.2}
+\contentsline {subsection}{\numberline {1.5}Expansion and rate equation}{9}{subsection.1.5}
+\contentsline {section}{\numberline {2}Theory}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{9}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Adjoint operator $\mathcal {L}^+$, and normalization}{10}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Emission rate equation}{11}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Full Mattia 2002 system}{13}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Low-dimensional dynamics}{13}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Truncation Full Mattia 2002 system}{13}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Schaffer like}{13}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Mattias equation}{13}{subsubsection.2.5.3}
+\contentsline {section}{\numberline {3}Spectral properties of specific models}{13}{section.3}
+\contentsline {subsection}{\numberline {3.1}Poisson neuron with absolute refractoriness}{13}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Gamma process}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}PIF neuron}{13}{subsection.3.3}
+\contentsline {section}{\numberline {4}General renewal neuron}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Population response to time-dependent input}{13}{subsection.4.1}
+\contentsline {section}{\numberline {5}Population dynamics of coupled neurons}{13}{section.5}
