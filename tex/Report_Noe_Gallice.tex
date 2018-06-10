@@ -125,6 +125,51 @@
 %%%%%%%%%%%%%%%%
 \newpage
 
+For a network of synaptically coupled neurons, I would like to compare  the solution I get with the solution of Mattia: Eq.(6)  of the paper "Low-dimensional firing rate dynamics of  spiking neuron networks". \\
+
+Here I will use the same notation as Mattia so $\nu(t)$ correspond to the Activity.\\
+
+To compute the coefficient $\alpha_2(\nu)$ and $\alpha_1(\nu)$ I need:
+\begin{equation}
+\label{c+1}
+c_{+1}=\langle\partial_{\nu}\psi_1|\phi_0\rangle
+\end{equation}
+
+For the coupling case we have :
+
+\begin{equation}
+\tau_m\dot{h}=-h+J\nu(t)
+\end{equation}
+
+and the hazard rate for Poisson neuron with absolute refractoriness is given by:
+
+\begin{equation}
+\rho(\tau,h)=\Phi(h)*\Theta(\tau -\Delta)
+\end{equation}
+
+As I can analytically expressed $\langle\partial_{h}\psi_1|\phi_0\rangle$ the idea was to rewrite Eq.\eqref{c+1} as :
+
+\begin{equation}
+\label{c+12}
+c_{+1}=\frac{\partial h}{\partial \nu}\langle\partial_{h}\psi_1|\phi_0\rangle
+\end{equation}
+
+So I need to compute $\frac{\partial h}{\partial \nu}$ 
+
+I tried:
+
+\begin{align}
+\frac{\partial h}{\partial \nu}&= \frac{\partial h}{\partial t}\frac{\partial t}{\partial \nu}\\
+&=\frac{\partial h}{\partial t}\dot{\nu}^{-1}
+\end{align}
+
+but with this, $\alpha_1$  and $\alpha_2$ depend on $\dot{\nu}$.
+
+Do you see how I could find a solution to this problem ? 
+
+
+\newpage
+
 
 \section{Renewal process}
 
@@ -477,7 +522,7 @@ For population density equation the last step is not trivial. and we dont have a
 My work is focus on this step and based on the work where they derived...
 
 
-\newpage
+
 
 \mbox{}
 \nocite{*}

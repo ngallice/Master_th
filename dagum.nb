@@ -10,122 +10,29 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6900,        212]
-NotebookOptionsPosition[      6267,        188]
-NotebookOutlinePosition[      6626,        204]
-CellTagsIndexPosition[      6583,        201]
+NotebookDataLength[      4007,        120]
+NotebookOptionsPosition[      3424,         96]
+NotebookOutlinePosition[      3783,        112]
+CellTagsIndexPosition[      3740,        109]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  
-  RowBox[{
-   RowBox[{
-    RowBox[{"$Assumptions", "=", 
-     RowBox[{"a", ">", "0"}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"$Assumptions", "=", 
-     RowBox[{"b", ">", "0"}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"$Assumptions", "=", 
-     RowBox[{"p", ">", "0"}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+Cell[BoxData[{"k1", "\[IndentingNewLine]", 
+ RowBox[{"k2", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Roots", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"P", "[", "x_", "]"}], "=", 
-     RowBox[{"a", "*", 
-      RowBox[{"p", "/", "x"}], "*", 
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"x", "/", "b"}], ")"}], "^", 
-         RowBox[{"(", 
-          RowBox[{"a", "*", "p"}], ")"}]}], "/", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{"x", "/", "b"}], ")"}], "^", "a"}], "+", "1"}], ")"}], 
-         "^", 
-         RowBox[{"(", 
-          RowBox[{"p", "+", "1"}], ")"}]}]}], ")"}]}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"S", "[", "x_", "]"}], "=", 
-     RowBox[{"1", "-", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{"1", "+", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{"x", "/", "b"}], ")"}], "^", 
-          RowBox[{"(", 
-           RowBox[{"-", "a"}], ")"}]}]}], ")"}], "^", 
-       RowBox[{"(", 
-        RowBox[{"-", "p"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"S2", "[", "x_", "]"}], "=", 
-     RowBox[{"1", "-", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{"x", "/", "b"}], ")"}], "^", 
-        RowBox[{"(", 
-         RowBox[{"a", "*", "p"}], ")"}]}], "*", 
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{"1", "+", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"x", "/", "b"}], ")"}], "^", 
-           RowBox[{"(", "a", ")"}]}]}], ")"}], "^", 
-        RowBox[{"(", 
-         RowBox[{"-", "p"}], ")"}]}]}]}]}], ";"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
-     RowBox[{"G", "[", "x_", "]"}], "=", 
-     RowBox[{"1", "-", 
-      RowBox[{"Integrate", "[", 
-       RowBox[{
-        RowBox[{"P", "[", "s", "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"s", ",", "0", ",", "x"}], "}"}]}], "]"}]}]}], " ", "*)"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
-     RowBox[{"RHO", "[", "x_", "]"}], "=", 
-     RowBox[{"Simplify", "[", 
-      RowBox[{
-       RowBox[{"P", "[", "x", "]"}], "/", 
-       RowBox[{"S", "[", "x", "]"}]}], "]"}]}], " ", "*)"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"RHO", "[", "x_", "]"}], "=", 
-    RowBox[{"Simplify", "[", 
-     RowBox[{"-", 
-      RowBox[{"D", "[", 
-       RowBox[{
-        RowBox[{"Log", "[", 
-         RowBox[{"S", "[", "x", "]"}], "]"}], ",", "x"}], "]"}]}], "]"}]}], 
-   " ", "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"f", 
-     RowBox[{"(", "s_", ")"}]}], "=", 
-    RowBox[{"LaplaceTransform", "[", 
      RowBox[{
-      RowBox[{"P", "[", "x", "]"}], ",", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]"}]}]}]}]}]], "Input",
+      RowBox[{"0.5", "*", "k2", "*", 
+       RowBox[{"s", "^", "2"}]}], "-", 
+      RowBox[{"k1", "*", "s"}], "+", 
+      RowBox[{"2", "*", "Pi", "*", "I"}]}], "\[Equal]", "0"}], ",", "s"}], 
+   "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.733463868915769*^9, 3.733464015578348*^9}, {
    3.733464178635709*^9, 3.733464179207224*^9}, {3.733464256620801*^9, 
    3.733464257299102*^9}, {3.733464297157412*^9, 3.733464452685491*^9}, {
@@ -135,7 +42,8 @@ Cell[BoxData[
    3.7334653277723303`*^9, {3.733465467244348*^9, 3.7334654834336243`*^9}, {
    3.733465548002248*^9, 3.733465552505044*^9}, {3.7334656192198143`*^9, 
    3.733465763140411*^9}, {3.733466084782166*^9, 3.7334661382576857`*^9}, {
-   3.733473731634521*^9, 3.733473744075098*^9}}],
+   3.733473731634521*^9, 3.733473744075098*^9}, {3.736761497716054*^9, 
+   3.736761553857142*^9}, {3.736761590823278*^9, 3.736761596853899*^9}}],
 
 Cell[BoxData[
  FractionBox[
@@ -204,16 +112,16 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 4142, 115, 633, "Input"],
-Cell[4725, 139, 720, 22, 108, "Output"]
+Cell[580, 22, 1299, 23, 195, "Input"],
+Cell[1882, 47, 720, 22, 50, "Output"]
 }, Open  ]],
-Cell[5460, 164, 70, 1, 32, "Input"],
-Cell[5533, 167, 93, 1, 32, InheritFromParent],
-Cell[5629, 170, 94, 1, 32, InheritFromParent],
-Cell[5726, 173, 196, 3, 32, "Input"],
-Cell[5925, 178, 96, 1, 32, InheritFromParent],
-Cell[6024, 181, 143, 2, 32, "Input"],
-Cell[6170, 185, 93, 1, 32, InheritFromParent]
+Cell[2617, 72, 70, 1, 32, "Input"],
+Cell[2690, 75, 93, 1, 32, "Input"],
+Cell[2786, 78, 94, 1, 32, "Input"],
+Cell[2883, 81, 196, 3, 32, "Input"],
+Cell[3082, 86, 96, 1, 32, "Input"],
+Cell[3181, 89, 143, 2, 32, "Input"],
+Cell[3327, 93, 93, 1, 32, "Input"]
 }
 ]
 *)
