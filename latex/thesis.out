@@ -1,0 +1,25 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Renewal spiking neuron model}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Moment of the interspike interval distribution P\(\)}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Interval distribution and Survivor function}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Examples }{section.1.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Populations of neurons and refractory density equations}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.2.1}{Network model}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.2}{Refractory density equation}{section.1.2}% 8
+\BOOKMARK [1][-]{section.1.3}{Spectral decomposition method}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.3.1}{Spectral decomposition of the Fokker-Planck equation}{section.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.3.2}{General properties of the Fokker-Planck operator}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.3.3}{Expansion and rate equation}{section.1.3}% 12
+\BOOKMARK [1][-]{section.1.4}{Aim of the thesis}{chapter.1}% 13
+\BOOKMARK [0][-]{chapter.2}{Theory}{}% 14
+\BOOKMARK [1][-]{section.2.1}{Operator of the refractory density, and eigenvalue spectrum \173n\175}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.2}{Adjoint operator L+, and normalization}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Emission rate equation}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Spectrum}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Spectral derivation for specific model}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.1.1}{Poisson neuron with absolute refractoriness}{section.3.1}% 20
+\BOOKMARK [1][-]{section.3.2}{A general approximation of the spectrum}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{General renewal neuron}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Transcient response of teh population activity starting with a delta distribution q\(,0\)=\(\)}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.1.1}{Population response to time-dependent input}{section.4.1}% 24
+\BOOKMARK [0][-]{chapter.5}{Population dynamics of coupled neurons}{}% 25
