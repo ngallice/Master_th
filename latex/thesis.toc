@@ -1,31 +1,31 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Renewal spiking neuron model}{1}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Moment of the interspike interval distribution $P(\tau )$}{2}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Interval distribution and Survivor function}{3}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Examples }{3}{subsection.1.1.3}
-\contentsline {paragraph}{Simple model with recovery function}{4}{section*.4}
-\contentsline {paragraph}{Gamma process}{5}{section*.7}
-\contentsline {paragraph}{Perfect integrate-and-fire model driven by white noise}{5}{section*.9}
-\contentsline {section}{\numberline {1.2}Populations of neurons and refractory density equations}{6}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Network model}{6}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Refractory density equation}{7}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}Spectral decomposition method}{8}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Spectral decomposition of the Fokker-Planck equation}{8}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}General properties of the Fokker-Planck operator}{9}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Expansion and rate equation}{10}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}Aim of the thesis}{11}{section.1.4}
-\contentsline {chapter}{\numberline {2}Theory}{12}{chapter.2}
-\contentsline {section}{\numberline {2.1}Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{12}{section.2.1}
-\contentsline {section}{\numberline {2.2}Adjoint operator $\mathcal {L}^+$, and normalization}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Emission rate equation}{15}{section.2.3}
-\contentsline {chapter}{\numberline {3}Spectrum}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Spectral derivation for specific model}{17}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Poisson neuron with absolute refractoriness}{17}{subsection.3.1.1}
-\contentsline {subsubsection}{Gamma process}{18}{section*.14}
-\contentsline {subsubsection}{PIF neuron}{19}{section*.16}
-\contentsline {section}{\numberline {3.2}A general approximation of the spectrum}{20}{section.3.2}
-\contentsline {chapter}{\numberline {4}General renewal neuron}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Transcient response of teh population activity starting with a delta distribution $q(\tau ,0)=\delta (\tau )$}{22}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Population response to time-dependent input}{22}{subsection.4.1.1}
-\contentsline {chapter}{\numberline {5}Population dynamics of coupled neurons}{29}{chapter.5}
+\contentsline {section}{\numberline {1.1}Renewal processes}{2}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Interval distribution and Survivor function}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Examples }{3}{subsection.1.1.2}
+\contentsline {paragraph}{Simple model with recovery function}{4}{figure.caption.7}
+\contentsline {paragraph}{Gamma process}{5}{section*.8}
+\contentsline {paragraph}{Perfect integrate-and-fire model driven by white noise}{6}{figure.caption.12}
+\contentsline {section}{\numberline {1.2}Moment of the interspike interval distribution $P(\tau )$}{7}{section.1.2}
+\contentsline {section}{\numberline {1.3}Populations of neurons and refractory density equations}{8}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Population model}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Refractory density equation}{9}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Spectral decomposition method}{10}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}General properties of the evolution operator}{10}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Rate equation}{12}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.5}Aim of the study}{13}{section.1.5}
+\contentsline {chapter}{\numberline {2}Theory}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{14}{section.2.1}
+\contentsline {section}{\numberline {2.2}Adjoint operator $\mathcal {L}^+$, and normalization}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Firing rate equation}{17}{section.2.3}
+\contentsline {chapter}{\numberline {3}Spectrum}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Spectral derivation for specific model}{19}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Poisson neuron with absolute refractoriness}{19}{subsection.3.1.1}
+\contentsline {subsubsection}{Gamma process}{20}{section*.15}
+\contentsline {subsubsection}{PIF neuron}{21}{section*.17}
+\contentsline {section}{\numberline {3.2}A general approximation of the spectrum}{22}{section.3.2}
+\contentsline {chapter}{\numberline {4}General renewal neuron}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Transcient response of the population activity starting with a delta distribution $q(\tau ,0)=\delta (\tau )$}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Population response to time-dependent input}{26}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Effect of the refractoriness}{31}{section.4.2}
+\contentsline {chapter}{\numberline {5}Population dynamics of coupled neurons}{33}{chapter.5}

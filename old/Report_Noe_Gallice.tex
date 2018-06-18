@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt,twoside]{article}
-
+\usepackage{braket}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[english]{babel}
@@ -109,425 +109,75 @@
 
 \begin{document}
 
-\maketitle
+\section{Emission rate equation}
 
-\tableofcontents % Table des matieres
-
-\baselineskip=16pt
-\parindent=15pt
-\parskip=5pt
-
-
-%%%%%%%%%%%%%%%%
-%
-%  ---- DISCUSSION------
-%
-%%%%%%%%%%%%%%%%
-\newpage
-
-For a network of synaptically coupled neurons, I would like to compare  the solution I get with the solution of Mattia: Eq.(6)  of the paper "Low-dimensional firing rate dynamics of  spiking neuron networks". \\
-
-Here I will use the same notation as Mattia so $\nu(t)$ correspond to the Activity.\\
-
-To compute the coefficient $\alpha_2(\nu)$ and $\alpha_1(\nu)$ I need:
-\begin{equation}
-\label{c+1}
-c_{+1}=\langle\partial_{\nu}\psi_1|\phi_0\rangle
-\end{equation}
-
-For the coupling case we have :
+%As the density $p(v,t)$ with the Fokker-Planck equation, the refractory density $q(\tau,t)$ can be expressed with the eigenfunctions  $ \{\ket{\phi_n}\}$. 
 
 \begin{equation}
-\tau_m\dot{h}=-h+J\nu(t)
+\label{eq:q}
+\ket{q}=\sum_na_n\ket{\phi_n}
 \end{equation}
 
-and the hazard rate for Poisson neuron with absolute refractoriness is given by:
+where $a_n=\langle \psi_n | q\rangle$ are the time dependent coefficients of the modal expansion. In particular from Eq.\eqref{eq:psi0}, and Eq.\eqref{eq:dij} we have $a_0(t)=1$. The dynamics of the $a_n$ can be determined directly using Eq.\eqref{eq:Loperator}, and Eq.\eqref{eq:masterequation2}
+
+\begin{align}
+\dot{a}_n&=\langle\psi_n|\partial_t q\rangle+\langle\partial_t\psi_n|q\rangle \nonumber \\
+&=\langle\psi_n|\mathcal{L}q\rangle+  \dot{h}\sum_ma_m\langle\partial_h\psi_n|\phi_m \rangle \nonumber \\
+&=\lambda_n a_n +  \dot{h}\sum_ma_m\langle\partial_h\psi_n|\phi_m \rangle 
+\end{align}
+
+Defining the coupling coefficient as $C_{nm}=\langle\partial_h\psi_n|\phi_m \rangle $ we can rewrite
 
 \begin{equation}
-\rho(\tau,h)=\Phi(h)*\Theta(\tau -\Delta)
+\dot{a}_n=\lambda_n a_n +  \dot{h}\sum_mC_{nm}a_m 
 \end{equation}
 
-As I can analytically expressed $\langle\partial_{h}\psi_1|\phi_0\rangle$ the idea was to rewrite Eq.\eqref{c+1} as :
+
+
+We can finally express the activity $A(t)=q(0,t)$ as
 
 \begin{equation}
-\label{c+12}
-c_{+1}=\frac{\partial h}{\partial \nu}\langle\partial_{h}\psi_1|\phi_0\rangle
+\label{eq:A2}
+A(t)=\sum_na_n(t)\phi_n(0)
 \end{equation}
 
-So I need to compute $\frac{\partial h}{\partial \nu}$ 
-
-I tried:
+Keeping only the first mode, and using the fact that $\ket{\phi_{-n}}=\ket{\bar{\phi}_n}$ and $a_{-n}=\bar{a}_n$,  Eq.\eqref{eq:A2} becomes
 
 \begin{align}
-\frac{\partial h}{\partial \nu}&= \frac{\partial h}{\partial t}\frac{\partial t}{\partial \nu}\\
-&=\frac{\partial h}{\partial t}\dot{\nu}^{-1}
-\end{align}
-
-but with this, $\alpha_1$  and $\alpha_2$ depend on $\dot{\nu}$.
-
-Do you see how I could find a solution to this problem ? 
-
-
-\newpage
-
-
-\section{Renewal process}
-
-Renewal processes keep memory of the last event, las firing time $t^f$. For those processes the spikes are generated according to a stochastic intensity called the hazard rate
-\be
-\rho(t|\hat{t})=\rho(\tau)
-\ee
-
-which depends on the age of the neuron $\tau$, i.e the time since the last spike $\tau=t-\hat{\tau}$.
-
-The renewal theory allows to define the probability of the next event given the age of the system,  to calculate the interspike-interval (ISI) distribution, i.e the Probability 
-
-\be 
-P(\tau)=P(t^f+\tau| t^f)
-\ee
-
-The ISI distribution satisfy
-
-\be 
-\int_0^\infty P(\tau)d\tau=1 
-\ee
-
-and allows to compute the moment:
-
-
-\be 
-<\tau^n>=\int_0^\infty \tau^nP(\tau)d\tau
-\ee
-
-
-
-\subsection{Survivor function}
-
-\be
-\ee
-
-Master equation
-
-\be
-\label{masterequation}
-\frac{\partial q}{\partial t}=-\frac{\partial q}{\partial \tau}-\rho(\tau)q
-\ee
-
-boundary condition
-
-\begin{align}
-\label{boundarycondition}
-q(0,t)=\int_{0}^{\infty}\rho(\tau)q(\tau,t)d\tau=A(t) \\
-q(\infty,t)=0
-\end{align}
-
-$q$ is normalised 
-
-\be
-\label{nomalisation}
-q(0,t)=\int_{0}^{\infty}q(\tau,t)d\tau \\
-\ee
-
-
-We can expand the refractory density
-\be
-\label{refractoryexpansion}
-q(\tau,t)=\sum_n a_n(t)\phi_n(\tau)
-\ee
-
-where $\phi_n(\tau)$ are the eigenfunctions of the operator $\mathcal{L}=-\partial_{\tau}-\rho(\tau)$
-
-
-\be
-\label{Loperator}
-\mathcal{L}\phi_n=\lambda_n\phi_n
-\ee
-
-if the eigenvalues $\lambda_n$ are complex, the complex conjugate of an eigenvalue is also an eigenvalue beacause $\mathcal{L}$ is a real operator
-
-Because $\mathcal{L}$ cannot be generally brought to an Hermitian form we also need  the eigenfunction $\psi_n$ of the adjoint operator  $\mathcal{L}^{+}$
-
-\be
-\label{Ldegaoperator}
-\mathcal{L}^+\psi_n=\lambda_n^+\psi_n
-\ee
-
-Defining the inner product one can show that the eigenvalues of eq.\eqref{Loperator} and eq.\eqref{Ldegaoperator} are the same:
-
-\be
-(\psi,\phi)=\int_{0}^{\infty}\psi(\tau)\phi(\tau)d\tau
-\ee
-
-\begin{align}
-\lambda_n(\psi_n,\phi_n) &=\int_{0}^{\infty}\psi(\tau)\mathcal{L}\phi(\tau)d\tau  \nonumber \\
-&=(\psi_n,\mathcal{L}\phi_n)  \nonumber \\
-&=(\mathcal{L}^+\psi_n,\phi_n)  \nonumber \\
-&=\int_{0}^{\infty}\mathcal{L}^+\psi_n(\tau)\phi_n(\tau)d\tau  \nonumber \\
-&=\lambda_n^+(\psi_n,\phi_n) \label{lndega}
-\end{align}
-
-Eq.\eqref{lndega} implies that $\lambda_n=\lambda_n^+$ and
-	
-\be
-\label{Ldegaoperator2}
-\mathcal{L}^+\psi_n=\lambda_n\psi_n
-\ee
-
-For different eigenvalues, the eigenfunctions $\psi_i$ and $phi_j$ are orthogonal:
-
-\begin{align}
-\lambda_j(\psi_i,\phi_j) 
-&=(\psi_i,\mathcal{L}\phi_j) \nonumber \\
-&=(\mathcal{L}^+\psi_i,\phi_j)  \nonumber \\
-&=\lambda_i(\psi_i,\phi_j) \label{lorthogonal}
-\end{align}
-
-We may thus normalize the functions according to 
-
-\be
-\label{dij}
-(\psi_i,\phi_j)=\delta_{ij}
-\ee
-
-If a stationary solution of Matser equation exists we have:
-
-\be
-\lambda_0=0\:, \hspace{0.7cm} \phi_0(\tau)=q_{st}(\tau)\:,\hspace{0.7cm} \psi_0(\tau)=1
-\ee
-
-We can find the adjoint operator $\mathcal{L}$, using the integration by part:
-
-\begin{align}
-(\psi,\mathcal{L}\phi)&= \int_{0}^{\infty}\psi(\tau)\mathcal{L}\phi(\tau)d\tau  \nonumber \\
-&= \int_{0}^{\infty}\psi(\tau)[-\partial_{\tau}-\rho(\tau)]\phi(\tau)d\tau  \nonumber \\
-&=-[\psi(\tau)\phi(\tau)]^{\infty}_{0}+\int_{0}^{\infty}\partial_{\tau}\psi(\tau)\phi(\tau)d\tau -\int_{0}^{\infty}\rho(\tau)\psi(\tau)\phi(\tau)d\tau \nonumber \\
-&= \psi(0)\phi(0)+ \int_{0}^{\infty}[\partial_{\tau}-\rho(\tau)]\psi(\tau)\phi(\tau)d\tau  \nonumber \\
-&=\int_{0}^{\infty} \psi(0)\rho(\tau)\phi(\tau)d\tau+ \int_{0}^{\infty}[\partial_{\tau}-\rho(\tau)]\psi(\tau)\phi(\tau)d\tau  \nonumber \\
-&= \int_{0}^{\infty}\{[\partial_{\tau}-\rho(\tau)]\psi(\tau)+ \psi(0)\rho(\tau)\}\phi(\tau)d\tau  \nonumber \\
-& = (\mathcal{L}^+\psi,\phi)
-\end{align}
-
-with 
-\be
-\label{Ldega}
-\mathcal{L}^+\psi(\tau)=[\partial_{\tau}-\rho(\tau)]\psi(\tau)+\psi(0)\rho(\tau)
-\ee
-
-From eq.\eqref{dij} and eq.\eqref{refractoryexpansion} we deduce that:
-
-\be
-\label{an}
-a_n=(\psi_n,q)
-\ee
-
-Taking the derivative of $a_n$ with respect to time we have:
-
-\begin{align}
-\label{anderiv}
-\frac{d a_n}{dt}&=(\psi_n,\partial_tq) \nonumber \\
-&=(\psi_n,\mathcal{L}q)  \nonumber \\
-&=(\mathcal{L}^+\psi_n,q) \nonumber \\
-&=\lambda_n(\psi_n,q) \nonumber \\
-&=\lambda_na_n
-\end{align}
-
-The solution of eq.\eqref{anderiv} with initial refractory density $q(0,\tau)$ is:
-
-\begin{align}
-\label{ant}
-a_n(t) = &a_n(0)\exp(\lambda_nt)\\
-with \hspace{0.4cm} a_n(0) = & \int_{0}^{\infty}\psi_n(\tau)q(0,\tau)d\tau
-\end{align}
-
-The solution eq.\eqref{Loperator}  and eq.\eqref{Ldegaoperator2} with initial refractory density $q(0,\tau)$ is:
-
-\begin{align}
-\label{phin}
-\phi_n(\tau)&=\phi_n(0)\exp(-\lambda_n\tau-\int_0^\tau\rho(s)ds)\nonumber\\
-				  &=\phi_n(0)\exp(-\lambda_n\tau)S(\tau)
-\end{align}
-
-\begin{align}
-\label{psin}
-\psi_n(\tau)&=\psi_n(0)\exp\big(\lambda_n\tau+\int_0^\tau\rho(s)ds\big)\nonumber\big[1-\int^\tau_0 \rho(x) \exp\big(-\lambda_nx-\int_0^x\rho(s)ds\big)dx\big]\\
-&=\psi_n(0)\exp(\lambda_n\tau)S^{-1}(\tau)\big[1-\int^\tau_0 P(x) \exp\big(-\lambda_nx)dx\big]
+\label{eq:A3}
+A(t)&=\phi_0(0) + a_1\phi_1(0) +a_{-1}\phi_{-1}(0) \nonumber \\
+&=\phi_0(0) + 2\left(\Re\big[a_1\big]\Re\big[\phi_1(0)\big]- \Im\big[a_1\big]\Im\big[\phi_1(0)\big]\right)
 \end{align}
 
 
+And the dynamics of the $a_1$ is given by
+\begin{equation}
+\label{eq:a1}
+\dot{a}_1=\lambda_1 a_1 + \dot{h}\big[C_{10}+C_{11}a_1+C_{1-1}a_{-1}\big] \nonumber \\
+\end{equation}
 
-Inserting eq.\eqref{phin} et eq.\eqref{psin} in eq.\ref{dij} we have:
+Separating explicitly the real part $X(t)$ and the imaginary part  $Y(t)$ of $a_1(t)$
 
-\begin{align}
-1=&\int_0^{\infty}\phi_n(0)\psi_n(0)\big[1-\int^\tau_0 P(x) \exp\big(-\lambda_nx)dx\big]d\tau \\
-\phi_n(0)\psi_n(0) =&\frac{1}{\int_0^{\infty}\big[1-\int^\tau_0 P(x) \exp\big(-\lambda_nx)dx\big]d\tau}
-\end{align}
+\begin{equation}
+\label{eq:a1xy}
+a_1(t)= X(t) +i Y(t)
+\end{equation}
 
-In particular for $n=0$, $\lambda_0=0$ and $\psi_0(0)=1$, so we recover the relation:
-
-\be
-\phi_0(0) = \frac{1}{\int_0^{\infty}S(\tau)d\tau}
-\ee
-
-Inserting eq.\eqref{phin} for $n=0$ in eq.\ref{dij} we have:
-
-\begin{align}
-\int_0^{\infty}\phi_0(0)S(\tau) =& 1 \\
-\phi_0(0) =& \frac{1}{\int_0^{\infty}S(\tau)}
-\end{align}
-
-\be
-A(t)=\sum_n a_n(t)\phi_n(0)
-\ee
-
-keeping only the first mode we have:
-
-\be
-A(t)=\phi_0(0) + a_1(t)\phi_1(0) +a_{-1}(t)\phi_{-1}(0)
-\ee
-
-Where the term $a_{-1}(t)\phi_{-1}(0)$ is the complex conjugate  of the term $a_1(t)\phi_1(0)$. 
-
+we derived from Eq.\eqref{eq:a1}  two non linear differential equation
 
 \begin{align}
-\dot{a}_n&=(\psi_n,\partial_tq) + \dot{\mu}\: (\partial_{\mu}\psi_n,q)   \nonumber \\
-&=(\psi_n,\mathcal{L}q)  +   \dot{\mu}\:\psi_n,\sum_ma_m\phi_m\nonumber \\
-&=(\mathcal{L}^+\psi_n,q)+ \dot{\mu}\sum_ma_m\:(\partial_{\mu}\:\psi_n,\phi_m) \nonumber \\
-&=\lambda_n(\psi_n,q) +  \dot{\mu}\sum_mc_{nm}a_m \nonumber \\
-&=\lambda_na_n   +  \dot{\mu}\sum_mc_{nm}a_m
-\end{align}
-
-Where we define $c_{nm} = \:(\partial_{\mu}\:\psi_n,\phi_m)$
-
-Keeping only the first modes the activity is given by:
-
-$A(t)= phi_0(0)+a_1(t)phi_1(0)+a_{-1}\phi_{-1}(0)$ 
-
-As $a_{-1}\phi_{-1}(0)$ is the complex conjugate of $a_1(t)phi_1(0)$ the activity can be written as:
-
-$A(t)= phi_0(0)+\Re{a_1(t)}\Re{phi_1(0)}-\Im{a_1(t)}\Im{phi_1(0)}$ 
-
-
-\be
-\dot{a}_1=\lambda_1 a_1 + \dot{\mu}(c_{10}+(c_{10}+c_{11}a_1+c_{1-1}a_{-1}) \nonumber \\
-\ee
-
-Writting $a_1(t)= X(t) +iY(t)$ where $X(t)$ and $Y(t)$ are two real function we obtained two non linear differential equation
-
-\begin{align}
-\dot{X}(t)=&\Re[f(t)]X(t)-\Im[g(t)]Y(t) +\Re[c_{10}]\dot{\mu}\\
-\dot{Y}(t)=&\Re[g(t)]Y(t)+\Im[f(t)]X(t) +\Im[c_{10}]\dot{\mu}\\
+\dot{X}=&\Re[f]X-\Im[g]Y +\Re[C_{10}]\dot{h}\\
+\dot{Y}=&\Re[g]Y+\Im[f]X +\Im[C_{10}]\dot{h}\\
 \end{align}
 
 with
 \begin{align}
-f(t)=&\lambda_1+ \dot{\mu}(c_{11}+c_{1-1})\\
-g(t)=&\lambda_1+ \dot{\mu}(c_{11}-c_{1-1})\\
+f=&\lambda_1+ \dot{h}(c_{11}+c_{1-1})\\
+g=&\lambda_1+ \dot{h}(c_{11}-c_{1-1})
 \end{align}
 
-\section{poisson proccess with absolute refarctoriness}
-
-\be
-\rho(\tau)=\nu\:\Theta(\tau-\Delta)
-\ee
-
-\be
-P(\tau)=\nu \Theta(\tau-\Delta) \exp(-\nu(\tau-\Delta))
-\ee
+We have finally a set of three non linear differential equation $\dot{h}$, $\dot{X}$, $\dot{Y}$
 
 
-\be
-S(\tau)=\Theta(\Delta-\tau) +  \Theta(\tau-\Delta) \exp(-\nu(\tau-\Delta))
-\ee
-
-\begin{align}
-P_L(\lambda)=&\int_0^\infty P(\tau)e^{-\lambda \tau}\\
-=&\int_\Delta^\infty \nu \exp(-(\lambda+\nu)\tau))\exp(\nu \Delta)\\
-=&\frac{\nu}{\nu+\lambda}exp(-\lambda \Delta)
-\end{align}
-
-\be
-\frac{\nu}{\nu+\lambda}exp(-\lambda_n \Delta)=1
-\ee
-
-\be
-\Delta \nu e^{\nu\Delta}=we^{w} \hspace{1cm} w=(\nu+\lambda_n)\Delta
-\ee
-
-\be
-w=W(\Delta \nu e^{\nu\Delta},n)
-\ee
-
-\be
-\lambda_n=\frac{1}{\Delta}W(\Delta \nu e^{\nu\Delta},n) - \nu
-\ee
-
-\begin{align}
-\phi_n(0) =&\frac{1}{\int_0^{\infty}\big[1-\int^\tau_0 \nu \Theta(x-\Delta) \exp(-\nu(x-\Delta)) \exp\big(-\lambda_nx)dx\big]d\tau}\\
-=& \frac{\nu+\lambda_n}{1+\Delta(\nu+\lambda_n)}
-\end{align}
-
-\be
-\phi_n(\tau)= \frac{\nu+\lambda_n}{1+\Delta(\nu+\lambda_n)}\exp(-\lambda_n\tau)\big[\Theta(\Delta-\tau) +  \Theta(\tau-\Delta) \exp(-\nu(\tau-\Delta))\big]
-\ee
-
-
-\begin{align}
-\psi_n(\tau)=&\Theta(\Delta-\tau)\exp(\lambda_n\tau) +  \Theta(\tau-\Delta) \frac{\nu}{\nu+\lambda_n}\\
-=&\Theta(\Delta-\tau)\exp(\lambda_n\tau) +  \Theta(\tau-\Delta) \exp(\lambda_n\Delta)\\
-\end{align}
-
-
-\be
-\frac{d\psi_n(\tau)}{d\nu}=\frac{\lambda_n}{\nu[1+\Delta(\nu+\lambda_n)]}\big[\Theta(\Delta-\tau)\tau\exp(\lambda_n\tau) +  \Theta(\tau-\Delta)\Delta \exp(\lambda_n\Delta)\big]\\
-\ee
-
-
-\begin{align}
-c_{nn}=&\int_0^\infty\frac{d\psi_n(\tau)}{d\nu}\phi_n(\tau)d\tau\\
-=&\frac{\lambda_n\Delta(1+\frac{1}{2}\lambda_n(\nu+\lambda_n))}{\nu(1+\Delta(\nu+\lambda_n))}
-\end{align}
-
-
-\begin{align}
-c_{nm}=&\int_0^\infty\frac{d\psi_n(\tau)}{d\nu}\phi_m(\tau)d\tau\\
-=&\frac{\lambda_n(\nu+\lambda_m)}{\nu(\lambda_n-\lambda_m)(\nu+\lambda_n)(1+\Delta(\nu+\lambda_m))}
-\end{align}
-
-
-
-
-
-
-For a LIF neuron with exponential link function the hazard rate is given by:
-
-$\rho(\tau,t)=C\exp(\frac{u(\tau,t)-V_{th}}{\Delta})$
-
-with membrane potential:
-$u(\tau,t)=V_r e^{-\tau/\tau_m}+\frac{1}{\tau_m}\int_0^\tau  e^{-s/\tau_m}\mu(t-s))ds$
-
-$\tau_m\frac{du(\tau,t)}{d\tau}=-u(\tau,t)+\mu(t)$
-
-$V_{th}=15  mV$
-$\Delta = 2     mV$
-$C=1000 Hz$
-$dt=0.1    ms$
-$tau=20   ms$
-$V_r=0  $
-
-
-In theoretical neuroscience one common way of understanding neuronal dynamics in the brain is to pass from complex system to simplified model and the last step is to derived mathematical tractable equation, that we can well undertsand and where we can apply  tools from dynamical system theory for example. 
-
-For population density equation the last step is not trivial. and we dont have a simple ODE for the firing rate.
-
-My work is focus on this step and based on the work where they derived...
-
-
-
-
-\mbox{}
-\nocite{*}
-%\bibliographystyle{plain}
-\bibliographystyle{unsrt}
-\bibliography{biblio}
 
 \end{document} %%%% THE END %%%%

@@ -1,15 +1,149 @@
 \def\url#1{}\def\doi#1{}\def\issn#1{}\def\isbn#1{}
-\begin{thebibliography}{1}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Augustin et~al.(2017)Augustin, Ladenbauer, Baumann, and
+  Obermayer]{AugLad17}
+M.~Augustin, J.~Ladenbauer, F.~Baumann, and K.~Obermayer.
+\newblock Low-dimensional spike rate models derived from networks of adaptive
+  integrate-and-fire neurons: Comparison and implementation.
+\newblock \emph{PLOS Computational Biology}, 13\penalty0 (6):\penalty0 1--46,
+  06 2017.
+\newblock \doi{10.1371/journal.pcbi.1005545}.
+
+\bibitem[Chizhov and Graham(2007)]{ChiGra07}
+A.~V. Chizhov and L.~J. Graham.
+\newblock Population model of hippocampal pyramidal neurons, linking a
+  refractory density approach to conductance-based neurons.
+\newblock \emph{Phys. Rev. E}, 75\penalty0 (1):\penalty0 011924, 2007.
+
+\bibitem[Chizhov and Graham(2008)]{ChiGra08}
+A.~V. Chizhov and L.~J. Graham.
+\newblock Efficient evaluation of neuron populations receiving colored-noise
+  current based on a refractory density method.
+\newblock \emph{Phys. Rev. E}, 77\penalty0 (1):\penalty0 011910, 2008.
+
+\bibitem[Dayan and Abbott(2005)]{DayAbb05}
+P.~Dayan and L.~F. Abbott.
+\newblock \emph{Theoretical Neuroscience: Computational and Mathematical
+  Modeling of Neural Systems}.
+\newblock The {MIT} Press, 1 edition, 2005.
+
+\bibitem[Deger et~al.(2014)Deger, Schwalger, Naud, and Gerstner]{DegSch14}
+M.~Deger, T.~Schwalger, R.~Naud, and W.~Gerstner.
+\newblock Fluctuations and information filtering in coupled populations of
+  spiking neurons with adaptation.
+\newblock \emph{Phys. Rev. E}, 90\penalty0 (6-1):\penalty0 062704, Dec 2014.
+\newblock \doi{10.1103/PhysRevE.90.062704}.
+
+\bibitem[Gerstner(2000)]{Ger00}
+W.~Gerstner.
+\newblock Population dynamics of spiking neurons: Fast transients, asynchronous
+  states, and locking.
+\newblock \emph{Neural Comput.}, 12:\penalty0 43, 2000.
+
+\bibitem[Gerstner and Kistler(2002)]{GerKis02}
+W.~Gerstner and W.~M. Kistler.
+\newblock \emph{Spiking Neuron Models: Single Neurons, Populations,
+  Plasticity}.
+\newblock Cambridge University Press, Cambridge, 2002.
+
 \bibitem[Gerstner et~al.(2014)Gerstner, Kistler, Naud, and Paninski]{GerKis14}
 W.~Gerstner, W.~M. Kistler, R.~Naud, and L.~Paninski.
 \newblock \emph{Neuronal Dynamics: From Single Neurons to Networks and Models
   of Cognition}.
 \newblock Cambridge University Press, Cambridge, 2014.
+
+\bibitem[Kandel et~al.(2000)Kandel, Schwartz, and Jessell]{KanSch00}
+E.~R. Kandel, J.~H. Schwartz, and T.~M. Jessell.
+\newblock \emph{Principles of Neural Science}.
+\newblock Mcgraw-Hill Professional, 4. a. edition, 2000.
+
+\bibitem[Knight(1972)]{Kni72}
+B.~W. Knight.
+\newblock Dynamics of encoding in a population of neurons.
+\newblock \emph{J. Gen. Physiol.}, 59:\penalty0 734, 1972.
+
+\bibitem[Knight et~al.(1996)Knight, Manin, and Sirovich]{KniMan96}
+B.~W. Knight, D.~Manin, and L.~Sirovich.
+\newblock Dynamical models of interacting neuron populations in visual cortex.
+\newblock \emph{Robot Cybern}, 54:\penalty0 4--8, 1996.
+
+\bibitem[Lefort et~al.(2009)Lefort, Tomm, Sarria, and Petersen]{Lef09}
+S.~Lefort, C.~Tomm, J.-C.~F. Sarria, and C.~C. Petersen.
+\newblock The excitatory neuronal network of the c2 barrel column in mouse
+  primary somatosensory cortex.
+\newblock \emph{Neuron}, 61\penalty0 (2):\penalty0 301 -- 316, 2009.
+\newblock ISSN 0896-6273.
+\newblock \doi{https://doi.org/10.1016/j.neuron.2008.12.020}.
+
+\bibitem[{Mattia}(2016)]{Mat16_arxiv}
+M.~{Mattia}.
+\newblock {Low-dimensional firing rate dynamics of spiking neuron networks}.
+\newblock \emph{ArXiv e-prints}, 2016.
+
+\bibitem[Mattia and {Del Giudice}(2002)]{MatGiu02}
+M.~Mattia and P.~{Del Giudice}.
+\newblock Population dynamics of interacting spiking neurons.
+\newblock \emph{Phys. Rev. E}, 66:\penalty0 051917, 2002.
+
+\bibitem[Ostojic and Brunel(2011)]{OstBru11}
+S.~Ostojic and N.~Brunel.
+\newblock From spiking neuron models to linear-nonlinear models.
+\newblock \emph{PLOS Computational Biology}, 7\penalty0 (1):\penalty0 1--16, 01
+  2011.
+\newblock \doi{10.1371/journal.pcbi.1001056}.
+
+\bibitem[Prijs et~al.(1993)Prijs, Keijzer, Versnel, and Schoonhoven]{Prij93}
+V.~F. Prijs, J.~Keijzer, H.~Versnel, and R.~Schoonhoven.
+\newblock Recovery characteristics of auditory nerve fibres in the normal and
+  noise-damaged guinea pig cochlea.
+\newblock \emph{Hearing Research}, 71\penalty0 (1):\penalty0 190 -- 201, 1993.
+\newblock ISSN 0378-5955.
+\newblock \doi{https://doi.org/10.1016/0378-5955(93)90034-X}.
+
+\bibitem[Risken(1984)]{Ris84}
+H.~Risken.
+\newblock \emph{The Fokker-Planck Equation}.
+\newblock Springer, Berlin, 1984.
+
+\bibitem[Schaffer et~al.(2013)Schaffer, Ostojic, and Abbott]{SchOst13}
+E.~S. Schaffer, S.~Ostojic, and L.~F. Abbott.
+\newblock A complex-valued firing-rate model that approximates the dynamics of
+  spiking networks.
+\newblock \emph{PLoS Comput. Biol.}, 9\penalty0 (10):\penalty0 e1003301, 2013.
+
+\bibitem[Schwalger(2013)]{Sch13}
+T.~Schwalger.
+\newblock \emph{The interspike-interval statistics of non-renewal neuron
+  models}.
+\newblock PhD thesis, Humboldt-Universitat zu Berlin,
+  Mathematisch-Naturwissenschaftliche Fakultat I, 2013.
+\newblock URL
+  \url{\url{http://edoc.hu-berlin.de/docviews/abstract.php?id=40328}}.
+
+\bibitem[{Schwalger} et~al.(2017){Schwalger}, {Deger}, and
+  {Gerstner}]{SchDeg17}
+T.~{Schwalger}, M.~{Deger}, and W.~{Gerstner}.
+\newblock {Towards a theory of cortical columns: From spiking neurons to
+  interacting neural populations of finite size}.
+\newblock \emph{PLoS Comput. Biol.}, 13\penalty0 (4):\penalty0 e1005507, 2017.
+\newblock \doi{10.1371/journal.pcbi.1005507}.
+
+\bibitem[van Vreeswijk(2010)]{Vre10}
+C.~van Vreeswijk.
+\newblock Stochastic models of spike trains.
+\newblock In S.~Grun and S.~Rotter, editors, \emph{Analysis of Parallel Spike
+  Trains}, chapter~1. Springer, 2010.
+
+\bibitem[Wilson and Cowan(1972)]{WilCow72}
+H.~R. Wilson and J.~D. Cowan.
+\newblock Excitatory and inhibitory interactions in localized populations of
+  model neurons.
+\newblock \emph{Biophys. J.}, 12\penalty0 (1):\penalty0 1, 1972.
 
 \end{thebibliography}

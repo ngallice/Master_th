@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.8)  12 JUN 2018 21:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.8)  18 JUN 2018 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,7 +762,7 @@ LaTeX Info: Redefining \nameref on input line 90.
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
- <figures/epfl.png, id=100, 1204.5pt x 578.16pt>
+ <figures/epfl.png, id=104, 1204.5pt x 578.16pt>
 File: figures/epfl.png Graphic file (type png)
 
 <use figures/epfl.png>
@@ -795,25 +795,27 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [8]
 Chapter 1.
+<figures/x285.png, id=184, 592.2125pt x 132.495pt>
+File: figures/x285.png Graphic file (type png)
+ <use figures/x285.png>
+Package pdftex.def Info: figures/x285.png used on input line 192.
+(pdftex.def)             Requested size: 368.57838pt x 82.46344pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 \begin{equation}
-                       [1
+l.198 
+       [1
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 205.
+ <./figures/x285.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 228.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 205.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 205.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 228.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -825,347 +827,426 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.264 
-       [2]pdfTeX warning (ext4): destination with the same identifier (name{pag
-e.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.331 T
-       he hazard rate, can be expressed using a recovery function $g(\tau)$
-[3] <figures/phi_h.pdf, id=212, 722.7pt x 361.35pt>
+l.247 
+       [2] <figures/phi_h.pdf, id=227, 722.7pt x 361.35pt>
 File: figures/phi_h.pdf Graphic file (type pdf)
- <use figures/phi_h.pdf>
-Package pdftex.def Info: figures/phi_h.pdf used on input line 347.
+
+<use figures/phi_h.pdf>
+Package pdftex.def Info: figures/phi_h.pdf used on input line 299.
 (pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
 
-<figures/poissonRHOSP.pdf, id=218, 1156.32pt x 289.08pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/poissonRHOSP.pdf, id=228, 1156.32pt x 289.08pt>
 File: figures/poissonRHOSP.pdf Graphic file (type pdf)
 
 <use figures/poissonRHOSP.pdf>
-Package pdftex.def Info: figures/poissonRHOSP.pdf used on input line 367.
+Package pdftex.def Info: figures/poissonRHOSP.pdf used on input line 307.
 (pdftex.def)             Requested size: 460.72124pt x 115.18002pt.
 
-<figures/expRHOSP.pdf, id=219, 1156.32pt x 289.08pt>
+<figures/expRHOSP.pdf, id=229, 1156.32pt x 289.08pt>
 File: figures/expRHOSP.pdf Graphic file (type pdf)
 
 <use figures/expRHOSP.pdf>
-Package pdftex.def Info: figures/expRHOSP.pdf used on input line 369.
+Package pdftex.def Info: figures/expRHOSP.pdf used on input line 309.
 (pdftex.def)             Requested size: 460.72124pt x 115.18002pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.382 \end{equation}
-                     [4 <./figures/phi_h.pdf>]
-<figures/gamma.pdf, id=262, 1156.32pt x 289.08pt>
+l.320 \end{equation}
+                     [3]pdfTeX warning (ext4): destination with the same identi
+fier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.320 \end{equation}
+                     [4 <./figures/phi_h.pdf> <./figures/poissonRHOSP.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/poissonRHOSP.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures/expRHOSP.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/expRHOSP.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>] <figures/gamma.pdf, id=308, 1156.32pt x 289.08pt>
 File: figures/gamma.pdf Graphic file (type pdf)
  <use figures/gamma.pdf>
-Package pdftex.def Info: figures/gamma.pdf used on input line 388.
+Package pdftex.def Info: figures/gamma.pdf used on input line 375.
 (pdftex.def)             Requested size: 460.72124pt x 115.18002pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<figures/PIF_V.pdf, id=310, 722.7pt x 361.35pt>
+File: figures/PIF_V.pdf Graphic file (type pdf)
+ <use figures/PIF_V.pdf>
+Package pdftex.def Info: figures/PIF_V.pdf used on input line 391.
+(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
 
-Underfull \vbox (badness 1337) has occurred while \output is active []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/inversegaussian.pdf, id=311, 1156.32pt x 289.08pt>
+File: figures/inversegaussian.pdf Graphic file (type pdf)
+
+<use figures/inversegaussian.pdf>
+Package pdftex.def Info: figures/inversegaussian.pdf used on input line 400.
+(pdftex.def)             Requested size: 460.72124pt x 115.18002pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.403 \end{align}
-                  [5 <./figures/poissonRHOSP.pdf> <./figures/expRHOSP.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/expRHOSP.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->] <figures/PIF_V.pdf, id=299, 722.7pt x 361.35pt>
-File: figures/PIF_V.pdf Graphic file (type pdf)
- <use figures/PIF_V.pdf>
-Package pdftex.def Info: figures/PIF_V.pdf used on input line 407.
-(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
-
-<figures/inversegaussian.pdf, id=300, 1156.32pt x 289.08pt>
-File: figures/inversegaussian.pdf Graphic file (type pdf)
-
-<use figures/inversegaussian.pdf>
-Package pdftex.def Info: figures/inversegaussian.pdf used on input line 416.
-(pdftex.def)             Requested size: 460.72124pt x 115.18002pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (13.7825pt too wide) in paragraph at lines 424--424
-[]\OT1/cmr/bx/n/17.28 Populations of neu-rons and re-frac-tory den-sity equa-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
-been already used, duplicate ignored
+l.407 
+       [5]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.430 \begin{equation}
-                       [6 <./figures/gamma.pdf> <./figures/PIF_V.pdf
+l.407 
+       [6 <./figures/gamma.pdf> <./figures/PIF_V.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/PIF_V.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
->]pdfTeX warning (ext4): destination with the same identifier (name{page.7}) ha
-s been already used, duplicate ignored
+> <./figures/inversegaussian.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/inversegaussian.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (4.58705pt too wide) in paragraph at lines 418--418
+[]\OT1/cmr/bx/n/17.28 Moment of the in-ter-spike in-ter-val dis-tri-bu-tion $\O
+ML/cmm/m/it/17.28 P\OT1/cmr/m/n/17.28 (\OML/cmm/m/it/17.28 ^^\\OT1/cmr/m/n/17.2
+8 )$ 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 418.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\tau' on input line 418.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 418.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.472 \end{equation}
-                     [7 <./figures/inversegaussian.pdf>]
-<figures/qtau.pdf, id=356, 788.85205pt x 462.19064pt>
-File: figures/qtau.pdf Graphic file (type pdf)
- <use figures/qtau.pdf>
-Package pdftex.def Info: figures/qtau.pdf used on input line 511.
-(pdftex.def)             Requested size: 322.50345pt x 188.95634pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+l.475 
+       [7]
+Overfull \hbox (13.7825pt too wide) in paragraph at lines 477--477
+[]\OT1/cmr/bx/n/17.28 Populations of neu-rons and re-frac-tory den-sity equa-
+ []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.535 \end{equation}
-                     [8] [9 <./figures/qtau.pdf>] [10] [11]
+l.513 \begin{equation}
+                       [8]
+<figures/qtau.pdf, id=410, 788.85205pt x 462.19064pt>
+File: figures/qtau.pdf Graphic file (type pdf)
+ <use figures/qtau.pdf>
+Package pdftex.def Info: figures/qtau.pdf used on input line 547.
+(pdftex.def)             Requested size: 322.50345pt x 188.95634pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10 <./figures/qtau.pdf>] [11] [12] [13]
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 636.
+(hyperref)                removing `math shift' on input line 739.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\lambda' on input line 636.
+(hyperref)                removing `\lambda' on input line 739.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 636.
+(hyperref)                removing `subscript' on input line 739.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 636.
+(hyperref)                removing `math shift' on input line 739.
 
-[12
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
+
+ []
+
+[14
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 705.
+(hyperref)                removing `math shift' on input line 804.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 705.
+(hyperref)                removing `superscript' on input line 804.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 705.
+(hyperref)                removing `math shift' on input line 804.
 
-
-Underfull \vbox (badness 5302) has occurred while \output is active []
-
- [13]
-[14] [15pdfTeX warning (ext4): destination with the same identifier (name{equat
-ion.2.3.24}) has been already used, duplicate ignored
+[15] [16] [17pdfTeX warning (ext4): destination with the same identifier (name{
+equation.2.3.22}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.830 \end{align}
-                 ] [16]
+l.935 \end{align}
+                 ] [18]
 Chapter 3.
-[17
+[19
 
-] <figures/poisson_eigenfunction2.pdf, id=531, 1156.32pt x 578.16pt>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
+
+ []
+
+<figures/poisson_eigenfunction2.pdf, id=626, 1156.32pt x 578.16pt>
 File: figures/poisson_eigenfunction2.pdf Graphic file (type pdf)
 
 <use figures/poisson_eigenfunction2.pdf>
 Package pdftex.def Info: figures/poisson_eigenfunction2.pdf used on input line 
-932.
+1032.
 (pdftex.def)             Requested size: 368.57838pt x 184.28275pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/gamma_eigenfunction.pdf, id=535, 1156.32pt x 578.16pt>
+[20] <figures/gamma_eigenfunction.pdf, id=644, 1156.32pt x 578.16pt>
 File: figures/gamma_eigenfunction.pdf Graphic file (type pdf)
 
 <use figures/gamma_eigenfunction.pdf>
-Package pdftex.def Info: figures/gamma_eigenfunction.pdf used on input line 968
-.
+Package pdftex.def Info: figures/gamma_eigenfunction.pdf used on input line 106
+6.
 (pdftex.def)             Requested size: 368.57838pt x 184.28275pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `eq:iversegaussian' on page 18 undefined on input line
- 978.
+LaTeX Warning: Reference `eq:iversegaussian' on page 21 undefined on input line
+ 1076.
 
-[18]
-Underfull \vbox (badness 5302) has occurred while \output is active []
-
- [19 <./figures/poisson_eigenfunction2.pdf> <./figures/gamma_eigenfunction.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/gamma_eigenfunctio
-n.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [20] <figures/kumulant_gamma.pdf, id=615, 722.7pt x 361.35pt>
+[21 <./figures/poisson_eigenfunction2.pdf>]
+<figures/kumulant_gamma.pdf, id=680, 722.7pt x 361.35pt>
 File: figures/kumulant_gamma.pdf Graphic file (type pdf)
 
 <use figures/kumulant_gamma.pdf>
-Package pdftex.def Info: figures/kumulant_gamma.pdf used on input line 1049.
+Package pdftex.def Info: figures/kumulant_gamma.pdf used on input line 1127.
 (pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
 
-<figures/kumulant_pif.pdf, id=616, 722.7pt x 361.35pt>
+<figures/kumulant_pif.pdf, id=681, 722.7pt x 361.35pt>
 File: figures/kumulant_pif.pdf Graphic file (type pdf)
 
 <use figures/kumulant_pif.pdf>
-Package pdftex.def Info: figures/kumulant_pif.pdf used on input line 1051.
+Package pdftex.def Info: figures/kumulant_pif.pdf used on input line 1129.
 (pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
- [21 <./figures/kumulant_gamma.pdf> <./figures/kumulant_pif.pdf
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22 <./figures/gamma_eigenfunction.pdf>] [23 <./figures/kumulant_gamma.pdf> <./
+figures/kumulant_pif.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/kumulant_pif.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
->]
+>] [24]
 Chapter 4.
 
-Overfull \hbox (15.37048pt too wide) in paragraph at lines 1064--1064
-[]\OT1/cmr/bx/n/17.28 Transcient re-sponse of teh pop-u-la-tion ac-tiv-ity star
+Overfull \hbox (15.37048pt too wide) in paragraph at lines 1163--1163
+[]\OT1/cmr/bx/n/17.28 Transcient re-sponse of the pop-u-la-tion ac-tiv-ity star
 t-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1064.
+(hyperref)                removing `math shift' on input line 1163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 1064.
+(hyperref)                removing `\tau' on input line 1163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delta' on input line 1064.
+(hyperref)                removing `\delta' on input line 1163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 1064.
+(hyperref)                removing `\tau' on input line 1163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1064.
+(hyperref)                removing `math shift' on input line 1163.
 
-<figures/delta_poisson.pdf, id=670, 722.7pt x 361.35pt>
+<figures/delta_poisson.pdf, id=775, 722.7pt x 361.35pt>
 File: figures/delta_poisson.pdf Graphic file (type pdf)
 
 <use figures/delta_poisson.pdf>
-Package pdftex.def Info: figures/delta_poisson.pdf used on input line 1075.
+Package pdftex.def Info: figures/delta_poisson.pdf used on input line 1167.
 (pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
+ [25
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/delta_gamma.pdf, id=675, 722.7pt x 361.35pt>
+ <./figures/delta_poisson.pdf>]
+<figures/delta_gamma.pdf, id=803, 722.7pt x 361.35pt>
 File: figures/delta_gamma.pdf Graphic file (type pdf)
 
 <use figures/delta_gamma.pdf>
-Package pdftex.def Info: figures/delta_gamma.pdf used on input line 1083.
+Package pdftex.def Info: figures/delta_gamma.pdf used on input line 1183.
 (pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[22
-
-] [23 <./figures/delta_poisson.pdf> <./figures/delta_gamma.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/delta_gamma.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->] <figures/NRMSo.pdf, id=723, 722.7pt x 361.35pt>
-File: figures/NRMSo.pdf Graphic file (type pdf)
- <use figures/NRMSo.pdf>
-Package pdftex.def Info: figures/NRMSo.pdf used on input line 1118.
-(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
-
-<figures/A_omega_t.pdf, id=726, 722.7pt x 722.7pt>
-File: figures/A_omega_t.pdf Graphic file (type pdf)
- <use figures/A_omega_t.pdf>
-Package pdftex.def Info: figures/A_omega_t.pdf used on input line 1129.
-(pdftex.def)             Requested size: 368.57838pt x 368.58315pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `' on page 24 undefined on input line 1143.
-
-<figures/fcos.pdf, id=729, 722.7pt x 361.35pt>
-File: figures/fcos.pdf Graphic file (type pdf)
- <use figures/fcos.pdf>
-Package pdftex.def Info: figures/fcos.pdf used on input line 1151.
-(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/A_t.pdf, id=730, 1203.76678pt x 1238.95306pt>
+<figures/A_t.pdf, id=808, 1203.76678pt x 1238.95306pt>
 File: figures/A_t.pdf Graphic file (type pdf)
  <use figures/A_t.pdf>
-Package pdftex.def Info: figures/A_t.pdf used on input line 1160.
+Package pdftex.def Info: figures/A_t.pdf used on input line 1195.
 (pdftex.def)             Requested size: 414.6463pt x 426.7587pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/NRMSe.pdf, id=733, 722.7pt x 361.35pt>
-File: figures/NRMSe.pdf Graphic file (type pdf)
- <use figures/NRMSe.pdf>
-Package pdftex.def Info: figures/NRMSe.pdf used on input line 1169.
-(pdftex.def)             Requested size: 414.6463pt x 207.32251pt.
+<figures/A_omega_t.pdf, id=811, 722.7pt x 722.7pt>
+File: figures/A_omega_t.pdf Graphic file (type pdf)
+ <use figures/A_omega_t.pdf>
+Package pdftex.def Info: figures/A_omega_t.pdf used on input line 1207.
+(pdftex.def)             Requested size: 368.57838pt x 368.58315pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24 <./figures/NRMSo.pdf>] [25 <./figures/A_omega_t.pdf>] [26 <./figures/fcos.p
-df>] [27 <./figures/A_t.pdf>] [28 <./figures/NRMSe.pdf>]
+<figures/NRMSo.pdf, id=812, 722.7pt x 361.35pt>
+File: figures/NRMSo.pdf Graphic file (type pdf)
+ <use figures/NRMSo.pdf>
+Package pdftex.def Info: figures/NRMSo.pdf used on input line 1216.
+(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/fcos.pdf, id=815, 722.7pt x 361.35pt>
+File: figures/fcos.pdf Graphic file (type pdf)
+ <use figures/fcos.pdf>
+Package pdftex.def Info: figures/fcos.pdf used on input line 1227.
+(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
+ Make it at least 27.18335pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26 <./figures/delta_gamma.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27 <./figures/A_t.pdf>] [28 <./figures/A_omega_t.pdf>]
+
+LaTeX Warning: Reference `NRMSe' on page 29 undefined on input line 1274.
+
+<figures/NRMSe.pdf, id=898, 722.7pt x 361.35pt>
+File: figures/NRMSe.pdf Graphic file (type pdf)
+ <use figures/NRMSe.pdf>
+Package pdftex.def Info: figures/NRMSe.pdf used on input line 1279.
+(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
+
+[29 <./figures/NRMSo.pdf> <./figures/fcos.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/fcos.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `NRMSstep' on page 30 undefined on input line 1286.
+
+<figures/Astep.pdf, id=942, 722.7pt x 361.35pt>
+File: figures/Astep.pdf Graphic file (type pdf)
+ <use figures/Astep.pdf>
+Package pdftex.def Info: figures/Astep.pdf used on input line 1290.
+(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
+
+<figures/NRMSstep.pdf, id=943, 722.7pt x 361.35pt>
+File: figures/NRMSstep.pdf Graphic file (type pdf)
+ <use figures/NRMSstep.pdf>
+Package pdftex.def Info: figures/NRMSstep.pdf used on input line 1298.
+(pdftex.def)             Requested size: 368.57838pt x 184.29158pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/refractory_rep.pdf, id=944, 867.24pt x 505.89pt>
+File: figures/refractory_rep.pdf Graphic file (type pdf)
+
+<use figures/refractory_rep.pdf>
+Package pdftex.def Info: figures/refractory_rep.pdf used on input line 1308.
+(pdftex.def)             Requested size: 322.50345pt x 188.12582pt.
+ [30 <./figures/NRMSe.pdf> <./figures/Astep.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/Astep.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>] [31 <./figures/NRMSstep.pdf> <./figures/refractory_rep.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/refractory_rep.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 1321--1322
+
+ []
+
+[32]
 Chapter 5.
-[29
+[33
 
-] (./thesis.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1210.
- [30
+] (./thesis.bbl [34
 
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1210.
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1363.
+ [35]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1363.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1210.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1210.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1363.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1363.
 
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: FA25DE3DDCDA4B3D8FBFF8F3E3CE1586;1986.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 1D901E50DE04875CE5489674D69C536F;1989
-(rerunfilecheck)             After:  7D5B1D332E8108C9C67801E95AA38497;2053.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1210.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1363.
  ) 
 Here is how much of TeX's memory you used:
- 9264 strings out of 492995
- 135900 string characters out of 6132705
- 242288 words of memory out of 5000000
- 12440 multiletter control sequences out of 15000+600000
- 19576 words of font info for 73 fonts, out of 8000000 for 9000
+ 9405 strings out of 492995
+ 138070 string characters out of 6132705
+ 244627 words of memory out of 5000000
+ 12545 multiletter control sequences out of 15000+600000
+ 17331 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,13n,43p,776b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,43p,1038b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1182,15 +1263,14 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (38 pages, 696300 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (43 pages, 787259 bytes).
 PDF statistics:
- 972 PDF objects out of 1000 (max. 8388607)
- 855 compressed objects within 9 object streams
- 191 named destinations out of 1000 (max. 500000)
- 288 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1153 PDF objects out of 1200 (max. 8388607)
+ 1018 compressed objects within 11 object streams
+ 221 named destinations out of 1000 (max. 500000)
+ 316 words of extra memory for PDF output out of 10000 (max. 10000000)
 

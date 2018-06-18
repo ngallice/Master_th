@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.8)  12 JUN 2018 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.8)  14 JUN 2018 10:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1563,23 +1563,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count308
 )
-(./Noe_Gallice.aux
-
-! Package natbib Error: Bibliography not compatible with author-year citations.
-
-(natbib)                Press <return> to continue in numerical citation style.
-
-
-See the natbib package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.150 ...and\NAT@force@numbers{}\NAT@force@numbers
-                                                  
-Check the bibliography entries for non-compliant syntax,
-or select author-year BibTeX style, e.g. plainnat
-
-)
+(./Noe_Gallice.aux)
 \openout1 = `Noe_Gallice.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
@@ -1599,7 +1583,8 @@ LaTeX Font Info:    ... okay on input line 131.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 131.
 
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 131.
@@ -1838,115 +1823,38 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/kumulant_pif.pdf):
 File: figures/delta_poisson.pdf Graphic file (type pdf)
 
 <use figures/delta_poisson.pdf>
-Package pdftex.def Info: figures/delta_poisson.pdf used on iing: Citation `GerKis14' on page 19 undefined on input line 
+Package pdftex.def Info: figures/delta_poisson.pdf used on input line 1118.
+(pdftex.def)             Requested size: 364.19664pt x 182.0971pt.
+
+<figures/delta_gamma.pdf, id=564, 722.7pt x 361.35pt>
+File: figures/delta_gamma.pdf Graphic file (type pdf)
+
+<use figures/delta_gamma.pdf>
+Package pdftex.def Info: figures/delta_gamma.pdf used on input line 1126.
+(pdftex.def)             Requested size: 364.19664pt x 182.0971pt.
+ [18 <./figures/delta_poisson.pdf> <./figures/delta_gamma.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/delta_gamma.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `fig:A_omega_t' on page 19 undefined on input line 115
+7.
+
+<figures/NRMSo.pdf, id=606, 722.7pt x 361.35pt>
+File: figures/NRMSo.pdf Graphic file (type pdf)
+ <use figures/NRMSo.pdf>
+Package pdftex.def Info: figures/NRMSo.pdf used on input line 1164.
+(pdftex.def)             Requested size: 364.19664pt x 182.0971pt.
+
+
+Package natbib Warning: Citation `GerKis14' on page 19 undefined on input line 
 1172.
 
-(./Noe_Gallice.bbl
-./Noe_Gallice.bbl:6: Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.6 \newblock {\em
-                   Neuronal Dynamics: From Single Neurons to Networks and Mo...
 
-? 
-./Noe_Gallice.bbl:6: Emergency stop.
-\math@cr@@@ ->\cr 
-                  
-l.6 \newblock {\em
-                   Neuronal Dynamics: From Single Neurons to Networks and Mo...
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 31591 strings out of 492995
- 596940 string characters out of 6132705
- 649328 words of memory out of 5000000
- 34413 multiletter control sequences out of 15000+600000
- 570588 words of font info for 125 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 55i,13n,65p,10429b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
-./Noe_Gallice.bbl:6:  ==> Fatal error occurred, no output PDF file produced!
-Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.6 \newblock {\em
-                   Neuronal Dynamics: From Single Neurons to Networks and Mo...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.6 \newblock {\em
-                   Neuronal Dynamics: From Single Neurons to Networks and Mo...
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-
-! LaTeX Error: \begin{thebibliography} on input line 2 ended by \end{multline}.
-
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \newblock {\em
-                   Neuronal Dynamics: From Single Neurons to Networks and Mo...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.6 \newblock {\em
-                   Neuronal Dynamics: From Single Neurons to Networks and Mo...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.6 \newblock {\em
-                   Neuronal Dynamics: From Single Neurons to Networks and Mo...
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+Package natbib Warning: There were undefined citations.
 
 [19 <./figures/NRMSo.pdf>]
-! Too many }'s.
-l.7   Cognition}
-                .
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-
-! LaTeX Error: \begin{document} ended by \end{thebibliography}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 \end{thebibliography}
-                          
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.10 \end{thebibliography}
-                          
-Things are pretty mixed up, but I think the worst is over.
-
-) [20]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1199.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1199.
  (./Noe_Gallice.aux)
@@ -1959,13 +1867,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1199.
  ) 
 Here is how much of TeX's memory you used:
- 31644 strings out of 492995
- 597624 string characters out of 6132705
+ 31633 strings out of 492995
+ 597508 string characters out of 6132705
  650328 words of memory out of 5000000
- 34453 multiletter control sequences out of 15000+600000
+ 34448 multiletter control sequences out of 15000+600000
  579971 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,13n,65p,10429b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,65p,10429b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/
 usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/
 local/texlive/2017/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{/usr/loca
@@ -1994,10 +1902,10 @@ s/cm/cmss17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 euler/eufm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
 plb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.p
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Noe_Gallice.pdf (20 pages, 630796 bytes).
+Output written on Noe_Gallice.pdf (19 pages, 629657 bytes).
 PDF statistics:
- 755 PDF objects out of 1000 (max. 8388607)
- 668 compressed objects within 7 object streams
- 169 named destinations out of 1000 (max. 500000)
+ 747 PDF objects out of 1000 (max. 8388607)
+ 661 compressed objects within 7 object streams
+ 166 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

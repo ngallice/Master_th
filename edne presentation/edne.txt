@@ -1,0 +1,66 @@
+
+
+Hi, Im Noe Gallice I’m an EPFL physics student, and before I’ll present you my master project that I hand in today. I will briefly introduce my education with a little tour of Epfl,  so after my bachelor in physics I move to the East side of the campus for my Master and I joined the Laboratory of statitical biophysics of Paolo de los Rios to do what is called TPIV. 
+
+
+
+My minor in computational neuroscience offer me the opportunity to discover the West-side of the campus but more importantly, to discover the intriguing world of neuroscience. I did my Minor Project in the Laboratory of Wulfram gerstner, and my work focus on the influence of surprise in human behavior. And I had the great chance to continue in the lab with my master project working on a complete different topic that I will present to you now
+
+
+My work focus and deriving a low dimensional population dynamics using eigenfunction expansion, it’s quite a theoretical work and I will not have the time to go deeply into the math detail and analytical derivation. But I will present you the main idea and some results
+
+In the brain billion of neurons form complex network, they communicate with each other by short electrical pulse called spikes or action potential. And we can describe the spike trains at different level.
+
+One of the most common ways to model large neuronal networks is to use a simplification called a firing rate model. This equivalent to a mean field approach where rather than record the spiking train of every single neuron (represnted by lines of dots), one tracks the averaged behavior of the spike rates of groups of neurons. 
+
+And thus at the mesocopic level we can defined the population activity  with the proportion of active neurons. So we count the number of spikes nactin a small time interval Δt and dividing by NDelta t we get the activity 
+
+Most of the firing rate model are phenomenological model but are not derived from the spike trains statistic of individual neurons, and not linked to biophysical parameters. 
+
+And so the aim of this study was to derive a low dimensional firing rate model that approximates the dynamics of spiking neuron networks. And before I’ll present the spectral expansion methods I will introduce the refractory density.
+
+So we consider a large homogenous population of neurons modeled by a time dependent renewal process. Which keep the memory of the last firing time. So the age of the neuron, or the time since the last spike is the state variable. And spikes are generated according to hazard function \rho. The probability to spike at time t knowing that there were no spike between $t$ and $\hat{t}$. 
+
+Here is an example for the poisson process with absolute refractoriness 
+
+The refractory density q corresponds to density of age at a certain time, 
+
+So here is a scheme of the refractory density as a function of the age tau for a certain time t
+
+Now if we discretize the time and the age in small interval \Delta t.
+The instantaneous probability to fire is given by the hazard function
+The proprotion of the neuron which fire in this small interval is given by and they will reapire at age 0. The others will reach the age tau_i+1 at time tau_j+1, and if we subtract q and divide both side by dt, we obtain this relation and taking the limit Dt to 0 we recover the continuity equation
+
+And the boundary condition of this equation are
+q(infant)=0 a neuron will fire at a finite time
+
+The sum of all trajectory that "disappear" at time $t$ due to firing, are "reappearing" at $\tau=0$, so q(0,t) can be expressed as the integral and this corresponds also to the activity.
+
+So we just derived this refractory density equation and introducing this operator L we can rewrite it like this.
+
+And then we can find the set of eigvalues and eigenfunctions of this operator. Note that lambda =0 is always an Eigenvalue of the operator $\mathcal{L}$ and corresponds to the stationary solution.
+
+Now we can expand the refractory density on this basis, where an are the time dependent coefficients of the modal expansion. And are obtained projecting the refractory density on the psi_n the eigenfunction of the adjoint operator. Because as L is not hermitian we have to define the adjoint operator.
+
+Know we have a biorthonormal basis and the corresponding eigenvalue we can look at the activity
+
+We will keep from this sum the Phi_0 is the eigenmode of the stady state. 
+
+The first eigen mode an it’s complex conjugate. Here both psi and a are complex and thus the sum run over all integer n.
+
+Now to compute we will derived 2 differential equation for the real and imaginary part of the an using the property of the operator and the biorthonormal basis, I want go into the details but the take home message is that we get 2 first order PDE keeping the first slowest mod, and thus obtained a low dimensional population dynamics.
+
+
+
+
+
+
+
+
+
+%And my work focused on recovering equilibrium properties in nonequilibrium simulations of Langevin dynamics using Jarzynski equality. // change minor if add it
+
+
+
+
+
