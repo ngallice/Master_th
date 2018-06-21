@@ -31,11 +31,12 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{sec:intro}{{1}{1}{Introduction}{chapter.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces  Response of population to a signal $I(t)$, represented by a sinusoidal modulation of the input starting at $t_{ON}$ and ending at $t_{OFF}$, stimulates the population of $8 000$ excitatory neurons in a randomly coupled network of $8 000$ excitatory and $2 000$ inhibitory neurons (left). Each neuron produces a spike train (middle) illustrated here by lines of dots, each dot corresponding to a spike. Only $1\%$ of the population is shown. At the mesoscopic level, the population activity $A(t)$ (right) counts spikes in time bins of $1$ ms averaged over the $8 000$ excitatory neurons. [\cite  {GerKis14}] \relax }}{1}{figure.caption.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces  Response of population to a signal $I(t)$, represented by a sinusoidal modulation of the input starting at $t_{ON}$ and ending at $t_{OFF}$, stimulates the population of $8 000$ excitatory neurons in a randomly coupled network of $8 000$ excitatory and $2 000$ inhibitory neurons (left). Each neuron produces a spike train (middle) illustrated here by lines of dots, each dot corresponding to a spike. Only $1\%$ of the population is shown. At the macroscopic level, the population activity $A(t)$ (right) counts spikes in time bins of $1$ ms averaged over the $8 000$ excitatory neurons. [\cite  {GerKis14}] \relax }}{1}{figure.caption.4}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:x285}{{1.1}{1}{Response of population to a signal $I(t)$, represented by a sinusoidal modulation of the input starting at $t_{ON}$ and ending at $t_{OFF}$, stimulates the population of $8 000$ excitatory neurons in a randomly coupled network of $8 000$ excitatory and $2 000$ inhibitory neurons (left). Each neuron produces a spike train (middle) illustrated here by lines of dots, each dot corresponding to a spike. Only $1\%$ of the population is shown. At the mesoscopic level, the population activity $A(t)$ (right) counts spikes in time bins of $1$ ms averaged over the $8 000$ excitatory neurons. [\cite {GerKis14}] \relax }{figure.caption.4}{}}
+\newlabel{fig:x285}{{1.1}{1}{Response of population to a signal $I(t)$, represented by a sinusoidal modulation of the input starting at $t_{ON}$ and ending at $t_{OFF}$, stimulates the population of $8 000$ excitatory neurons in a randomly coupled network of $8 000$ excitatory and $2 000$ inhibitory neurons (left). Each neuron produces a spike train (middle) illustrated here by lines of dots, each dot corresponding to a spike. Only $1\%$ of the population is shown. At the macroscopic level, the population activity $A(t)$ (right) counts spikes in time bins of $1$ ms averaged over the $8 000$ excitatory neurons. [\cite {GerKis14}] \relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Renewal processes}{2}{section.1.1}}
 \newlabel{sec:renew}{{1.1}{2}{Renewal processes}{section.1.1}{}}
+\newlabel{eq:h}{{1.1}{2}{Renewal processes}{equation.1.1.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Interval distribution and Survivor function}{2}{subsection.1.1.1}}
 \newlabel{eq:Pnorm}{{1.3}{2}{Interval distribution and Survivor function}{equation.1.1.3}{}}
 \newlabel{eq:S1}{{1.4}{3}{Interval distribution and Survivor function}{equation.1.1.4}{}}
@@ -47,75 +48,73 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Examples }{3}{subsection.1.1.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces  Rate $\Phi (h)$ as a function of input potential $h$. With $h_0=15$ mV , $\beta =1$ mV$^{_1}$ and $\nu _{max}=0.6$ kHz.\relax }}{4}{figure.caption.6}}
 \newlabel{fig:phi_h}{{1.2}{4}{Rate $\Phi (h)$ as a function of input potential $h$. With $h_0=15$ mV , $\beta =1$ mV$^{_1}$ and $\nu _{max}=0.6$ kHz.\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for different recovery function $g(\tau )$. (a) Recovery function corresponds to a Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. (b) Recovery function defined by $ g(\tau )=\left [1-\qopname  \relax o{exp}(-\eta (\tau -\Delta ))\right ]\theta (\tau -\Delta )$ Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. \relax }}{4}{figure.caption.7}}
-\newlabel{fig:renewalprocess}{{1.3}{4}{Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for different recovery function $g(\tau )$. (a) Recovery function corresponds to a Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. (b) Recovery function defined by $ g(\tau )=\left [1-\exp (-\eta (\tau -\Delta ))\right ]\theta (\tau -\Delta )$ Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. \relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for different recovery function $g(\tau )$. (a) Recovery function for a Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. (b) Recovery function defined by $ g(\tau )=\left [1-\qopname  \relax o{exp}(-\eta (\tau -\Delta ))\right ]\theta (\tau -\Delta )$ Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. \relax }}{4}{figure.caption.7}}
+\newlabel{fig:renewalprocess}{{1.3}{4}{Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for different recovery function $g(\tau )$. (a) Recovery function for a Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. (b) Recovery function defined by $ g(\tau )=\left [1-\exp (-\eta (\tau -\Delta ))\right ]\theta (\tau -\Delta )$ Poisson neuron with absolute refractoriness $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=600$ Hz. \relax }{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {paragraph}{Simple model with recovery function}{4}{figure.caption.7}}
 \citation{Prij93}
-\newlabel{eq:hi}{{1.10}{5}{Simple model with recovery function}{equation.1.1.10}{}}
-\newlabel{eq:rho}{{1.11}{5}{Simple model with recovery function}{equation.1.1.11}{}}
-\newlabel{eq:phi}{{1.12}{5}{Simple model with recovery function}{equation.1.1.12}{}}
-\newlabel{eq:poissonabs}{{1.13}{5}{Simple model with recovery function}{equation.1.1.13}{}}
-\newlabel{eq:expabs}{{1.14}{5}{Simple model with recovery function}{equation.1.1.14}{}}
-\@writefile{toc}{\contentsline {paragraph}{Gamma process}{5}{section*.8}}
-\newlabel{eq:gamma}{{1.15}{5}{Gamma process}{equation.1.1.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces \textbf  {Gamma process.} Hazard rate $\rho (\tau )$ (left), interval distribution $P(\tau )$ (middle) and survivor functio $S(\rho (\tau )$ (right) for a Gamma process with $\beta =100$ Hz $\gamma =10$ \relax }}{6}{figure.caption.9}}
-\newlabel{fig:gammaprocess}{{1.4}{6}{\textbf {Gamma process.} Hazard rate $\rho (\tau )$ (left), interval distribution $P(\tau )$ (middle) and survivor functio $S(\rho (\tau )$ (right) for a Gamma process with $\beta =100$ Hz $\gamma =10$ \relax }{figure.caption.9}{}}
+\newlabel{eq:rho}{{1.10}{5}{Simple model with recovery function}{equation.1.1.10}{}}
+\newlabel{eq:phi}{{1.11}{5}{Simple model with recovery function}{equation.1.1.11}{}}
+\newlabel{eq:poissonabs}{{1.12}{5}{Simple model with recovery function}{equation.1.1.12}{}}
+\newlabel{eq:expabs}{{1.13}{5}{Simple model with recovery function}{equation.1.1.13}{}}
+\@writefile{toc}{\contentsline {paragraph}{Gamma neuron model}{5}{section*.8}}
+\newlabel{eq:gamma}{{1.14}{5}{Gamma neuron model}{equation.1.1.14}{}}
+\newlabel{sec:pif}{{1.1.2}{5}{Perfect integrate-and-fire model driven by white noise}{section*.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{Perfect integrate-and-fire model driven by white noise}{5}{figure.caption.12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces \textbf  {Gamma neuron model.} Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for a Gamma neuron model with $\beta =100$ Hz and $\gamma =10$ \relax }}{6}{figure.caption.9}}
+\newlabel{fig:gammaprocess}{{1.4}{6}{\textbf {Gamma neuron model.} Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for a Gamma neuron model with $\beta =100$ Hz and $\gamma =10$ \relax }{figure.caption.9}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Typical realization $V(t)$ for the PIF model driven with a white noise with $f(h)=0.3$ $V_{th}$, $D=0.1$ $V_{th}^2$,$\tau _v=1$ ms $V_{th}=1$. The generated spike train is indicated on the top. \relax }}{6}{figure.caption.11}}
 \newlabel{fig:PIFV}{{1.5}{6}{Typical realization $V(t)$ for the PIF model driven with a white noise with $f(h)=0.3$ $V_{th}$, $D=0.1$ $V_{th}^2$,$\tau _v=1$ ms $V_{th}=1$. The generated spike train is indicated on the top. \relax }{figure.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces \textbf  {PIF neurons.} Hazard rate $\rho (\tau )$ (left), interval distribution $P(\tau )$ (middle) and survivor function $S(\rho (\tau )$ (right) for the PIF model. \relax }}{6}{figure.caption.12}}
-\newlabel{fig:inversegaussianprocess}{{1.6}{6}{\textbf {PIF neurons.} Hazard rate $\rho (\tau )$ (left), interval distribution $P(\tau )$ (middle) and survivor function $S(\rho (\tau )$ (right) for the PIF model. \relax }{figure.caption.12}{}}
-\newlabel{sec:pif}{{1.1.2}{6}{Perfect integrate-and-fire model driven by white noise}{section*.10}{}}
-\@writefile{toc}{\contentsline {paragraph}{Perfect integrate-and-fire model driven by white noise}{6}{figure.caption.12}}
-\newlabel{eq:Vxi}{{1.16}{7}{Perfect integrate-and-fire model driven by white noise}{equation.1.1.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Moment of the interspike interval distribution $P(\tau )$}{7}{section.1.2}}
-\newlabel{eq:Pmoment}{{1.18}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.18}{}}
-\newlabel{eq:Plaplace}{{1.19}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.19}{}}
-\newlabel{eq:Pmoment2}{{1.20}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.20}{}}
-\newlabel{eq:Pcumulant}{{1.21}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.21}{}}
-\newlabel{eq:kappa1234}{{1.22}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.22}{}}
-\newlabel{eq:R}{{1.24}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces \textbf  {PIF neurons.} Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for the PIF model driven with a white noise with $f(h)=0.3$ $V_{th}$, $D=0.1$ $V_{th}^2$,$\tau _v=1$ ms $V_{th}=1$ \relax }}{6}{figure.caption.12}}
+\newlabel{fig:inversegaussianprocess}{{1.6}{6}{\textbf {PIF neurons.} Hazard rate $\rho (\tau ,h)$ (left), interval distribution $P(\tau ,h)$ (middle) and survivor function $S(\tau ,h)$ (right) for the PIF model driven with a white noise with $f(h)=0.3$ $V_{th}$, $D=0.1$ $V_{th}^2$,$\tau _v=1$ ms $V_{th}=1$ \relax }{figure.caption.12}{}}
+\newlabel{eq:Vxi}{{1.15}{6}{Perfect integrate-and-fire model driven by white noise}{equation.1.1.15}{}}
 \citation{Lef09}
 \citation{KanSch00}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Moment of the interspike interval distribution $P(\tau )$}{7}{section.1.2}}
+\newlabel{eq:Pmoment}{{1.17}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.17}{}}
+\newlabel{eq:Plaplace}{{1.18}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.18}{}}
+\newlabel{eq:Pmoment2}{{1.19}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.19}{}}
+\newlabel{eq:Pcumulant}{{1.20}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.20}{}}
+\newlabel{eq:kappa1234}{{1.21}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.21}{}}
+\newlabel{eq:R}{{1.23}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.23}{}}
+\newlabel{eq:CV}{{1.24}{7}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.24}{}}
 \citation{Kni72}
 \citation{WilCow72}
 \citation{SchDeg17}
 \citation{GerKis02}
-\newlabel{eq:CV}{{1.25}{8}{Moment of the interspike interval distribution $P(\tau )$}{equation.1.2.25}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Populations of neurons and refractory density equations}{8}{section.1.3}}
 \newlabel{sec:refractory}{{1.3}{8}{Populations of neurons and refractory density equations}{section.1.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Population model}{8}{subsection.1.3.1}}
-\newlabel{eq:mu}{{1.27}{8}{Population model}{equation.1.3.27}{}}
-\newlabel{eq:input}{{1.28}{8}{Population model}{equation.1.3.28}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Refractory density equation}{9}{subsection.1.3.2}}
-\newlabel{eq:A}{{1.29}{9}{Refractory density equation}{equation.1.3.29}{}}
-\newlabel{eq:continuity1}{{1.30}{9}{Refractory density equation}{equation.1.3.30}{}}
-\newlabel{eq:masterequation}{{1.31}{9}{Refractory density equation}{equation.1.3.31}{}}
-\newlabel{eq:boundarycondition}{{1.32}{9}{Refractory density equation}{equation.1.3.32}{}}
-\newlabel{eq:qnormalisation}{{1.34}{9}{Refractory density equation}{equation.1.3.34}{}}
-\newlabel{eq:qinitial}{{1.35}{9}{Refractory density equation}{equation.1.3.35}{}}
+\newlabel{eq:input}{{1.26}{8}{Population model}{equation.1.3.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Refractory density equation}{8}{subsection.1.3.2}}
+\newlabel{eq:A}{{1.27}{8}{Refractory density equation}{equation.1.3.27}{}}
+\newlabel{eq:continuity1}{{1.28}{9}{Refractory density equation}{equation.1.3.28}{}}
+\newlabel{eq:masterequation}{{1.29}{9}{Refractory density equation}{equation.1.3.29}{}}
+\newlabel{eq:boundarycondition}{{1.30}{9}{Refractory density equation}{equation.1.3.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Scheme of refractory density dynamics. The red arrow represents the proportion of neurons with age $\tau _i$ whose fire at time $t_j$, the blue one represents those that are not firing and will reach the age $\tau _{j+1}$ at time $t_{j+1}$. Taking the limit $\Delta t \rightarrow 0$ yields to Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:masterequation}\unskip \@@italiccorr )}} \relax }}{9}{figure.caption.13}}
+\newlabel{fig:qtau}{{1.7}{9}{Scheme of refractory density dynamics. The red arrow represents the proportion of neurons with age $\tau _i$ whose fire at time $t_j$, the blue one represents those that are not firing and will reach the age $\tau _{j+1}$ at time $t_{j+1}$. Taking the limit $\Delta t \rightarrow 0$ yields to Eq.\eqref {eq:masterequation} \relax }{figure.caption.13}{}}
+\newlabel{eq:qnormalisation}{{1.32}{9}{Refractory density equation}{equation.1.3.32}{}}
 \citation{MatGiu02}
 \citation{SchOst13}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces Scheme of refractory density dynamics. The red arrow represents the proportion of neurons with age $\tau _i$ whose fire at time $t_j$, the blue one represents those that are not firing and will reach the age $\tau _{j+1}$ at time $t_{j+1}$. Taking the limit $\Delta t \rightarrow 0$ yields to Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:masterequation}\unskip \@@italiccorr )}} \relax }}{10}{figure.caption.13}}
-\newlabel{fig:qtau}{{1.7}{10}{Scheme of refractory density dynamics. The red arrow represents the proportion of neurons with age $\tau _i$ whose fire at time $t_j$, the blue one represents those that are not firing and will reach the age $\tau _{j+1}$ at time $t_{j+1}$. Taking the limit $\Delta t \rightarrow 0$ yields to Eq.\eqref {eq:masterequation} \relax }{figure.caption.13}{}}
+\newlabel{eq:qinitial}{{1.33}{10}{Refractory density equation}{equation.1.3.33}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Spectral decomposition method}{10}{section.1.4}}
 \newlabel{sec:spect}{{1.4}{10}{Spectral decomposition method}{section.1.4}{}}
-\newlabel{eq:generaleq}{{1.36}{10}{Spectral decomposition method}{equation.1.4.36}{}}
+\newlabel{eq:generaleq}{{1.34}{10}{Spectral decomposition method}{equation.1.4.34}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}General properties of the evolution operator}{10}{subsection.1.4.1}}
-\newlabel{eq:fokkerplanckoperator}{{1.37}{10}{General properties of the evolution operator}{equation.1.4.37}{}}
-\newlabel{eq:fokkerplanckoperatordega}{{1.38}{11}{General properties of the evolution operator}{equation.1.4.38}{}}
-\newlabel{eq:innerproduct}{{1.39}{11}{General properties of the evolution operator}{equation.1.4.39}{}}
-\newlabel{eq:sameeig}{{1.40}{11}{General properties of the evolution operator}{equation.1.4.40}{}}
-\newlabel{eq:fokkerplanckoperatordega2}{{1.41}{11}{General properties of the evolution operator}{equation.1.4.41}{}}
-\newlabel{eq:lorthogonal}{{1.42}{11}{General properties of the evolution operator}{equation.1.4.42}{}}
-\newlabel{eq:dij}{{1.43}{11}{General properties of the evolution operator}{equation.1.4.43}{}}
-\newlabel{eq:p}{{1.44}{11}{General properties of the evolution operator}{equation.1.4.44}{}}
+\newlabel{eq:fokkerplanckoperator}{{1.35}{10}{General properties of the evolution operator}{equation.1.4.35}{}}
+\newlabel{eq:fokkerplanckoperatordega}{{1.36}{10}{General properties of the evolution operator}{equation.1.4.36}{}}
+\newlabel{eq:innerproduct}{{1.37}{10}{General properties of the evolution operator}{equation.1.4.37}{}}
+\newlabel{eq:sameeig}{{1.38}{11}{General properties of the evolution operator}{equation.1.4.38}{}}
+\newlabel{eq:fokkerplanckoperatordega2}{{1.39}{11}{General properties of the evolution operator}{equation.1.4.39}{}}
+\newlabel{eq:lorthogonal}{{1.40}{11}{General properties of the evolution operator}{equation.1.4.40}{}}
+\newlabel{eq:dij}{{1.41}{11}{General properties of the evolution operator}{equation.1.4.41}{}}
+\newlabel{eq:p}{{1.42}{11}{General properties of the evolution operator}{equation.1.4.42}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Rate equation}{11}{subsection.1.4.2}}
+\newlabel{eq:AJq}{{1.43}{11}{Rate equation}{equation.1.4.43}{}}
 \citation{MatGiu02}
 \citation{GerKis02}
 \citation{SchOst13}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Rate equation}{12}{subsection.1.4.2}}
-\newlabel{eq:AJq}{{1.45}{12}{Rate equation}{equation.1.4.45}{}}
-\newlabel{eq:AJphi}{{1.48}{12}{Rate equation}{equation.1.4.48}{}}
-\newlabel{eq:andyn}{{1.49}{12}{Rate equation}{equation.1.4.49}{}}
+\newlabel{eq:AJphi}{{1.46}{12}{Rate equation}{equation.1.4.46}{}}
+\newlabel{eq:andyn}{{1.47}{12}{Rate equation}{equation.1.4.47}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}Aim of the study}{13}{section.1.5}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Theory}{14}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -127,23 +126,30 @@
 \newlabel{eq:masterequation2}{{2.2}{14}{Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{equation.2.1.2}{}}
 \newlabel{eq:Loperator2}{{2.3}{14}{Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{equation.2.1.3}{}}
 \newlabel{eq:boundarycondition2}{{2.4}{14}{Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{equation.2.1.4}{}}
+\citation{Sch16}
+\citation{Sch16}
 \newlabel{eq:phin}{{2.6}{15}{Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{equation.2.1.6}{}}
 \newlabel{eq:condition1}{{2.7}{15}{Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{equation.2.1.7}{}}
 \newlabel{eq:condition2}{{2.8}{15}{Operator of the refractory density, and eigenvalue spectrum $\{\lambda _n\}$}{equation.2.1.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Adjoint operator $\mathcal  {L}^+$, and normalization}{15}{section.2.2}}
 \newlabel{sec:adop}{{2.2}{15}{Adjoint operator $\mathcal {L}^+$, and normalization}{section.2.2}{}}
 \newlabel{eq:Ldegaoperator}{{2.10}{15}{Adjoint operator $\mathcal {L}^+$, and normalization}{equation.2.2.10}{}}
-\newlabel{eq:Ldega}{{2.12}{16}{Adjoint operator $\mathcal {L}^+$, and normalization}{equation.2.2.12}{}}
-\newlabel{eq:psin}{{2.13}{16}{Adjoint operator $\mathcal {L}^+$, and normalization}{equation.2.2.13}{}}
-\newlabel{eq:psi0}{{2.14}{16}{Adjoint operator $\mathcal {L}^+$, and normalization}{equation.2.2.14}{}}
+\newlabel{eq:Ldega}{{2.13}{16}{Adjoint operator $\mathcal {L}^+$, and normalization}{equation.2.2.13}{}}
+\newlabel{eq:psin}{{2.14}{16}{Adjoint operator $\mathcal {L}^+$, and normalization}{equation.2.2.14}{}}
+\newlabel{eq:psi0}{{2.15}{16}{Adjoint operator $\mathcal {L}^+$, and normalization}{equation.2.2.15}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Firing rate equation}{17}{section.2.3}}
 \newlabel{sec:emissionrateequation}{{2.3}{17}{Firing rate equation}{section.2.3}{}}
-\newlabel{eq:q}{{2.18}{17}{Firing rate equation}{equation.2.3.18}{}}
-\newlabel{eq:A2}{{2.20}{17}{Firing rate equation}{equation.2.3.20}{}}
-\newlabel{eq:A3}{{2.21}{17}{Firing rate equation}{equation.2.3.21}{}}
-\newlabel{eq:a1}{{2.22}{17}{Firing rate equation}{equation.2.3.22}{}}
+\newlabel{eq:q}{{2.19}{17}{Firing rate equation}{equation.2.3.19}{}}
+\newlabel{eq:A2}{{2.21}{17}{Firing rate equation}{equation.2.3.21}{}}
 \newlabel{eq:a1xy}{{2.22}{17}{Firing rate equation}{equation.2.3.22}{}}
-\newlabel{eq:A4}{{2.28}{18}{Firing rate equation}{equation.2.3.28}{}}
+\newlabel{eq:A3}{{2.24}{17}{Firing rate equation}{equation.2.3.24}{}}
+\newlabel{eq:a1}{{2.25}{17}{Firing rate equation}{equation.2.3.25}{}}
+\newlabel{eq:a12}{{2.26}{18}{Firing rate equation}{equation.2.3.26}{}}
+\newlabel{eq:X}{{2.27}{18}{Firing rate equation}{equation.2.3.27}{}}
+\newlabel{eq:Y}{{2.28}{18}{Firing rate equation}{equation.2.3.28}{}}
+\newlabel{eq:first}{{2.29}{18}{Firing rate equation}{equation.2.3.29}{}}
+\newlabel{eq:last}{{2.36}{18}{Firing rate equation}{equation.2.3.36}{}}
+\newlabel{eq:A4}{{2.37}{18}{Firing rate equation}{equation.2.3.37}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Spectrum}{19}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -152,59 +158,80 @@
 \newlabel{sec:specif-model}{{3.1}{19}{Spectral derivation for specific model}{section.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Poisson neuron with absolute refractoriness}{19}{subsection.3.1.1}}
 \newlabel{subsec:absref}{{3.1.1}{19}{Poisson neuron with absolute refractoriness}{subsection.3.1.1}{}}
-\newlabel{eq:weq}{{3.4}{19}{Poisson neuron with absolute refractoriness}{equation.3.1.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Gamma process}{20}{section*.15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Real part (left) and imaginary part (right) of the eigenfunctions $\phi _n$ and $\psi _n$ of the first modes for \textbf  {Poisson neuron with absolute refractory period} $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=0.6$ kHz. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }}{21}{figure.caption.14}}
-\newlabel{fig:poissoneigenfunction}{{3.1}{21}{Real part (left) and imaginary part (right) of the eigenfunctions $\phi _n$ and $\psi _n$ of the first modes for \textbf {Poisson neuron with absolute refractory period} $\Delta $, with $\Delta =5$ ms, $h=h_0$, $\nu _{max}=0.6$ kHz. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{PIF neuron}{21}{section*.17}}
-\citation{SchOst13}
-\citation{SchOst13}
-\citation{SchOst13}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Real part (left) and imaginary part (right) of the eigenfunction $\phi _n$ of the first modes for a \textbf  {Gamma Process} with $\beta =100$ $\gamma =10$. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }}{22}{figure.caption.16}}
-\newlabel{fig:gammaeigenfunction}{{3.2}{22}{Real part (left) and imaginary part (right) of the eigenfunction $\phi _n$ of the first modes for a \textbf {Gamma Process} with $\beta =100$ $\gamma =10$. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Real part (left) and imaginary part (right) of the eigenfunctions $\phi _n$ of the first modes $n=0,1$ for a \textbf  {Poisson neuron with absolute refractory period} $\Delta $. With $\Delta =5$ ms, $h=h_0$, $\nu _{max}=0.6$ kHz. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }}{19}{figure.caption.14}}
+\newlabel{fig:poissoneigenfunction}{{3.1}{19}{Real part (left) and imaginary part (right) of the eigenfunctions $\phi _n$ of the first modes $n=0,1$ for a \textbf {Poisson neuron with absolute refractory period} $\Delta $. With $\Delta =5$ ms, $h=h_0$, $\nu _{max}=0.6$ kHz. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }{figure.caption.14}{}}
+\newlabel{eq:weq}{{3.4}{20}{Poisson neuron with absolute refractoriness}{equation.3.1.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Gamma process}{21}{subsection.3.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Real part (left) and imaginary part (right) of the eigenfunction $\phi _n$ of the first modes for a \textbf  {Gamma neuron model} with $\beta =100$ $\gamma =10$. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }}{21}{figure.caption.15}}
+\newlabel{fig:gammaeigenfunction}{{3.2}{21}{Real part (left) and imaginary part (right) of the eigenfunction $\phi _n$ of the first modes for a \textbf {Gamma neuron model} with $\beta =100$ $\gamma =10$. $\phi {-1}$ is the complex conjugate of $\phi _{1}$\relax }{figure.caption.15}{}}
+\newlabel{eq:gammaeig}{{3.13}{21}{Gamma process}{equation.3.1.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}PIF model}{22}{subsection.3.1.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}A general approximation of the spectrum}{22}{section.3.2}}
-\newlabel{eq:PLcum}{{3.20}{22}{A general approximation of the spectrum}{equation.3.2.20}{}}
-\newlabel{eq:cum2pi}{{3.21}{22}{A general approximation of the spectrum}{equation.3.2.21}{}}
-\newlabel{eq:cumaprox}{{3.22}{22}{A general approximation of the spectrum}{equation.3.2.22}{}}
-\newlabel{eq:l1aprox}{{3.23}{22}{A general approximation of the spectrum}{equation.3.2.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf  {Top:} Gamma process. \textbf  {Bottom:} PIF neuron. Relative error on the eigenvalue for the spectrum approximations derived by \cite  {SchOst13} Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:schaffer}\unskip \@@italiccorr )}}, and by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:l1aprox}\unskip \@@italiccorr )}} using the cumulant expansion as a function of $C_V$.\relax }}{23}{figure.caption.18}}
-\newlabel{fig:kumulant}{{3.3}{23}{\textbf {Top:} Gamma process. \textbf {Bottom:} PIF neuron. Relative error on the eigenvalue for the spectrum approximations derived by \cite {SchOst13} Eq.\eqref {eq:schaffer}, and by Eq.\eqref {eq:l1aprox} using the cumulant expansion as a function of $C_V$.\relax }{figure.caption.18}{}}
-\newlabel{eq:schaffer}{{3.24}{23}{A general approximation of the spectrum}{equation.3.2.24}{}}
-\newlabel{eq:l1aprox2}{{3.25}{23}{A general approximation of the spectrum}{equation.3.2.25}{}}
+\newlabel{sec:eigv}{{3.2}{22}{A general approximation of the spectrum}{section.3.2}{}}
+\newlabel{eq:PLcum}{{3.19}{22}{A general approximation of the spectrum}{equation.3.2.19}{}}
+\citation{SchOst13}
+\citation{SchOst13}
+\citation{SchOst13}
+\newlabel{eq:cum2pi}{{3.20}{23}{A general approximation of the spectrum}{equation.3.2.20}{}}
+\newlabel{eq:cumaprox}{{3.21}{23}{A general approximation of the spectrum}{equation.3.2.21}{}}
+\newlabel{eq:l1aprox}{{3.22}{23}{A general approximation of the spectrum}{equation.3.2.22}{}}
+\newlabel{eq:schaffer}{{3.23}{23}{A general approximation of the spectrum}{equation.3.2.23}{}}
+\newlabel{eq:l1aprox2}{{3.24}{23}{A general approximation of the spectrum}{equation.3.2.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf  {Top:} Gamma neuron model. \textbf  {Bottom:} PIF neuron. Relative error on the eigenvalue for the eigenvalue approximations derived by \cite  {SchOst13} Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:schaffer}\unskip \@@italiccorr )}}, and by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:l1aprox}\unskip \@@italiccorr )}} using the cumulant expansion as a function of $C_V$.\relax }}{24}{figure.caption.16}}
+\newlabel{fig:kumulant}{{3.3}{24}{\textbf {Top:} Gamma neuron model. \textbf {Bottom:} PIF neuron. Relative error on the eigenvalue for the eigenvalue approximations derived by \cite {SchOst13} Eq.\eqref {eq:schaffer}, and by Eq.\eqref {eq:l1aprox} using the cumulant expansion as a function of $C_V$.\relax }{figure.caption.16}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}General renewal neuron}{25}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chap:grene}{{4}{25}{General renewal neuron}{chapter.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Transcient response of the population activity starting with a delta distribution $q(\tau ,0)=\delta (\tau )$}{25}{section.4.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Activity $A(t)$ of a population of neuron of poison neuron with absolute refractoriness $\Delta $ The approximation given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:A3}\unskip \@@italiccorr )}}, and the 10 modes approximation is given by by Eq.\ref  {eq:A2} with $n=10$. The parameters used are $h=h_0$, $\Delta =5$ ms, and $\nu _{max}=0.6$ $kHz$ and the initial condition is $q(\tau ,0)=\delta (\tau )$\relax }}{25}{figure.caption.19}}
-\newlabel{fig:delta_poisson}{{4.1}{25}{Activity $A(t)$ of a population of neuron of poison neuron with absolute refractoriness $\Delta $ The approximation given by Eq.\eqref {eq:A3}, and the 10 modes approximation is given by by Eq.\ref {eq:A2} with $n=10$. The parameters used are $h=h_0$, $\Delta =5$ ms, and $\nu _{max}=0.6$ $kHz$ and the initial condition is $q(\tau ,0)=\delta (\tau )$\relax }{figure.caption.19}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Activity $A(t)$ of a population of neuron having an ISI density given by the gamma distribution with $\beta =100$ Hz and $\gamma =10$ starting with a delta distribution $q(\tau ,0)=\delta (\tau )$. With the approximation given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:A3}\unskip \@@italiccorr )}}, and the complete expansion given by Eq.\ref  {eq:A2}\relax }}{26}{figure.caption.20}}
-\newlabel{fig:delta_gamma}{{4.2}{26}{Activity $A(t)$ of a population of neuron having an ISI density given by the gamma distribution with $\beta =100$ Hz and $\gamma =10$ starting with a delta distribution $q(\tau ,0)=\delta (\tau )$. With the approximation given by Eq.\eqref {eq:A3}, and the complete expansion given by Eq.\ref {eq:A2}\relax }{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Population response to time-dependent input}{26}{subsection.4.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Response of a population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:mu2}\unskip \@@italiccorr )}}. For different amplitude $\epsilon $ of the oscillating function $f_{cos}(t)$(left: $\epsilon =2$ mV, right: $\epsilon =10$ mV)), for different baseline of the external potential input, top: $\mu _0 < h_0$, middle $\mu _0 = h_0$ and bottom: $\mu _0 > h_0$ The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{27}{figure.caption.21}}
-\newlabel{fig:A_t}{{4.3}{27}{Response of a population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\eqref {eq:mu2}. For different amplitude $\epsilon $ of the oscillating function $f_{cos}(t)$(left: $\epsilon =2$ mV, right: $\epsilon =10$ mV)), for different baseline of the external potential input, top: $\mu _0 < h_0$, middle $\mu _0 = h_0$ and bottom: $\mu _0 > h_0$ The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Population response to an oscillating input $\mu (t)$ with angular frequency $\omega _s$ (top: $100$ Hz, bottom $150$ Hz ), for a large populations of uncoupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms.t potential $h$ is $\tau _m=10$ ms. \relax }}{28}{figure.caption.22}}
-\newlabel{fig:A_omega_t}{{4.4}{28}{Population response to an oscillating input $\mu (t)$ with angular frequency $\omega _s$ (top: $100$ Hz, bottom $150$ Hz ), for a large populations of uncoupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms.t potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.22}{}}
-\newlabel{eq:mut}{{4.3}{28}{Population response to time-dependent input}{equation.4.1.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness as a function of the angular frequency $\omega _s$ of the sinusoidal modulation of the external input potential $\mu (t)$ Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:mut}\unskip \@@italiccorr )}}. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{29}{figure.caption.23}}
-\newlabel{fig:NRMSo}{{4.5}{29}{NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness as a function of the angular frequency $\omega _s$ of the sinusoidal modulation of the external input potential $\mu (t)$ Eq.\eqref {eq:mut}. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Mix of equal amplitude sinusoidal oscillation with different frequencies: $5$, $20$ and $100$ Hz. $f_{cos}(t)=\frac  {1}{3}\left (\qopname  \relax o{cos}(\omega _1t)-\qopname  \relax o{cos}(\omega _2t)-\qopname  \relax o{cos}(\omega _3t)\right )$ \relax }}{29}{figure.caption.24}}
-\newlabel{fig:fcos}{{4.6}{29}{Mix of equal amplitude sinusoidal oscillation with different frequencies: $5$, $20$ and $100$ Hz. $f_{cos}(t)=\frac {1}{3}\left (\cos (\omega _1t)-\cos (\omega _2t)-\cos (\omega _3t)\right )$ \relax }{figure.caption.24}{}}
-\newlabel{eq:mu2}{{4.4}{29}{Population response to time-dependent input}{equation.4.1.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:mu2}\unskip \@@italiccorr )}}. For different amplitude $\epsilon $ of the oscilating function $f_{cos}(t)$, for different baseline potential, top: $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{30}{figure.caption.25}}
-\newlabel{fig:NRMSe.}{{4.7}{30}{NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\eqref {eq:mu2}. For different amplitude $\epsilon $ of the oscilating function $f_{cos}(t)$, for different baseline potential, top: $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Transient response of the population activity receiving as external input a step function $\mu (t)$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. \relax }}{30}{figure.caption.26}}
-\newlabel{fig:Astep}{{4.8}{30}{Transient response of the population activity receiving as external input a step function $\mu (t)$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. \relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a abrupt change in the input potential $\mu (t)$. for different step from $15$ mV to $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{31}{figure.caption.27}}
-\newlabel{fig:NRMSstep}{{4.9}{31}{NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a abrupt change in the input potential $\mu (t)$. for different step from $15$ mV to $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Effect of the refractoriness}{31}{section.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Transient response of the population activity (bottom) receiving as external input an step function $\mu (t)$ (top). The blue line correspond to the response of poisson neuron with absolute refractory period .The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The red line correspond to the "equivalent" poputaltion of poisson neuron with firing rate given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:eqfr}\unskip \@@italiccorr )}} \relax }}{31}{figure.caption.28}}
-\newlabel{fig:refractory_rep}{{4.10}{31}{Transient response of the population activity (bottom) receiving as external input an step function $\mu (t)$ (top). The blue line correspond to the response of poisson neuron with absolute refractory period .The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The red line correspond to the "equivalent" poputaltion of poisson neuron with firing rate given by Eq.\eqref {eq:eqfr} \relax }{figure.caption.28}{}}
-\newlabel{eq:eqfr}{{4.5}{32}{Effect of the refractoriness}{equation.4.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Activity $A(t)$ of a population of neuron of poison neuron with absolute refractoriness $\Delta $ The approximation given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:A3}\unskip \@@italiccorr )}}, and the 10 modes approximation is given by by Eq.\ref  {eq:A2} with $n=10$. The parameters used are $h=h_0$, $\Delta =5$ ms, and $\nu _{max}=0.6$ $kHz$ and the initial condition is $q(\tau ,0)=\delta (\tau )$\relax }}{25}{figure.caption.17}}
+\newlabel{fig:delta_poisson}{{4.1}{25}{Activity $A(t)$ of a population of neuron of poison neuron with absolute refractoriness $\Delta $ The approximation given by Eq.\eqref {eq:A3}, and the 10 modes approximation is given by by Eq.\ref {eq:A2} with $n=10$. The parameters used are $h=h_0$, $\Delta =5$ ms, and $\nu _{max}=0.6$ $kHz$ and the initial condition is $q(\tau ,0)=\delta (\tau )$\relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Activity $A(t)$ of a population of neuron having an ISI density given by the gamma distribution with $\beta =100$ Hz and $\gamma =10$ starting with a delta distribution $q(\tau ,0)=\delta (\tau )$. With the approximation given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:A4}\unskip \@@italiccorr )}}, and the complete expansion given by Eq.\ref  {eq:A2}\relax }}{26}{figure.caption.18}}
+\newlabel{fig:delta_gamma}{{4.2}{26}{Activity $A(t)$ of a population of neuron having an ISI density given by the gamma distribution with $\beta =100$ Hz and $\gamma =10$ starting with a delta distribution $q(\tau ,0)=\delta (\tau )$. With the approximation given by Eq.\eqref {eq:A4}, and the complete expansion given by Eq.\ref {eq:A2}\relax }{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Population response to time-dependent input}{26}{section.4.2}}
+\newlabel{sec:uncoupletimedep}{{4.2}{26}{Population response to time-dependent input}{section.4.2}{}}
+\newlabel{eq:NRMS}{{4.2}{26}{Population response to time-dependent input}{equation.4.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Response of a population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:mu2}\unskip \@@italiccorr )}}. For different amplitude $\epsilon $ of the oscillating function $f_{cos}(t)$(left: $\epsilon =2$ mV, right: $\epsilon =10$ mV)), for different baseline of the external potential input, top: $\mu _0 < h_0$, middle $\mu _0 = h_0$ and bottom: $\mu _0 > h_0$ The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{27}{figure.caption.19}}
+\newlabel{fig:A_t}{{4.3}{27}{Response of a population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\eqref {eq:mu2}. For different amplitude $\epsilon $ of the oscillating function $f_{cos}(t)$(left: $\epsilon =2$ mV, right: $\epsilon =10$ mV)), for different baseline of the external potential input, top: $\mu _0 < h_0$, middle $\mu _0 = h_0$ and bottom: $\mu _0 > h_0$ The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Population response to an oscillating input $\mu (t)$ with angular frequency $\omega _s$ (top: $100$ Hz, bottom $150$ Hz ), for a large populations of uncoupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{28}{figure.caption.20}}
+\newlabel{fig:A_omega_t}{{4.4}{28}{Population response to an oscillating input $\mu (t)$ with angular frequency $\omega _s$ (top: $100$ Hz, bottom $150$ Hz ), for a large populations of uncoupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.20}{}}
+\newlabel{eq:mut}{{4.3}{28}{Population response to time-dependent input}{equation.4.2.3}{}}
+\newlabel{eq:mu2}{{4.4}{28}{Population response to time-dependent input}{equation.4.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness as a function of the angular frequency $\omega _s$ of the sinusoidal modulation of the external input potential $\mu (t)$ Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:mut}\unskip \@@italiccorr )}}. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{29}{figure.caption.21}}
+\newlabel{fig:NRMSo}{{4.5}{29}{NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness as a function of the angular frequency $\omega _s$ of the sinusoidal modulation of the external input potential $\mu (t)$ Eq.\eqref {eq:mut}. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Mix of equal amplitude sinusoidal oscillation with different frequencies: $5$, $20$ and $100$ Hz. $f_{cos}(t)=\frac  {1}{3}\left (\qopname  \relax o{cos}(\omega _1t)-\qopname  \relax o{cos}(\omega _2t)-\qopname  \relax o{cos}(\omega _3t)\right )$ \relax }}{29}{figure.caption.22}}
+\newlabel{fig:fcos}{{4.6}{29}{Mix of equal amplitude sinusoidal oscillation with different frequencies: $5$, $20$ and $100$ Hz. $f_{cos}(t)=\frac {1}{3}\left (\cos (\omega _1t)-\cos (\omega _2t)-\cos (\omega _3t)\right )$ \relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:mu2}\unskip \@@italiccorr )}}. For different amplitude $\epsilon $ of the oscillating function $f_{cos}(t)$, for different baseline potential $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{30}{figure.caption.23}}
+\newlabel{fig:NRMSe}{{4.7}{30}{NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a fluctuating external input given by Eq.\eqref {eq:mu2}. For different amplitude $\epsilon $ of the oscillating function $f_{cos}(t)$, for different baseline potential $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Transient response for a population of uncoupled Poisson neurons with absolute refractoriness, receiving as external input a step function $\mu (t)$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. \relax }}{30}{figure.caption.24}}
+\newlabel{fig:Astep}{{4.8}{30}{Transient response for a population of uncoupled Poisson neurons with absolute refractoriness, receiving as external input a step function $\mu (t)$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. \relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a abrupt change in the input potential $\mu (t)$. for different step from $15$ mV to $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }}{31}{figure.caption.25}}
+\newlabel{fig:NRMSstep}{{4.9}{31}{NRMS on the response of population of uncoupled Poisson neurons with absolute refractoriness to a abrupt change in the input potential $\mu (t)$. for different step from $15$ mV to $\mu _0$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The time constant of the input potential $h$ is $\tau _m=10$ ms. \relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Effect of the refractoriness}{31}{section.4.3}}
+\newlabel{eq:eqfr}{{4.5}{31}{Effect of the refractoriness}{equation.4.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Transient response of the population activity (bottom) receiving as external input an step function $\mu (t)$ (top). The blue line correspond to the response of poisson neuron with absolute refractory period .The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The red line correspond to the "equivalent" poputaltion of poisson neuron with firing rate given by Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:eqfr}\unskip \@@italiccorr )}} \relax }}{32}{figure.caption.26}}
+\newlabel{fig:refractory_rep}{{4.10}{32}{Transient response of the population activity (bottom) receiving as external input an step function $\mu (t)$ (top). The blue line correspond to the response of poisson neuron with absolute refractory period .The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $h_0=15$ mV. The red line correspond to the "equivalent" poputaltion of poisson neuron with firing rate given by Eq.\eqref {eq:eqfr} \relax }{figure.caption.26}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Population dynamics of coupled neurons}{33}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chap:coupled}{{5}{33}{Population dynamics of coupled neurons}{chapter.5}{}}
+\newlabel{eq:h2}{{5.1}{33}{Population dynamics of coupled neurons}{equation.5.0.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Response to time dependent input}{33}{section.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Population response to an oscillating input $\mu (t)$ with a frequency of 40Hz, for a large populations of coupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ and $J=50$ mV$\cdot $ ms. \relax }}{34}{figure.caption.27}}
+\newlabel{fig:A_omega_t_coupled}{{5.1}{34}{Population response to an oscillating input $\mu (t)$ with a frequency of 40Hz, for a large populations of coupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ and $J=50$ mV$\cdot $ ms. \relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces NRMS on the response of population of coupled Poisson neurons with absolute refractoriness as a function of the angular frequency $\omega _s$ of the sinusoidal modulation of the external input potential $\mu (t)$ Eq.\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:mut}\unskip \@@italiccorr )}}. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ and $J=50$ mV$\cdot $ ms. \relax }}{34}{figure.caption.28}}
+\newlabel{fig:NRMSo_coupled}{{5.2}{34}{NRMS on the response of population of coupled Poisson neurons with absolute refractoriness as a function of the angular frequency $\omega _s$ of the sinusoidal modulation of the external input potential $\mu (t)$ Eq.\eqref {eq:mut}. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ and $J=50$ mV$\cdot $ ms. \relax }{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Transient response of the population activity for a population of coupled Poisson neuron with absolute refractoriness. receiving as external input a step function $\mu (t)$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $J=50$ mV$\cdot $ ms. \relax }}{35}{figure.caption.29}}
+\newlabel{fig:Astep_coupled}{{5.3}{35}{Transient response of the population activity for a population of coupled Poisson neuron with absolute refractoriness. receiving as external input a step function $\mu (t)$. The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$ , $J=50$ mV$\cdot $ ms. \relax }{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces NRMS on the response of population of coupled Poisson neurons with absolute refractoriness to a abrupt change in the input potential $\mu (t)$. For different step from $-2$ mV to $\mu $, $-15$ mV$\leq \mu \leq 30$ mV . The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$, $J=50$ mV$\cdot $ ms. \relax }}{35}{figure.caption.30}}
+\newlabel{fig:NRMSstep_coupled}{{5.4}{35}{NRMS on the response of population of coupled Poisson neurons with absolute refractoriness to a abrupt change in the input potential $\mu (t)$. For different step from $-2$ mV to $\mu $, $-15$ mV$\leq \mu \leq 30$ mV . The parameters of the neurons are $\nu _{max}=100$ Hz, $\Delta =10$ ms, $\beta =1$ mV$^{-1}$, $J=50$ mV$\cdot $ ms. \relax }{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Fixed points of the dynamical system}{35}{section.5.2}}
+\newlabel{eq:hdot}{{5.2}{36}{Fixed points of the dynamical system}{equation.5.2.2}{}}
+\newlabel{eq:xeq}{{5.3}{36}{Fixed points of the dynamical system}{equation.5.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces  $\tau _m \mathaccentV {dot}05F{h}$ as a function of $h$ for $mu=-6$ mV and for different J. The intersection with the $h-nullline$ corresponds to the fixed point of this dynamical system. For $J=-50$ and $J=50$ there is only a "low firing rate" fixed point (stable). For $J=250$ there is also an "high friring rate fixed point (stable) and an "intermediate firing rate" fixed point (unstable). \relax }}{36}{figure.caption.31}}
+\newlabel{fig:hdyn}{{5.5}{36}{$\tau _m \dot {h}$ as a function of $h$ for $mu=-6$ mV and for different J. The intersection with the $h-nullline$ corresponds to the fixed point of this dynamical system. For $J=-50$ and $J=50$ there is only a "low firing rate" fixed point (stable). For $J=250$ there is also an "high friring rate fixed point (stable) and an "intermediate firing rate" fixed point (unstable). \relax }{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Number of fixed point and bifurcation for the parameters $J$ and $\mu $. The three dots corresponds to the pair of parameters $(J,\mu )$ used in Fig\ref  {fig:hdyn}. \relax }}{37}{figure.caption.32}}
+\newlabel{fig:phase_plan}{{5.6}{37}{Number of fixed point and bifurcation for the parameters $J$ and $\mu $. The three dots corresponds to the pair of parameters $(J,\mu )$ used in Fig\ref {fig:hdyn}. \relax }{figure.caption.32}{}}
 \bibstyle{abbrvnat}
 \citation{GerKis14}
 \citation{WilCow72}
@@ -232,21 +259,21 @@
 \bibcite{ChiGra07}{{2}{2007}{{Chizhov and Graham}}{{}}}
 \bibcite{ChiGra08}{{3}{2008}{{Chizhov and Graham}}{{}}}
 \bibcite{DayAbb05}{{4}{2005}{{Dayan and Abbott}}{{}}}
-\bibcite{DegSch14}{{5}{2014}{{Deger et~al.}}{{Deger, Schwalger, Naud, and Gerstner}}}
-\bibcite{Ger00}{{6}{2000}{{Gerstner}}{{}}}
-\bibcite{GerKis02}{{7}{2002}{{Gerstner and Kistler}}{{}}}
-\bibcite{GerKis14}{{8}{2014}{{Gerstner et~al.}}{{Gerstner, Kistler, Naud, and Paninski}}}
-\bibcite{KanSch00}{{9}{2000}{{Kandel et~al.}}{{Kandel, Schwartz, and Jessell}}}
-\bibcite{Kni72}{{10}{1972}{{Knight}}{{}}}
-\bibcite{KniMan96}{{11}{1996}{{Knight et~al.}}{{Knight, Manin, and Sirovich}}}
-\bibcite{Lef09}{{12}{2009}{{Lefort et~al.}}{{Lefort, Tomm, Sarria, and Petersen}}}
-\bibcite{Mat16_arxiv}{{13}{2016}{{Mattia}}{{}}}
-\bibcite{MatGiu02}{{14}{2002}{{Mattia and {Del Giudice}}}{{}}}
-\bibcite{OstBru11}{{15}{2011}{{Ostojic and Brunel}}{{}}}
-\bibcite{Prij93}{{16}{1993}{{Prijs et~al.}}{{Prijs, Keijzer, Versnel, and Schoonhoven}}}
-\bibcite{Ris84}{{17}{1984}{{Risken}}{{}}}
-\bibcite{SchOst13}{{18}{2013}{{Schaffer et~al.}}{{Schaffer, Ostojic, and Abbott}}}
-\bibcite{Sch13}{{19}{2013}{{Schwalger}}{{}}}
+\bibcite{Ger00}{{5}{2000}{{Gerstner}}{{}}}
+\bibcite{GerKis02}{{6}{2002}{{Gerstner and Kistler}}{{}}}
+\bibcite{GerKis14}{{7}{2014}{{Gerstner et~al.}}{{Gerstner, Kistler, Naud, and Paninski}}}
+\bibcite{KanSch00}{{8}{2000}{{Kandel et~al.}}{{Kandel, Schwartz, and Jessell}}}
+\bibcite{Kni72}{{9}{1972}{{Knight}}{{}}}
+\bibcite{KniMan96}{{10}{1996}{{Knight et~al.}}{{Knight, Manin, and Sirovich}}}
+\bibcite{Lef09}{{11}{2009}{{Lefort et~al.}}{{Lefort, Tomm, Sarria, and Petersen}}}
+\bibcite{Mat16_arxiv}{{12}{2016}{{Mattia}}{{}}}
+\bibcite{MatGiu02}{{13}{2002}{{Mattia and {Del Giudice}}}{{}}}
+\bibcite{OstBru11}{{14}{2011}{{Ostojic and Brunel}}{{}}}
+\bibcite{Prij93}{{15}{1993}{{Prijs et~al.}}{{Prijs, Keijzer, Versnel, and Schoonhoven}}}
+\bibcite{Ris84}{{16}{1984}{{Risken}}{{}}}
+\bibcite{SchOst13}{{17}{2013}{{Schaffer et~al.}}{{Schaffer, Ostojic, and Abbott}}}
+\bibcite{Sch13}{{18}{2013}{{Schwalger}}{{}}}
+\bibcite{Sch16}{{19}{2016}{{Schwalger}}{{}}}
 \bibcite{SchDeg17}{{20}{2017}{{{Schwalger} et~al.}}{{{Schwalger}, {Deger}, and {Gerstner}}}}
 \bibcite{Vre10}{{21}{2010}{{van Vreeswijk}}{{}}}
 \bibcite{WilCow72}{{22}{1972}{{Wilson and Cowan}}{{}}}

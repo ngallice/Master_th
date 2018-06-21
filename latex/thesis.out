@@ -17,9 +17,13 @@
 \BOOKMARK [0][-]{chapter.3}{Spectrum}{}% 17
 \BOOKMARK [1][-]{section.3.1}{Spectral derivation for specific model}{chapter.3}% 18
 \BOOKMARK [2][-]{subsection.3.1.1}{Poisson neuron with absolute refractoriness}{section.3.1}% 19
-\BOOKMARK [1][-]{section.3.2}{A general approximation of the spectrum}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{General renewal neuron}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Transcient response of the population activity starting with a delta distribution q\(,0\)=\(\)}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.1.1}{Population response to time-dependent input}{section.4.1}% 23
-\BOOKMARK [1][-]{section.4.2}{Effect of the refractoriness}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Population dynamics of coupled neurons}{}% 25
+\BOOKMARK [2][-]{subsection.3.1.2}{Gamma process}{section.3.1}% 20
+\BOOKMARK [2][-]{subsection.3.1.3}{PIF model}{section.3.1}% 21
+\BOOKMARK [1][-]{section.3.2}{A general approximation of the spectrum}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter.4}{General renewal neuron}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Transcient response of the population activity starting with a delta distribution q\(,0\)=\(\)}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{Population response to time-dependent input}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.3}{Effect of the refractoriness}{chapter.4}% 26
+\BOOKMARK [0][-]{chapter.5}{Population dynamics of coupled neurons}{}% 27
+\BOOKMARK [1][-]{section.5.1}{Response to time dependent input}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{Fixed points of the dynamical system}{chapter.5}% 29

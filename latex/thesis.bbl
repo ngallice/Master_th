@@ -33,13 +33,6 @@ P.~Dayan and L.~F. Abbott.
   Modeling of Neural Systems}.
 \newblock The {MIT} Press, 1 edition, 2005.
 
-\bibitem[Deger et~al.(2014)Deger, Schwalger, Naud, and Gerstner]{DegSch14}
-M.~Deger, T.~Schwalger, R.~Naud, and W.~Gerstner.
-\newblock Fluctuations and information filtering in coupled populations of
-  spiking neurons with adaptation.
-\newblock \emph{Phys. Rev. E}, 90\penalty0 (6-1):\penalty0 062704, Dec 2014.
-\newblock \doi{10.1103/PhysRevE.90.062704}.
-
 \bibitem[Gerstner(2000)]{Ger00}
 W.~Gerstner.
 \newblock Population dynamics of spiking neurons: Fast transients, asynchronous
@@ -123,8 +116,12 @@ T.~Schwalger.
   models}.
 \newblock PhD thesis, Humboldt-Universitat zu Berlin,
   Mathematisch-Naturwissenschaftliche Fakultat I, 2013.
-\newblock URL
-  \url{\url{http://edoc.hu-berlin.de/docviews/abstract.php?id=40328}}.
+
+\bibitem[{Schwalger}(2016)]{Sch16}
+T.~{Schwalger}.
+\newblock {An attempt to make an Eigenfunction expansion of the refrcatory
+  density for renewal processes}.
+\newblock \emph{unpublished notes}, 2016.
 
 \bibitem[{Schwalger} et~al.(2017){Schwalger}, {Deger}, and
   {Gerstner}]{SchDeg17}
