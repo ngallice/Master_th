@@ -139,7 +139,7 @@
 During this thesis, I have received great help from a lot of people and I would like to express my gratitudes for their time.\\
 In particular I would like to thank Prof. Wulfram Gerstner director of the Laboratory of Computational Neuroscience and Prof. Matthieu Wyart director of the Laboratory of Physics of Complex Systems for their support, their critical comments which helped me to organize my thought, and for stimulating my curiosity during their lectures.\\
 I am incredibly grateful to Dr. Tilo Schwalger, who guided me through this thesis, had always time for me despite his busy schedule and even from the other side of the Atlantic was always there to offer his advice, and his ideas. Working by his side has been a great experience and I have learned immensely from him. \\
-Then I thank all the members of the LCN lab. They created a very friendly atmosphere. This allowed me to do my master project in the best possible conditions. And I would like to adress a special thanks to Dr. Samuel Muscinelli and to Dr. Vasiliki Liakoni for their time and their very wise advice.\\
+Then I thank all the members of the LCN lab. They created a very friendly atmosphere. This allowed me to do my master project in the best possible conditions. And I would like to adress a special thanks to Dr. Samuel Muscinelli and to Dr. Vasiliki Liakoni for their time and their very wise advices.\\
 Finally I liked to thank my parents, my sister and my brother who have always supported me.
 
 
@@ -150,11 +150,8 @@ Finally I liked to thank my parents, my sister and my brother who have always su
 \chapter*{Abstract}
 \thispagestyle{empty}
 
-%TODO
 
-
-
-
+A low-dimensional population dynamics of spiking neurons is derived via eigenfunction expansion of the refractory density. As a result, an infinite dimension integral formulation is simplified to a three dimensional dynamical system by considering only the two slowest modes of the expansion. The validity of the derived approximation is shown for a large homogeneous population of Poisson neurons with absolute refractoriness. However, the presented results apply to a wide class of neuronal networks.
 
 
 %----------------------------------------------------------------------------------------
@@ -178,14 +175,14 @@ Finally I liked to thank my parents, my sister and my brother who have always su
 \label{sec:intro}
 
 
-This thesis is concerned with the mean activity of large homogeneous population of neurons. In the brain billion of neurons form complex network, they communicate with each other by short electrical pulse called spike or action potential. Neurons encode stimuli by emitting spikes trains in response to sensory inputs. To uncover the corresponding neural code, the analysis of spike statistic is essential. 
+This thesis is concerned with the mean activity of large homogeneous population of neurons. In the brain billions of neurons form complex networks, they communicate with each other by short electrical pulses called spike or action potential. Neurons encode stimuli by emitting spikes trains in response to sensory inputs. To uncover the corresponding neural code, the analysis of spike statistics is essential. 
 
-%TODO change mesoscopic to macro ?
+One of the most common ways to model large neuronal networks is to use a simplification called a firing rate model. It is equivalent to a mean field approach where rather than recording the spiking trains of every single neuron, one tracks the averaged behavior of the spike rates of groups of neurons.
 
-One of the most common ways to model large neuronal networks is to use a simplification called a firing rate model. It is equivalent to a mean field approach where rather than record the spiking trains of every single neuron, one tracks the averaged behavior of the spike rates of groups of neurons. This transition from a microscopic description to a macroscopic description is illustrated in Fig.\ref{fig:x285}. Firing rate model provides simple models which are computationally efficient and are mathematically tractable. The resulting models involves a compromise between accuracy and simplicity. Simple firing-rate models where the dynamics was governed by only one time constant fail to replicate certain dynamic features of populations of spiking neurons. To explain some phenomenological properties, heuristic model where developed but these model were not derived from the spiking neuron dynamics [\cite{WilCow72},\cite{OstBru11}]. 
+But can we predict the population activity $A(t)$ from the properties of its individual neurons? And how does the population activity respond to a novel input? Those are the question we might ask, when we pass from a microscopic description to a macroscopic description as illustrated in Fig.\ref{fig:x285}.
 
-
-%TODO Ger00,ChiGra07,ChiGra08,SchDeg17} HOW ?? 
+ Firing rate models provide simple models which are computationally efficient and are mathematically tractable to study the response of a population to an external input. The resulting models involves a compromise between accuracy and simplicity. Simple firing-rate models where the dynamics was governed by only one time constant fail to replicate certain dynamic features of populations of spiking neurons. To explain some phenomenological properties, heuristic model where developed but these model were not derived from the spiking neuron dynamics. [\cite{WilCow72},\cite{OstBru11}]. 
+ %TODO W is! ? 
 
 \begin{figure}[h!]
 	\centering
@@ -194,8 +191,7 @@ One of the most common ways to model large neuronal networks is to use a simplif
 	\label{fig:x285}
 \end{figure}
 
-In this project we consider a large homogeneous population of neurons modeled by time dependent renewal process. And the goal is to derive a low-dimensional population dynamics of spiking neurons, starting from a spectral expansion of the refractory density equation. Thus we will first introduce in Sections \ref{sec:renew} and \ref{sec:refractory}, renewal processes and the refractory density approach. Then we will recall some property of the spectral expansion in Section \ref{sec:spect}, which in previous studies was used to approximates the dynamics of spiking Networks, taking as state variable the membrane potential $v$ [\cite{MatGiu02},\cite{SchOst13},\cite{AugLad17}].
-
+In this project we consider a large homogeneous population of neurons modeled by time dependent renewal process. A common approach to recover the activity of such a population is based on the refractory density [\cite{Ger00}, \cite{ChiGra07}, \cite{ChiGra08}, \cite{SchDeg17}]. But the integral formulation present in the refractory density equation makes this approach computationally inefficient and limit the analytical tractability. Therefore the goal of this work is to derive a low-dimensional population dynamics of spiking neurons, starting from a spectral expansion of the refractory density equation. Thus we will first introduce in Sections \ref{sec:renew} and \ref{sec:refractory}, renewal processes and the refractory density approach. Then we will recall some properties of the spectral expansion in Section \ref{sec:spect}, which in previous studies was used to approximate the dynamics of spiking networks, taking as state variable the membrane potential $v$ [\cite{MatGiu02}, \cite{SchOst13}, \cite{AugLad17}].
 
 
 \section{Renewal processes} %spiking neuron model}
@@ -205,7 +201,6 @@ In this project we consider a large homogeneous population of neurons modeled by
 %Survivor function: probability of no spike in [t ,t ˆ ]
 %Interspike-interval density: probability densityof next spike at t given last spike at t P = ρS
 
-%TODO ALL THE MODIFICATION  ASK HOW TO REORGANISZE AND SEPARAtTE TIME DEPENDENT INPUT ....
 
 A neuron model tells how an input is transformed into output spikes. We define $h(t)$ as the input potential, its time derivative is given by
 
@@ -216,7 +211,7 @@ A neuron model tells how an input is transformed into output spikes. We define $
 
 where $\mu(t)$ represents an external stimulus, and $I_{syn}$ is the synaptic current, due to the spikes from other neurons.
 
-Renewal processes keep memory of the last event, last firing time $\hat{t}$. The age, i.e the time elapsed since the last spike $\tau=t-\hat{t}$, is a state variable of the neuron. For those processes the spikes are generated according to a stochastic intensity called the hazard rate $\rho(\tau,h)$. The hazard rate $\rho(\tau,h)$ define the probability to spike between $t+\Delta t$ knowing that there were no spike between $t$ and $\hat{t}$
+Renewal processes keep memory of the last event,i.e. the last firing time $\hat{t}$. The age, i.e the time elapsed since the last spike $\tau=t-\hat{t}$, is a state variable of the neuron. For those processes the spikes are generated according to a stochastic intensity called the hazard rate $\rho(\tau,h)$. The hazard rate $\rho(\tau,h)$ define the probability to spike between $t+\Delta t$ knowing that there were no spike between $t$ and $\hat{t}$
 
 To generate a spike train according to the hazard rate $\rho(\tau,h)$ in a simulation, one would proceed as follows
 \begin{itemize}
@@ -229,7 +224,7 @@ p_{spike}=1-\exp(-\rho(\tau,h)\Delta t)
 
 \subsection{Interval distribution and Survivor function}
 
-The renewal theory allows to define the probability of the next event given the age of the system and to calculate the interspike-interval (ISI) distribution $P(\tau,h)$, i.e the probability to spike at age $\tau$. The ISI distribution is normalized and therefore satisfy
+Let us in this section assume a time-homogeneous process, i.e. $h=const$. We can calculate the interspike interval (ISI) density $P(\tau,h)$ i.e the probability to spike at age $\tau$. 
 
 \begin{equation}
 \label{eq:Pnorm}
@@ -244,7 +239,7 @@ The interspike-interval (ISI) distribution can be linked to the survivor functio
 S(\tau,h)=1-\int_0^\tau P(s,h) \dd s
 \end{equation}
 
-The survivor function $S(\tau,h)$ define the probability that a neuron reach the age $\tau$, so that a neuron "survive" without firing between $\hat{t}$ and $t$. $P(\tau,h)$ describes the probability to spike at age $\tau$. There it can be express as the product of the probability to survive until age $\tau$ times the momentary hazard $\rho(\tau,h)$. 
+The survivor function $S(\tau,h)$ defines the probability that a neuron reaches the age $\tau$, so that a neuron "survive" without firing between $\hat{t}$ and $t$. $P(\tau,h)$ describes the probability to spike at age $\tau$. There it can be expressed as the product of the probability to survive until age $\tau$ times the momentary hazard $\rho(\tau,h)$. 
 
 \begin{equation}
 \label{eq:P2}
@@ -258,20 +253,20 @@ The derivation of Eq.\eqref{eq:S1} yields to
 P(\tau,h)=-\frac{\dd}{\dd \tau}S(\tau,h)
 \end{equation}
 
-Inserting Eq.\eqref{eq:P2} in Eq.\eqref{eq:P3}, we find that the hazard rate $\rho(\tau,h)$ corresponds to the rate of decay of the survivor function:
+Inserting Eq.\eqref{eq:P2} in Eq.\eqref{eq:P3}, we find that the hazard rate $\rho(\tau,h)$ corresponds to the rate of decay of the survivor function
 
 \begin{equation}
 \label{eq:ratedecays}
 \rho(\tau,h)=-\frac{\frac{\dd}{\dd \tau}S(\tau,h)}{S(\tau,h)}
 \end{equation}
 
-Integrating eq.\ref{eq:ratedecays} yields to the survivor function:
+Integrating eq.\ref{eq:ratedecays} yields to the survivor function
 \begin{equation}
 \label{eq:S2}
 S(\tau,h)=\exp\big[-\int_0^\tau\rho(s,h)\dd s\big]
 \end{equation}
 
-Inserting Eq.\eqref{eq:S2} in Eq.\eqref{eq:P2} the interval distribution can be explicitly express in terms of the hazard, and is by itself normalized:
+Inserting Eq.\eqref{eq:S2} in Eq.\eqref{eq:P2} the interval distribution can be explicitly express in terms of the hazard, and is by itself normalized
 
 \begin{equation}
 \label{eq:P4}
@@ -282,9 +277,9 @@ Each of the three function $\rho(\tau,h)$, $P(\tau,h)$ and $S(\tau,h)$ is suffic
 
 \subsection{Examples }
 
-Interval distribution and hazard functions have been measured in many experiments. Here are some examples widely used, for their simplicity and/or the agreement with experimental measurements.
+Interval distribution and hazard functions have been measured in many experiments. Here are some examples that will be useful for finding analytical approximations and/or that agree  with experimental measurements.
 
-\paragraph{Simple model with recovery function}
+\subsubsection{Simple model with recovery function}
 
 \begin{figure}[h!]
 	\centering
@@ -299,7 +294,7 @@ Interval distribution and hazard functions have been measured in many experiment
 	\includegraphics[width=\linewidth]{poissonRHOSP.pdf}
 	(b)\\
 	\includegraphics[width=\linewidth]{expRHOSP.pdf}
-	\caption{Hazard rate $\rho(\tau,h)$ (left), interval distribution $P(\tau,h)$ (middle) and survivor function $S(\tau,h)$ (right) for different recovery function $g(\tau)$. (a) Recovery function for a Poisson neuron with absolute refractoriness $\Delta$, with $\Delta=5$ ms, $h=h_0$, $\nu_{max}=600$ Hz.  (b) Recovery function defined  by $ g(\tau)=\left[1-\exp(-\eta(\tau-\Delta))\right]\theta(\tau-\Delta)$ Poisson neuron with absolute refractoriness $\Delta$, with $\Delta=5$ ms, $h=h_0$, $\nu_{max}=600$ Hz.  }
+	\caption{Hazard rate $\rho(\tau,h)$ (left), interval distribution $P(\tau,h)$ (middle) and survivor function $S(\tau,h)$ (right) for different recovery function $g(\tau)$. (a) Recovery function for a Poisson neuron with absolute refractoriness $\Delta$, with $\Delta=5$ ms, $h=h_0$, $\nu_{max}=600$ Hz.  (b) Recovery function defined  by Eq.\eqref{eq:expabs} with $\Delta=5$ ms, $h=h_0$, $\nu_{max}=600$ Hz.  }
 	\label{fig:renewalprocess}
 \end{figure}
 %In the previous section we were implicitly considering stationary renewal system using the notation $\rho(t|\hat{t})$.
@@ -311,7 +306,7 @@ The hazard rate, can be expressed as a product of the instantaneous rate $\Phi(h
 \rho(\tau,h)=\Phi(h)g(\tau)
 \end{equation}
 
-The function $\Phi(h)$ is a monotonically increasing function. A common choice is an exponential function. In our examples we will however use a sigmoidal function with threshold $h_0$ illustrated on Fig.\ref{fig:phi_h}. For $h>>h_0$ the firing rate goes to the value $\nu_max$ for $h<<h_0$ it goes to $0$.
+The function $\Phi(h)$ is a monotonically increasing function. In our examples we will use a sigmoidal function with threshold $h_0$ illustrated on Fig.\ref{fig:phi_h}. For $h>>h_0$ the firing rate goes to the value $\nu_{max}$ for $h<<h_0$ it goes to $0$.
 
 \begin{equation}
 \label{eq:phi}
@@ -331,14 +326,12 @@ $\theta(\tau-\Delta)$ denotes the Heaviside function. The recovery function for 
 g(\tau)=\left[1-\exp(-\eta(\tau-\Delta))\right]\theta(\tau-\Delta)
 \end{equation}
 
-The main difference is that for the Poisson neuron with absolute refractoriness the recovery function Eq.\eqref{eq:poissonabs} make a jump, whereas in Eq.\eqref{eq:expabs} the transition is smooth. The time course of the recovery function given by Eq.\eqref{eq:expabs}, approximate well the recovery function measured for auditory neurons  of the guinea-pig [\cite{Prij93}]
+The main difference is that for the Poisson neuron with absolute refractoriness the recovery function Eq.\eqref{eq:poissonabs} make a jump, whereas in Eq.\eqref{eq:expabs} the transition is smooth which gives rise to relative refractoriness. The time course of the recovery function given by Eq.\eqref{eq:expabs}, approximate well the recovery function measured for auditory neurons of the guinea-pig [\cite{Prij93}]
 
 
+\subsubsection{Gamma neuron model}
 
-\paragraph{Gamma neuron model}
-
-
-The gamma neuron model is often used to model spike trains as it is one of the easiest non-Poisson process to analyze. For this process the interspike distribution is given by
+The gamma neuron model is often used to model spike trains as it is one of the easiest non-Poisson process to analyze. For this neuron model the interspike distribution is given by
 
 \begin{equation}
 \label{eq:gamma}
@@ -353,16 +346,17 @@ Where $\beta:=\beta(h)$ is a rate which depend on the input potential $h$
 	\label{fig:gammaprocess}
 \end{figure}
 
-The rate of this process is $R=\beta/\gamma$, And the coefficient of variation is given by $C_V=\gamma^{-\frac{1}{2}}$. For $\gamma=1$ this corresponds to a Poisson process. For $C_V>1$ the Interspike distribution diverges as $\tau$ goes to $0$.  One can see the gamma  neuron model as a succession of $\gamma$ states, each state is Poisson neuron with firing rate $\beta$, one has to pass by each state before spiking, this implies that the global rate of the total chain is $R=\beta/\gamma$, and induces a relative refractoriness as shown on Fig.\ref{fig:gammaprocess}.
+The rate of this neuron model is $R=\beta/\gamma$, And the coefficient of variation is given by $C_V=\gamma^{-\frac{1}{2}}$. For $\gamma=1$ this corresponds to a Poisson process. For $C_V>1$ the interspike distribution diverges as $\tau$ goes to $0$. One can see the gamma neuron model as a succession of $\gamma$ states where each state is  a Poisson neuron with firing rate $\beta$ since one has to pass by each state before spiking, this implies that the global rate of the total chain is $R=\beta/\gamma$, and induces relative refractoriness as shown on Fig.\ref{fig:gammaprocess}.
 
 
-\paragraph{Perfect integrate-and-fire model driven by white noise}
+\subsubsection{Perfect integrate-and-fire model driven by white noise}
 \label{sec:pif}
+
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{PIF_V}
-	\caption{Typical realization $V(t)$ for the PIF model driven with a white noise with $f(h)=0.3$ $V_{th}$, $D=0.1$ $V_{th}^2$,$\tau_v=1$ ms $V_{th}=1$. The generated spike train is indicated on the top.
+	\caption{Typical realization $V(t)$ for the PIF model driven with a white noise with  $f(h)=0.3$ $V_{th}$, $D=0.1$ $V_{th}^2$,$\tau_v=1$ ms $V_{th}=1$. The generated spike train is indicated on the top. 
 	}
 	\label{fig:PIFV}
 \end{figure}
@@ -376,7 +370,7 @@ The rate of this process is $R=\beta/\gamma$, And the coefficient of variation i
 	\label{fig:inversegaussianprocess}
 \end{figure}
 
-The perfect integrating-and fire model has been used to explain statistics of single neuron. The membrane potential $V$ of a neuron can be seen as a Brownian-motion with drift $f(h)$ driven by a white noise, which is reset to the value $V_r$ when it hits the threshold $V_{th}$. The function $f(h)$ is a mean current which depends on the input potential $h$.
+The perfect integrating-and fire model has been used to explain statistics of isolated neurons. The membrane potential $V$ of a neuron can be seen as a Brownian-motion with drift $f(h)$ driven by a white noise, which is reset to the value $V_r$ when it hits the threshold $V_{th}$. The function $f(h)$ is a mean current which depends on the input potential $h$.
 
 \begin{align}
 \label{eq:Vxi}
@@ -384,16 +378,24 @@ The perfect integrating-and fire model has been used to explain statistics of si
 \langle\xi(t)\xi(s)\rangle=\delta(t-s)
 \end{align}
 
-A typical realization of the dynamics of $V(t)$ for a single neuron and the corresponding spike train is illustrated on Fig.\ref{fig:PIFV}. The statistic of such neurons are shown on Fig.\ref{fig:inversegaussianprocess}.
+A typical realization of the dynamics of $V(t)$ for a single neuron and the corresponding spike train is illustrated on Fig.\ref{fig:PIFV}. The statistics of such neurons are shown on Fig.\ref{fig:inversegaussianprocess}.
 
-%TODO ADD R AND CV FOR THIS PROCESS
+
+
+For this neuron model the interspike distribution is given by
+
+\begin{equation}
+\label{eq:inversegaussian}
+P(\tau,h)=\frac{V_{th}\tau_v}{\sqrt{4\pi D\tau^3}}\exp\left(-\frac{(f(h)\tau-V_{th}\tau_v)^2}{4D\tau}\right)
+\end{equation}
+
+The rate of this neuron model is $R=\frac{f(h)}{V_{th}\tau_v}$, And the coefficient of variation is given by $C_V=\sqrt{\frac{2D}{\tau_vf(h)V_{th}}}$.
+
+
+
 \section{Moment of the interspike interval distribution $P(\tau)$}
 
-For the upcoming theoretical derivations, it is usefull to introduce the moment of the interspike interval distribution.
-
-For a stationary spike train, the ISI distribution is also stationary.
-
-Here  $h$ is constant and $P(\tau,h)$ is reduced to $P(\tau)$. The interval distribution allows to compute the $k-$th moment,
+For the upcoming theoretical derivations, it is usefull to introduce the moment of the interspike interval distribution. For a stationary spike train, the ISI distribution is also stationary. Here  $h$ is constant, so we used the notation $P(\tau)$ instead of $P(\tau,h)$.  The interval distribution allows to compute the $k-$th moment,
 
 \begin{equation}
 \label{eq:Pmoment}
@@ -452,29 +454,32 @@ A Poisson process produces distributions with $C_V=1$ which indicate a highly ir
 \label{sec:refractory}
 \subsection{Population model}
 
-There are more about hundred of billion neurons in the human brain, distributed in different brain area and which form elaborate neural networks. Within a brain area one can identify subregions and layers where neurons are organize in populations of cells with similar property. Eloquent example are barrel columns in the primary somatosensory cortex [\cite{Lef09}], and pool of motor neuron [\cite{KanSch00}].
+There are about a hundred billion neurons in the human brain, distributed in different brain area and which form elaborate neural networks. Within a brain area one can identify subregions and layers where neurons are organized in populations of cells with similar properties. Eloquent examples are barrel columns in the primary somatosensory cortex [\cite{Lef09}], and pools of motor neurons [\cite{KanSch00}].
 
-Given the large number of neurons in a population, rather than track the spiking of individual neurons, instead it is appealing to describe the mean activity. Fig.\ref{fig:x285} illustrate the transition from a microscopic to a macroscopic description. The theory of population dynamics date back to the 1970s [\cite{Kni72}, \cite{WilCow72}] and are still widely use to predict the temporal evolution of the activity $A(t)$ [\cite{SchDeg17}]. In a network of $N$ neurons the population activity $A(t)$ is defined as the proportion of active neuron. Denoting by $t^f_j$ the firing time $f$ of the neuron $j$, the activity can be express as
+Given the large number of neurons in a population, rather than tracking the spiking of individual neurons,  it is appealing to describe the mean activity. Fig.\ref{fig:x285} illustrate the transition from a microscopic to a macroscopic description. The theory of population dynamics dates back to the 1970s [\cite{Kni72}, \cite{WilCow72}] and modern variants are used to predict the temporal evolution of the activity $A(t)$ [\cite{SchDeg17}]. In a network of $N$ neurons the population activity $A(t)$ is defined as the proportion of active neuron. Denoting by $t^f_j$ the firing time $f$ of the neuron $j$, the activity can be expressed as
 \begin{equation}
 A(t)=\frac{1}{N}\sum_{j=1}^N\sum_f\delta(t-t_j^f)
 \end{equation}
+
 %$A(t)=lim_{\Delta t \rightarrow 0} \frac{1}{\Delta t}\frac{n_{act}(t;t+\Delta t)}{N}$
 
-where $\delta$ denotes the dirac function.
-%and the double sum runs over all firing time $t^f$ of all neuron $j$ in the population.
+where $\delta$ a dirac function.
 
-We consider large homogeneous population of neurons i.e all neuron are identical and receive the same input potential. Composed of an external input$\mu(t)$ and a synaptic input current $I_{syn}$, due to the spikes from other neurons.
+
+We consider large homogeneous population of neurons i.e all neuron are identical and receive the same input potential, composed of an external input$\mu(t)$ and a synaptic input current $I_{syn}$, due to the spikes from other neurons.
 
 \begin{equation}
 \label{eq:input}
 RI_{syn}(t)=JA(t)
 \end{equation}
 
-$J$ denotes the coupling constant with the unite of voltage seconds, for a sake of simplicity we will consider all-to-all coupling, i.e. each neuron are coupled to each neuron and therefore receive the same input proportional to the mean activity.
+where $J$ denotes the coupling constant with the units of voltage seconds. For the sake of simplicity we will consider all-to-all coupling, i.e. each neuron is coupled to each neuron and therefore receives the same input proportional to the mean activity.
 
 \subsection{Refractory density equation}
+\label{secrefde}
 
-An approach on the refractory density $q(\tau,t) $ can be used to analyze the dynamic in an homogeneous population [\cite{GerKis02}]. $q(\tau,t)$ characterize the number of neuron at time $t$ that are in a similar state of activity, i.e with age $\tau=t-\hat{t}$, where $\hat{t}$ is the last spike time of the neuron. The  population activity is thus given by
+% TODO Wchange ? 
+An approach on the refractory density $q(\tau,t) $ let analyze the dynamic in an homogeneous population [\cite{GerKis02}]. $q(\tau,t)$ characterize the number of neuron at time $t$ that are in a similar state of activity, i.e with age $\tau=t-\hat{t}$, where $\hat{t}$ is the last spike time of the neuron. The population activity is thus given by
 \begin{equation}
 \label{eq:A}
 A(t)=q(0,t)
@@ -497,7 +502,8 @@ When a neuron fires, the trajectory along the refractory variable $\tau$ stops a
 % \textcolor{red}{$q(\tau_i)\rho(\tau_i)\Delta t$}
 %  \textcolor{blue}{$q(\tau_{i+1},t_{j+1})=q(\tau_i,t_j)[1-\rho(\tau_i)\Delta t]$}
 %  \textcolor{blue}{$\frac{q(\tau_{i+1},t_{j+1})-q(\tau_i,t_j)}{\Delta t}=-\rho(\tau_i)q(\tau_i,t_j)$}
-The dynamics is schematize on Fig.\ref{fig:qtau}. At time $t_j$ The proportion of neurons at age $\tau_i$ whose are firing and will reappear at age $0$, is given by $q(\tau_i,\tau_j)\rho(\tau_i,h_j)\Delta t$ (red arrow). The neuron whose did not fire will reach the age $\tau_{i+1}$ at time $t_{j+1}$ (blue arrow). The sum of all trajectory that "disappear" at time $t$ due to firing, are "reappearing" at $\tau=0$ and neuron will fire at some finite time, therefore the boundary condition are
+
+The dynamics is schematized on Fig.\ref{fig:qtau}. At time $t_j$ The proportion of neurons at age $\tau_i$ which are firing and will reappear at age $0$, is given by $q(\tau_i,\tau_j)\rho(\tau_i,h_j)\Delta t$ (red arrow). The neuron that did not fire will reach the age $\tau_{i+1}$ at time $t_{j+1}$ (blue arrow). The sum of all trajectories that "disappear" at time $t$ due to firing, are "reappearing" at $\tau=0$ since each neuron will fire at some finite time, the boundary conditions are
 
 \begin{align}
 \label{eq:boundarycondition}
@@ -533,7 +539,6 @@ where $q_0(\tau)$ is some function that satisfies the conditions Eq.\eqref{eq:bo
 \section{Spectral decomposition method}
 \label{sec:spect}
 
-%The  eigenfunction expansion is a method applied on partial differential equation. The main idea is identify an operator and expand the equation in terms of the operator eigenfunction times time dependent coefficients. 
 
 We apply a probability density approach, which describes the evolution of the density of states $q(x,t)$, in the phase space of a specific choice of neuronal state variable $x$.
 Many approaches consider only one state, the membrane potential $v$, governed by the integrate and fire model. In the refractory density approach, the state variable is the age $\tau$, i.e the time elapsed since the last spike. Assuming that the state variable $x$ can be described by a Markovian dynamics, we can write down an evolution equation for the state density $q$ in the following form
@@ -545,7 +550,7 @@ Many approaches consider only one state, the membrane potential $v$, governed by
 
 Where $\mathcal{L}$  is the evolution operator. Taking the membrane potential $v$ as a state variable the evolution operator corresponds to the Fokker-Planck operator [\cite{MatGiu02},\cite{SchOst13}]. We will first recall some property for a general evolution operator.
 
-%Where the evolution operator $\mathcal{L}$  L is a linear operator given a fixed history of the population activity A(t), s<t. 
+
 
 \subsection{General properties of the evolution operator}
 The operator $\mathcal{L}$ of Eq.\ref{eq:generaleq} has a set of eigenfunctions and associated eigenvalues
@@ -559,7 +564,7 @@ The time dependency provides a moving basis $\{\ket{\phi_n}\}$.
 
 Because $\mathcal{L}$ is a real operator, if an eigenvalue $\lambda_n$ is complex, its complex conjugate $\bar{\lambda}_n$  is also an eigenvalue of $\mathcal{L}$, with eigenfunction $\ket{\bar{\phi_n}}$. We will use the notation $\bar{\lambda}_n=\lambda_{-n}$, i.e the sums over the spectrum of $\mathcal{L}$ range over all integer numbers. Note that $\lambda_0=0$ is always an eigenvalue of the operator $\mathcal{L}$ and corresponds to the stationary solution.
 
-Because $\mathcal{L}$ is not generally hermitian we also need to define the eigenfunctions $\ket{\psi_n}$ of the adjoint operator $\mathcal{L}^{+}$ 
+Because $\mathcal{L}$ is not generally Hermitian we also need to define the eigenfunctions $\ket{\psi_n}$ of the adjoint operator $\mathcal{L}^{+}$ 
 
 \begin{equation}
 \label{eq:fokkerplanckoperatordega}
@@ -606,7 +611,7 @@ And with an appropriate normalization the two set of eigenfunctions are biorthon
 \langle\psi_i|\phi_j\rangle=\delta_{ij}
 \end{equation}
 
-The density of state $q(x,t)$ can be expressed in terms of this basis. 
+The density of state $q(x,t)$ can be expressed in terms of this basis
 
 \begin{equation}
 \label{eq:p}
@@ -623,6 +628,8 @@ The activity $A(t)$ can often be written as the action of some flux operator $\h
 \label{eq:AJq}
 A(t)=\hat{J}q(x,t)
 \end{equation}
+
+%TODO W changes
 
 Taking the membrane potential $v$ as state variable, the flux operator $\hat{J}$ is defined as
 \begin{equation}
@@ -656,7 +663,7 @@ The dynamics of the $a_n$ can be determined directly from the evolution equation
 \end{align}
 
 
-Here we have use the fact that the time dependence of $\psi$ is due to the moment of $h$, which is an external variable. An emission rate equation result
+Here we have use the fact that the time dependence of $\psi$ is due to the change of $h$, which is an external variable. The result is an emission rate equation
 
 \begin{align}
 \dot{\vec{a}}&=(\boldsymbol{\Lambda}+\boldsymbol{C}\dot{h})\vec{a}\\
@@ -664,7 +671,7 @@ A&=\vec{a}\cdot\vec{f}
 \end{align}
 
 
-The synaptic coupling are expressed in the he matrix $\boldsymbol{C}$: $C_{nm}=\langle\partial_h\psi_n|\phi_m\rangle$. And $\boldsymbol{\Lambda}$ is the diagonal matrix of the eigenvalues of $\mathcal{L}$:  $\Lambda_{nm}=\lambda_n\delta_{nm}$
+The synaptic coupling are expressed in the matrix $\boldsymbol{C}$: $C_{nm}=\langle\partial_h\psi_n|\phi_m\rangle$. And $\boldsymbol{\Lambda}$ is the diagonal matrix of the eigenvalues of $\mathcal{L}$:  $\Lambda_{nm}=\lambda_n\delta_{nm}$ \\
 
 %\begin{align}
 %\dot{\vec{a}}&=(\boldsymbol{\Lambda}+\boldsymbol{C}\dot{A})\vec{a}+\vec{c}\dot{A}\nonumber\\
@@ -672,18 +679,18 @@ The synaptic coupling are expressed in the he matrix $\boldsymbol{C}$: $C_{nm}=\
 %\end{align}
 
 
-%The synaptic coupling are expressed in the in the vector $\vec{c}$ $c_n=\langle\partial_h\psi_n|\phi_0\rangle$, $\forall n \neq 0$ and the matrix $\boldsymbol{C}$: $C_{nm}=\langle\partial_h\psi_n|\phi_m\rangle$ , $\forall n \neq 0$. And $\boldsymbol{\Lambda}$ is the diagonal matrix of the eigenvalues of $\mathcal{L}$: $\Lambda_{nm}=\lambda_n\delta_{nm}$
-
- In previous studies a prominent choice of the state variable was the membrane potential $v$ to analyze the dynamics of networks of integrate and fire neurons.  In this case the evolution operator $\mathcal{L}$ was the Fokker-Planck operator [\cite{MatGiu02}, \cite{GerKis02}, \cite{SchOst13}]. However neurons with different refractory state can have the same potential, and thus the membrane potential can be a weak predictor of the neuron complete state, but the age approximate quite well the refractory states, this encourage the use of a refractory approach. In this study, we re-evalute the spectral decomposition for the refractory density Eq.\eqref{eq:masterequation}. 
+%TODO change W : Knight 2000 also
+ In previous studies a prominent choice of the state variable was the membrane potential $v$ to analyze the dynamics of networks of integrate and fire neurons.  In this case the evolution operator $\mathcal{L}$ was the Fokker-Planck operator [\cite{MatGiu02}, \cite{GerKis02}, \cite{SchOst13}]. However neurons with different refractory state can have the same potential, and thus the membrane potential can be a weak predictor of the neurons complete state, whereas the age approximates quite well the refractory states. This encourage the use of a refractory approach. In this study, we re-evalute the spectral decomposition for the refractory density Eq.\eqref{eq:masterequation}. 
 
 
 \section{Aim of the study}
 
-%TODO EDNE PRESNTATION LIMITATION ....
 
-Starting with the spike statistic of a renewal process the goal of this thesis is to derive a low dimensional population dynamics keeping the first mode of the spectral expansion of the refractory density equation. In other word we would like to apply the eigenfunction expansion method presented in Section \ref{sec:spect} to the operator of the refractory density. Therefore we will first introduce in Sections \ref{sec:op} and \ref{sec:adop}, the operator and adjoint operator of the refractory density and the corresponding eigenfunctions, to finally  in Section \ref{sec:emissionrateequation} derive from this expansion a firing rate equation for a large homogeneous population of neurons. 
+We consider a large homogeneous populations of neurons modeled by a time dependent renewal process. A common approach to recover the population activity is based on the refractory density using the age of a neuron at state variable, Section.\ref{secrefde}. There are nevertheless some limitations to this integral formulation of the activity Eq.\eqref{eq:boundarycondition}. It has infinite dimension, it is not computationally efficient and the analytical tractability is limited.
 
-In Chapter \ref{chap:spectrum}, we will present the spectrum for specific model and an approximation of the first eigenvalue for a general renewal process. We will then show the accuracy of the derived approximations using as model a large homogeneous population of Poisson neurons with absolute refractoriness.
+Therefore the goal of this thesis is to derive a low-dimensional population dynamics keeping the first mode of the spectral expansion of the refractory density equation. In other words we would like to apply the eigenfunction expansion method presented in Section \ref{sec:spect} to the operator of the refractory density. Therefore we will first introduce in Sections \ref{sec:op} and \ref{sec:adop}, the operator and adjoint operator of the refractory density and the corresponding eigenfunctions, to finally  in Section \ref{sec:emissionrateequation} derive from this expansion a firing rate equation for a large homogeneous population of neurons. 
+
+In Chapter \ref{chap:spectrum}, we will present the spectrum for a specific model and an approximation of the first eigenvalue for a general renewal process. We will then show the accuracy of the derived approximation using as model a large homogeneous population of Poisson neurons with absolute refractoriness.
 In Chapter \ref{chap:grene} we will first consider the uncoupled case and analyze the effect of the refractory period $\Delta$. In Chapter \ref{chap:coupled} we will finally look at a network of synaptically coupled neurons.
 
 
@@ -691,7 +698,7 @@ In Chapter \ref{chap:grene} we will first consider the uncoupled case and analyz
 \chapter{Theory}
 \label{chap:theory}
 
-In this chapter we will follow the different step of the spectral expansion presented in Section \ref{sec:spect}, defining the operator and adjoint operator of the refractory density equation. Thanks to the derived spectrum and biorthonormal basis, we will obtained a low dimensional firing rate equation.
+In this chapter we will follow the different steps of the spectral expansion presented in Section \ref{sec:spect}, defining the operator and adjoint operator of the refractory density equation. Thanks to the derived spectrum and biorthonormal basis, we will obtained a low dimensional firing rate equation.
 
 \section{Operator of the refractory density, and eigenvalue spectrum $\{\lambda_n\}$}
 \label{sec:op}
@@ -708,13 +715,13 @@ The master equation Eq.\eqref{eq:masterequation} can be rewritten introducing th
 \partial_t q(\tau,t)=\mathcal{L}q(\tau,t)
 \end{equation}
 
-The set of eigenfunctions and associated eigenvalues of $\mathcal{L}$ obeys to
+The set of eigenfunctions and associated eigenvalues of $\mathcal{L}$ obeys
 \begin{equation}
 \label{eq:Loperator2}
 \mathcal{L}\ket{\phi_n}=\lambda_n\ket{\phi_n}
 \end{equation}
 
-And respect the boundary conditions Eq.\eqref{eq:boundarycondition}
+and respect the boundary conditions Eq.\eqref{eq:boundarycondition}
 
 \begin{align}
 \label{eq:boundarycondition2}
@@ -722,8 +729,7 @@ And respect the boundary conditions Eq.\eqref{eq:boundarycondition}
 \phi_n(\infty,h)&=0
 \end{align}
 
-
-To lighten the notation, we will omit the dependence on $h$ (the time dependent potential) of the hazard rate $\rho(\tau)$, The ISI distribution $P(\tau)$, the survivor function $S(\tau)$, and of the set of eigenfunctions $\{\ket{\phi_n}\}$ and eigenvalues $\{\lambda_n\}$.
+To lighten the notation, we will omit the dependence on $h$ (the time dependent potential) of the hazard rate $\rho(\tau)$, the ISI distribution $P(\tau)$, the survivor function $S(\tau)$, and of the set of eigenfunctions $\{\ket{\phi_n}\}$ and eigenvalues $\{\lambda_n\}$.
 
 The solution of Eq.\eqref{eq:Loperator2} is
 \begin{align}
@@ -754,14 +760,14 @@ We can conclude some properties of the spectrum {$\lambda_n$} imposed by Eq.\eqr
 \item As expected, the eigenvalue $\lambda_0=0$ fulfilled the condition because the ISI density is normalized. This eigenvalue corresponds to the stationary density.
 \item The real part of $\lambda_n$ cannot be positive, as expected for physical reason. Indeed the solution of the refractory density equation is directly related to the eigenvalues of $\mathcal{L}$ and is expected to converge to $\phi_0$, instead of exploding which would be the case for positive eigenvalues. In fact for $\Re(\lambda_n)>0$,\begin{equation}
 \int_0^\infty e^{-\lambda_n \tau} P(\tau) \dd\tau<\int_0^\infty |e^{-\lambda_n\tau} |P(\tau) \dd\tau<\int_0^\infty P(\tau) \dd\tau=1
-\end{equation}which contradict Eq.\eqref{eq:condition2}.
+\end{equation}which contradicts Eq.\eqref{eq:condition2}.
 \end{itemize}
 
 
 \section{Adjoint operator $\mathcal{L}^+$, and normalization}
 \label{sec:adop}
 
-Because $\mathcal{L}$ is not hermitian we also need to define the set of eigenfunctions $\{\ket{\psi_n}\}$ of the adjoint operator $\mathcal{L}^{+}$
+Because $\mathcal{L}$ is not Hermitian we also need to define the set of eigenfunctions $\{\ket{\psi_n}\}$ of the adjoint operator $\mathcal{L}^{+}$
 
 \begin{equation}
 \label{eq:Ldegaoperator}
@@ -777,7 +783,7 @@ We can find the adjoint operator $\mathcal{L}$, using integration by part
 &= \psi(0)\phi(0)+ \int_{0}^{\infty}[\partial_{\tau}-\rho(\tau)]\psi(\tau)\phi(\tau)\dd\tau  \nonumber \\
 \end{align}
 
-Using Eq.\eqref{eq:boundarycondition2} to rewrite $\phi(0)$ as an integral yields
+Using Eq.\eqref{eq:boundarycondition} to rewrite $\phi(0)$ as an integral yields
 
 \begin{align}
 \langle\psi|\mathcal{L}\phi\rangle&=\int_{0}^{\infty} \psi(0)\rho(\tau)\phi(\tau)\dd\tau+ \int_{0}^{\infty}[\partial_{\tau}-\rho(\tau)]\psi(\tau)\phi(\tau)\dd\tau  \nonumber \\
@@ -785,45 +791,44 @@ Using Eq.\eqref{eq:boundarycondition2} to rewrite $\phi(0)$ as an integral yield
 & = \langle\mathcal{L}^+\psi|\phi\rangle
 \end{align}
 
-As we will normalize the eigenfunction to obtain a biorthonormal basis we can set $\psi_n(0)=1$, and the adjoint operator can be express as
+As we will later normalize the eigenfunction to obtain a biorthonormal basis we can for now set $\psi_n(0)=1$, and the adjoint operator can be expressed as
 
 \begin{equation}
 \label{eq:Ldega}
 \mathcal{L}^+\psi_n(\tau)=[\partial_{\tau}-\rho(\tau)]\psi_n(\tau)+\rho(\tau)
 \end{equation}
 
-The solution of Eq.\eqref{eq:Ldegaoperator} is thus
+The un-normalized solution of Eq.\eqref{eq:Ldegaoperator} is thus
 
 \begin{align}
 \label{eq:psin}
 \psi_n(\tau)&=\exp\left(\lambda_n\tau+\int_0^\tau\rho(s)\dd s\right)\left[1-\int^\tau_0\dd x \rho(x) \exp\left(-\lambda_nx-\int_0^x\rho(s)\dd s\right)\right]\nonumber\\
-&=e^{\lambda_n\tau}S^{-1}(\tau)\big[1-\int^\tau_0 \dd x P(x) e^{-\lambda_nx}\big]
+&=e^{\lambda_n\tau}(\tau)\big[1-\int^\tau_0 \dd x P(x) e^{-\lambda_nx}\big]\frac{1}{S(\tau)}
 \end{align}
 
-In particular for $n=0$, $\lambda_0=0$ and using Eq.\ref{eq:S1}  we have 
+In particular for $n=0$, $\lambda_0=0$ and using Eq.\eqref{eq:S1}  we have 
 
 \begin{align}
 \label{eq:psi0}
-\psi_0(\tau)&=S^{-1}(\tau)\big[1-\int^\tau_0P(x) \dd x \big] \nonumber \\
+\psi_0(\tau)&=\frac{1}{S(\tau)}(\tau)\big[1-\int^\tau_0P(x) \dd x \big] \nonumber \\
 &=1
 \end{align}
 
-
-
- Inserting Eq.\eqref{eq:phin} and Eq.\eqref{eq:psin} in Eq.\eqref{eq:dij} yields to the normalization of the biorthonormal basis 
+ Inserting Eq.\eqref{eq:phin} and Eq.\eqref{eq:psin} in Eq.\eqref{eq:dij} yields the normalization of the biorthonormal basis 
 \begin{align}
+\label{eq:normalization}
 1=&\int_0^{\infty}\dd \tau\phi_n(0)\left[1-\int^\tau_0 \dd x P(x) e^{-\lambda_nx}\right] \\
 \phi_n(0) =&\frac{1}{\int_0^{\infty}\big[1-\int^\tau_0 P(x) e^{-\lambda_nx}\dd x\big]\dd\tau}
 \end{align}
 
 
-In particular for $n=0$, $\lambda_0=0$ and using Eq.\ref{eq:S1} we recover the relation
+In particular for $n=0$, $\lambda_0=0$ and using Eq.\eqref{eq:S1} we recover the relation
 
 \begin{equation}
 \phi_0(0) = \frac{1}{\int_0^{\infty}S(\tau)\dd\tau}
 \end{equation}
 
-which shows that the stationnary rate $\phi_0(0)$ is the inverse of the mean time $\langle\tau\rangle$ to spike, given by $\langle\tau\rangle=\int_0^{\infty}S(\tau)\dd\tau$.
+which shows that the stationary rate $\phi_0(0)$ is the inverse of the mean time $\langle\tau\rangle$ to spike, given by $\langle\tau\rangle=\int_0^{\infty}S(\tau)\dd\tau$.
 
 \section{Firing rate equation}
 \label{sec:emissionrateequation}
@@ -843,13 +848,20 @@ where $a_n(t)=\langle \psi_n | q\rangle$ are the time dependent coefficients of 
 %&=\lambda_n a_n +  \dot{h}\sum_ma_m\langle\partial_h\psi_n|\phi_m \rangle 
 %\end{align}
 
-Defining the coupling coefficient as $C_{nm}=\langle\partial_h\psi_n|\phi_m \rangle $ we can rewrite Eq.\ref{eq:andyn}
+Defining the coupling coefficient as
+
+\begin{equation}
+\label{eq:couplingcoef}
+ C_{nm}=\langle\partial_h\psi_n|\phi_m \rangle 
+ \end{equation}
+
+we can rewrite Eq.\eqref{eq:andyn}
 
 \begin{equation}
 \dot{a}_n=\lambda_n a_n +  \dot{h}\sum_mC_{nm}a_m 
 \end{equation}
 
-We can finally express the activity $A(t)=q(0,t)$ as
+Using Eq.\eqref{eq:q}, we can finally express the activity $A(t)=q(0,t)$ as
 
 \begin{equation}
 \label{eq:A2}
@@ -864,7 +876,6 @@ a_1(t)&= X(t) +i Y(t)\\
 \phi_1(0,h)&= \Phi_r(h)+i\Phi_i(h)
 \end{align}
 
-
  Keeping only the first mode, and using the fact that  $\ket{\phi_{-n}}=\ket{\bar{\phi}_n}$ and $a_{-n}=\bar{a}_n$,  Eq.\eqref{eq:A2} becomes
 
 \begin{align}
@@ -873,8 +884,6 @@ A(t)&=\phi_0(0) + a_1\phi_1(0) +a_{-1}\phi_{-1}(0) \nonumber \\
 &=\phi_0(0) + \left(X+iY\right)\left(\Phi_r+i\Phi_i\right)+\left(X-iY\right)\left(\Phi_r-i\Phi_i\right)\nonumber \\
 &=\phi_0(0) + 2\left(X\Phi_r- Y\Phi_i\right)
 \end{align}
-
-
 
 
 
@@ -893,8 +902,7 @@ Inserting Eq.\eqref{eq:a1xy} in Eq.\eqref{eq:a1} yields
 \dot{X}+i\dot{Y}=\lambda_1(X + iY)+ \dot{h}\big[C_{10}+C_{11}(X + iY)+C_{1-1}(X - iY)\big]\\
 \end{equation}
 
-
-Separating the imaginary part and the real part of Eq.\eqref{eq:a12}, we derived two first order differential equations for the real part $X$ and the imaginary part $Y$ of $a_{1}$
+Separating the imaginary part and the real part of Eq.\eqref{eq:a12}, we derive two first-order differential equations for the real part $X$ and the imaginary part $Y$ of $a_{1}$
 
 \begin{align}
 \label{eq:X}
@@ -914,17 +922,17 @@ with
 \gamma_r(h)&=\Re[C_{1-1}(h)]\\
 \gamma_i(h)&=\Im[C_{1-1}(h)]\\
 \eta_r(h)&=\Re[C_{10}(h)]\\
-\label{eq:last}
 \eta_i(h)&=\Im[C_{10}(h)]	
+\label{eq:last}
 \end{align}
 
 
-We have finally a set of three non linear differential equation $\dot{h}$, $\dot{X}$, $\dot{Y}$. The dynamics of the input potential $h$ is given by Eq.\eqref{eq:h}
+We have finally a set of three non linear differential equation $\dot{h}$, $\dot{X}$, $\dot{Y}$. The dynamics of the input potential $h$ is given by Eq.\eqref{eq:h}.
 We can rewrite Eq.\eqref{eq:A3} making the dependence in time $t$ and $h$ explicit
 
 \begin{equation}
 \label{eq:A4}
-A(t)=\phi_0(0,h) + 2\big(X(t)\Phi_r(h)- Y(t)\Phi_i(h)\big)
+A(t)=\phi_0(0,h(t)) + 2\big(X(t)\Phi_r(h(t))- Y(t)\Phi_i(h(t))\big)
 \end{equation}
 
 
@@ -933,9 +941,9 @@ A(t)=\phi_0(0,h) + 2\big(X(t)\Phi_r(h)- Y(t)\Phi_i(h)\big)
 \chapter{Spectrum}
 \label{chap:spectrum}
 
-In this chapter we will derive  in Section \ref{sec:specif-model}, the eigenvalue spectrum $\{\lambda_n\}$ for different processes. In Section \ref{sec:eigv}, we will present a derivation to obtain an approximation of the first eigenvalue $\lambda_1$ for a general process.
+In this chapter we will derive in Section \ref{sec:specif-model}, the eigenvalue spectrum $\{\lambda_n\}$ for different processes. In Section \ref{sec:eigv}, we will present a derivation to obtain an approximation of the first eigenvalue $\lambda_1$ for a general process.
 
-\section{Spectral derivation for specific model}
+\section{Spectral derivation for specific models}
 \label{sec:specif-model}
 
 
@@ -945,7 +953,7 @@ In this chapter we will derive  in Section \ref{sec:specif-model}, the eigenvalu
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{poisson_eigenfunction2.pdf}
-	\caption{Real part (left) and imaginary part (right) of the eigenfunctions $\phi_n$ of the first modes $n=0,1$ for a \textbf{Poisson neuron with absolute refractory period} $\Delta$. With $\Delta=5$ ms, $h=h_0$, $\nu_{max}=0.6$ kHz. $\phi{-1}$ is the complex conjugate of $\phi_{1}$}
+	\caption{Real part (left) and imaginary part (right) of the eigenfunctions $\phi_n$ of the first modes $n=0,1$ for a \textbf{Poisson neuron with absolute refractory period} $\Delta$. With $\Delta=5$ ms, $h=h_0$, $\nu_{max}=0.6$ kHz. $\phi_{-1}$ is the complex conjugate of $\phi_{1}$}
 	\label{fig:poissoneigenfunction}
 \end{figure} 
 
@@ -967,13 +975,13 @@ P(\tau,h)=\nu\exp\big(-\nu(\tau-\Delta)\big) \Theta(\tau-\Delta)
 For this process we can compute the Laplace transform of the ISI density
 
 \begin{align}
-P_L(\lambda)=&\int_0^\infty P(\tau)e^{-\lambda \tau}\nonumber\\
+P_L(\lambda)=&\int_0^\infty P(\tau)e^{-\lambda \tau}\dd \tau\nonumber\\
 =&\frac{\nu}{\nu+\lambda}\exp(-\lambda \Delta)
 \end{align}
 %=&\int_\Delta^\infty \nu \exp\big(-(\lambda+\nu)\tau)\big)\exp\big(\nu \Delta\big)\\
 
 
-By the change of variable $w_n=(\nu+\lambda_n)\Delta$, the condition Eq.\eqref{eq:condition2}, can be rewritten as
+By the change of variable $w_n=(\nu+\lambda_n)\Delta$, the normalization condition Eq.\eqref{eq:condition2} $P_L(\lambda))=1$, can be rewritten as
 
 %\frac{\nu}{\nu+\lambda}exp(-\lambda_n \Delta)=1
 
@@ -993,7 +1001,6 @@ from which we read the eigenvalue spectrum $\{\lambda_n\}$
 \lambda_n=\frac{1}{\Delta}W(\Delta \nu e^{\nu\Delta},n) - \nu
 \end{equation}
 
-
 We can explicitly express the eigenfunctions, $\ket{\phi_n}$ of the operator $\mathcal{L}$ and $\ket{\psi_n}$ of  the adjoint operator $\mathcal{L}^+$
 
 %\begin{align}
@@ -1012,14 +1019,14 @@ These eigenfunctions are illustrated in Fig.\ref{fig:poissoneigenfunction} for $
 =&\Theta(\Delta-\tau)e^{\lambda_n\tau} +  \Theta(\tau-\Delta)e^{\lambda_n\Delta}
 \end{align}\\
 
-On can verify that the set eigenfunctions satisfy Eq.\eqref{eq:dij}.
+One can verify that the set ofeigenfunctions satisfy Eq.\eqref{eq:dij}.
+So far we considered constant $h$. For the general case of time-dependent input, we need we need to compute $\frac{d\psi_n(\tau)}{d\nu}$, to define the coupling coefficients Eq.\eqref{eq:couplingcoef}. 
 
-In order to define the coupling coefficient we need first to compute $\frac{d\psi_n(\tau)}{d\nu}$ 
 \begin{equation}
 \frac{\partial\psi_n(\tau)}{\partial\nu}=\frac{\lambda_n}{\nu[1+\Delta(\nu+\lambda_n)]}\left[\Theta(\Delta-\tau)\tau e^{\lambda_n\tau} +  \Theta(\tau-\Delta)\Delta e^{\lambda_n\Delta}\right]\\
 \end{equation}\\
 
-The coupling coefficient are then given by
+The coupling coefficients are then given by
 \begin{align}
 C_{nn}=&\frac{\partial \nu}{\partial h}\int_0^\infty\frac{d\psi_n(\tau)}{d\nu}\phi_n(\tau)d\tau \nonumber\\
 =&\frac{\lambda_n\Delta(1+\frac{1}{2}\lambda_n(\nu+\lambda_n))}{\nu(1+\Delta(\nu+\lambda_n))}\frac{\partial \nu}{\partial h}
@@ -1034,78 +1041,76 @@ C_{nm}=&\frac{\partial \nu}{\partial h}\int_0^\infty\frac{d\psi_n(\tau)}{d\nu}\p
 
 
 
-\subsection{Gamma process}
+\subsection{Gamma neuron model}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{gamma_eigenfunction.pdf}
 	\caption{Real part (left) and imaginary part (right) of the eigenfunction $\phi_n$ of the first modes for a \textbf{Gamma neuron model} with $\beta=100$
-		$\gamma=10$. $\phi{-1}$ is the complex conjugate of  $\phi_{1}$}
+		$\gamma=10$. $\phi_{-1}$ is the complex conjugate of  $\phi_{1}$}
 	\label{fig:gammaeigenfunction}
 \end{figure}
 
-In this section we consider a gamma  neuron model. Taking the Laplace transform of the ISI density Eq. \eqref{eq:gamma} yields
+In this section we consider a gamma neuron model. Taking the Laplace transform of the ISI density Eq.\eqref{eq:gamma} yields
 
 \begin{equation}
 P_L(\lambda)=\left(\frac{\beta}{\beta +\lambda}\right)^\gamma
 \end{equation}
 
-The condition given by Eq.\eqref{eq:condition2} leads then to the solutions
+The condition given by Eq.\eqref{eq:condition2} leads then to the solutions [\cite{Sch16}]
 
 \begin{equation}
 \label{eq:gammaeig}
 \lambda_n=\beta\left(\exp\left(\frac{2\pi i}{\gamma}n\right)-1\right), \hspace{2.8cm}  n=0,..., \gamma-1
 \end{equation}
 
-Interestingly the gamma  neuron model has a finite number of mode. Eq.\eqref{eq:gammaeig} can be rewritten in function of the rate $R$ and the coefficient of variation $C_V$ as
+Interestingly the gamma neuron model has a finite number of mode. Eq.\eqref{eq:gammaeig} can be rewritten in function of the rate $R$ and the coefficient of variation $C_V$ as
 
 \begin{equation}
 \lambda_n=RC_V^{-2}\left(\exp\left(2\pi iC_V^2 n\right)-1\right)
 \end{equation}
 
-And the normalization Eq.\ref{eq:psi0} yields to
+And the normalization Eq.\eqref{eq:psi0} yields to
 \begin{equation}
 \phi_n(0)=\frac{1}{\gamma\beta^\gamma(\beta+\lambda_n)^{-(\gamma+1)}}
 \end{equation}
 
-
 The eigenfunctions of the gamma  neuron model are illustrated in Fig.\ref{fig:gammaeigenfunction} for $n=0,1$.
-
-
 
 
 \subsection{PIF model}
 
-In this section we will consider a perfect integrating and  fire neuron. The Laplace transform of the ISI density Eq. \eqref{eq:iversegaussian} is
+In this section we will consider the perfect integrating and fire neuron modem. The Laplace transform of the ISI density Eq.\eqref{eq:inversegaussian} is
 
 \begin{equation}
-P_L(\lambda)=\exp\big(\frac{\mu V_{th}}{2D}\big[1-\sqrt{1+\frac{4D\lambda}{\mu^2}}\big]\big)
+P_L(\lambda)=\exp\big(\frac{f(h) V_{th}\tau_v}{2D}\big[1-\sqrt{1+\frac{4D\lambda}{f(h)^2}}\big]\big)
 \end{equation}
 
 
 The condition given by Eq.\eqref{eq:condition2} leads then to the solutions
 \begin{equation}
-\lambda_n=- \frac{2\pi\mu}{V_{th}}n( \frac{2\pi D}{\mu V_{th}}n + i)
+\lambda_n=-\frac{4\pi D}{\tau_V^2V_{th}^2}n^2+\frac{f(h)}{V_{th}\tau_v}ni
 \end{equation}
 
 The spectrum can be rewritten as a function of the rate $R$ and the coefficient of variation $C_V$
 
 \begin{equation}
-\lambda_n=- 2\pi^2R^2C_V^2n^2+2\pi R i\:n
+\lambda_n=- 2\pi^2RC_V^2n^2+2\pi R i\:n
 \end{equation}
 
-We could not find an analytical solution for the normalization equation Eq.\ref{eq:psi0}.
+We could not find an analytical solution for the normalization equation Eq.\eqref{eq:normalization}.
 
 \section{A general approximation of the spectrum}
 \label{sec:eigv}
-In the previous sections we derived the spectrum $\{\lambda_n\}$ for different specific model. But for a general ISI distribution $P(\tau)$, it is not always possible to obtained a analytical form of the Laplace transform $P_L(\lambda)$. Thats why we would like to find a method to approximate the first eigenvalue $\lambda_1$. From Eq.\eqref{eq:Pmoment2} one can see that the the Laplace transform of ISI distribution can be rewritten with the cumulant $\kappa_n$ as
+In the previous sections we derived the spectrum $\{\lambda_n\}$ for different specific neuron models. But for a general ISI distribution $P(\tau)$, it is not always possible to obtained a analytical form of the Laplace transform $P_L(\lambda)$. Thats why we would like to find a method to approximate the first eigenvalue $\lambda_1$. From Eq.\eqref{eq:Pmoment2} one can see that the the Laplace transform of the ISI distribution can be rewritten with the cumulant $\kappa_n$ as
 
 \begin{equation}
 \label{eq:PLcum}
 P_L(\lambda)=\exp\left[ \sum_{k=1}^{+\infty}(-1)^k\kappa_k \frac{\lambda^k}{k!}\right]
 \end{equation}
 
-The condition Eq.\eqref{eq:condition2} can be then rewritten as
+The condition $P_L(\lambda_n)=1=\exp(2\pi \i n)$ Eq.\eqref{eq:condition2} can be rewritten as
+
 
 \begin{equation}
 \label{eq:cum2pi}
@@ -1119,7 +1124,7 @@ We can approximate the first eigenvalue $\lambda_1$, neglecting the terms multip
 \frac{\kappa_2}{2}\lambda_1^2-\kappa_1\lambda_1 -2\pi i=0
 \end{equation}
 
-$\lambda_1$ correspond to the roots of Eq.\eqref{eq:cumaprox} with the negative real parts, as we have shown before in Section \ref{sec:op}, a positive real part would be unphysical and does not satisfy Eq.\eqref{eq:condition2}. The approximation of $\lambda_1$ can be rewritten in terms of the rate $R$ and the coefficient of variation $C_V$: 
+$\lambda_1$ correspond to the roots of Eq.\eqref{eq:cumaprox} with the negative real parts, as we have shown before in Section \ref{sec:op}, a positive real part would be unphysical and does not satisfy Eq.\eqref{eq:condition2}. The approximation of $\lambda_1$ can be rewritten in terms of the rate $R$ and the coefficient of variation $C_V$ using Eq.\eqref{eq:R} and Eq.\eqref{eq:CV}
 
 \begin{equation}
 \label{eq:l1aprox}
@@ -1131,19 +1136,19 @@ $\lambda_1$ correspond to the roots of Eq.\eqref{eq:cumaprox} with the negative 
 	\includegraphics[width=0.8\linewidth]{kumulant_gamma.pdf}
 	\centering
 	\includegraphics[width=0.8\linewidth]{kumulant_pif.pdf}
-	\caption{\textbf{Top:} Gamma  neuron model. \textbf{Bottom:} PIF neuron. Relative error on the eigenvalue for the eigenvalue approximations derived by \cite{SchOst13} Eq.\eqref{eq:schaffer}, and by Eq.\eqref{eq:l1aprox} using the cumulant expansion as a function of $C_V$.}
+	\caption{\textbf{Top:} Gamma  neuron model. \textbf{Bottom:} PIF neuron modle. Relative error on the eigenvalue for the eigenvalue approximations derived by \cite{SchOst13} Eq.\eqref{eq:schaffer}, and by Eq.\eqref{eq:l1aprox} using the cumulant expansion as a function of $C_V$.}
 	\label{fig:kumulant}
 \end{figure}
 
 
-\cite{SchOst13} determined the first eigenvalue $\lambda_1$ for different renewal processes by fitting the dependency of the real part and the imaginary part on the rate $R$ and the coefficient of variation squared $C_V^2$. They found as a relationship for small $C_V$:
+In \cite{SchOst13},  they determined the first eigenvalue $\lambda_1$ for different renewal processes by fitting the dependency of the real part and the imaginary part on the rate $R$ and on the coefficient of variation squared $C_V^2$. They found as a relationship for small $C_V$:
 
 \begin{equation}
 \label{eq:schaffer}
 \lambda_1 \simeq -R\left( \left(\frac{C_V}{0.22}\right)^2+2\pi i\right) 
 \end{equation}
 
-Note that for small $C_V$ we can expand taylor expand the square root in Eq.\eqref{eq:l1aprox} and recover an expression close to Eq.\eqref{eq:schaffer}
+Note that for small $C_V$ we can Taylor expand the square root in Eq.\eqref{eq:l1aprox} and recover an expression close to Eq.\eqref{eq:schaffer}
 
 \begin{equation}
 \label{eq:l1aprox2}
@@ -1152,12 +1157,15 @@ Note that for small $C_V$ we can expand taylor expand the square root in Eq.\eqr
 
 Indeed $\frac{1}{(0.22)^2}\simeq20.7$ and $2\pi^2\simeq19.7$.
 
-Fig.\ref{fig:kumulant} shows the relative error $\frac{|\lambda_1 -\hat{\lambda}_1|}{|\lambda_1|}$ for the different approximation $\hat{\lambda}_1$ of the first eigenvalue $\lambda_1$. For the Gamma  neuron model the relative error is below $0.1$ for $C_V<0.3$ for the approximation obtained by Schaffer et al Eq.\eqref{eq:schaffer} and the one given by Eq.\eqref{eq:l1aprox}. For $C_V<0.1$ Eq.\eqref{eq:l1aprox} is a better approximation. For
-the PIF neuron model, the $\kappa_2$ approximation has a relative error below $0.1$ for $C_V<0.1$. It becomes better than the Schaffer approximation for $C_V<0.1$. Actually Eq.\eqref{eq:l1aprox2} is exact and we saw that the Schaffer approximation is close to this expression. It seems that the truncation of the cumulant sum to second order gives a good approximation of the first eigenvalue $\lambda_1$ for small $C_V$. %Those preliminary results must be further investigated.
+Fig.\ref{fig:kumulant} shows the relative error $\frac{|\lambda_1 -\hat{\lambda}_1|}{|\lambda_1|}$ for the different approximation $\hat{\lambda}_1$ of the first eigenvalue $\lambda_1$. 
 
+For the Gamma neuron model the relative error is below $0.1$ for $C_V<0.3$ for the approximation obtained by Schaffer et al Eq.\eqref{eq:schaffer} and the one given by Eq.\eqref{eq:l1aprox}. For $C_V<0.1$ Eq.\eqref{eq:l1aprox} is a better approximation. 
 
+For the PIF neuron model, the $\kappa_2$ approximation has a relative error below $0.1$ for $C_V<0.1$. It becomes better than the Schaffer approximation for $C_V<0.1$. Actually Eq.\eqref{eq:l1aprox2} is exact thus for small $C_V$, the relative error with the $\kappa_2$ is very low and we saw that the Schaffer approximation is close to this expression, so even for large $C_V$ the Schaffer approximation is good.
 
-\chapter{General renewal neuron}
+ It seems that the truncation of the cumulant sum to second order gives a good approximation of the first eigenvalue $\lambda_1$ for small $C_V$.  %Those preliminary results must be further investigated.
+
+\chapter{Evaluation of spectral approximations}
 \label{chap:grene}
 
 \section{Transcient response of the population activity starting with a delta distribution $q(\tau,0)=\delta(\tau)$}
@@ -1165,20 +1173,20 @@ the PIF neuron model, the $\kappa_2$ approximation has a relative error below $0
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{delta_poisson.pdf}
-	\caption{Activity $A(t)$ of a population of neuron of poison neuron with absolute refractoriness $\Delta$ The approximation given by Eq.\eqref{eq:A3}, and the 10 modes approximation is given by  by Eq.\ref{eq:A2} with $n=10$. The parameters used are $h=h_0$, $\Delta=5$ ms, and $\nu_{max}=0.6$ $kHz$  and the initial condition is $q(\tau,0)=\delta(\tau)$}
+	\caption{Activity $A(t)$ of a population of neuron of poisson neuron with absolute refractoriness $\Delta$ The approximation given by Eq.\eqref{eq:A3}, and the 10 modes approximation is given by  by Eq.\eqref{eq:A2} with $n=10$. The parameters used are $h=h_0$, $\Delta=5$ ms, and $\nu_{max}=0.6$ $kHz$  and the initial condition is $q(\tau,0)=\delta(\tau)$}
 	\label{fig:delta_poisson}
 \end{figure}
 
+In this section we will look at the result of the approximation Eq.\eqref{eq:A4} for the gamma  neuron model and for a population of Poisson neurons with absolute refractoriness. For the sake of simplicity we consider first a large homogeneous population of uncoupled neurons with a constant input potential.The initial distribution of the refractory density $q$ is given by a delta peak $q(\tau,0)=\delta(\tau$), i.e all neurons spike at time $t=0$.
 
-In this section we will look at the result of the approximation Eq.\eqref{eq:A4} for the gamma  neuron model and for a population of Poisson neurons with absolute refractoriness. For a sake of simplicity we consider first large homogeneous population of uncoupled neurons with a constant input potential.The initial distribution of the refractory density $q$ is given by a delta pic $q(\tau,0)=\delta(\tau$), i.e all neurons spike at time $t=0$.
-As expected we need infinitely many modes to recover the exact initial distribution. We will see later that keeping only the first mode is a good approximation for not too fast changes, which is not the case of a delta pic nevertheless  fig.\ref{fig:delta_poisson} one can see that we quantitatively reproduce the response i.e the oscillations of the activity with the approximation given by Eq.\eqref{eq:A4}, and we even recover the shape of the first pic taking the $10$ first mode of Eq.\eqref{eq:A2}.
-The Gamma neuron model have a finite number of modes Eq.\ref{eq:gammaeig} and we see on fig.\ref{fig:delta_poisson} that we recover exactly the activity $A(t)$ taking the complete expansion.
+As expected for the Poisson neuron with absolute refractoryness model, we need infinitely many modes to recover the exact initial distribution Fig.\ref{fig:delta_poisson}. We will see later that keeping only the first mode is a good approximation for changes that are not too fast, which is not the case of a delta peak. Nevertheless  Fig.\ref{fig:delta_poisson} one can see that we quantitatively reproduce the response i.e the oscillations of the activity with the approximation given by Eq.\eqref{eq:A4}, and we even recover the shape of the first peak taking the $10$ first mode of Eq.\eqref{eq:A2}.
 
+The Gamma neuron model has a finite number of modes Eq.\eqref{eq:gammaeig} and we see on Fig.\ref{fig:delta_poisson} that we recover exactly the activity $A(t)$ taking the complete expansion.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{delta_gamma.pdf}
-	\caption{Activity $A(t)$ of a population of neuron having an ISI density given by the gamma distribution with $\beta=100$ Hz and $\gamma=10$ starting with a delta distribution $q(\tau,0)=\delta(\tau)$. With the approximation given by Eq.\eqref{eq:A4}, and the complete expansion given by Eq.\ref{eq:A2}}
+	\caption{Activity $A(t)$ of a population of neurons having an ISI density given by the gamma distribution with $\beta=100$ Hz and $\gamma=10$ starting with a delta distribution $q(\tau,0)=\delta(\tau)$. With the approximation given by Eq.\eqref{eq:A4}, and the complete expansion given by Eq.\eqref{eq:A2}}
 	\label{fig:delta_gamma}
 \end{figure}
 
@@ -1224,7 +1232,6 @@ The Gamma neuron model have a finite number of modes Eq.\ref{eq:gammaeig} and we
 \end{figure}
 
 
-
 In this section we will study the response of a large population of uncoupled (i.e $J=0$) Poisson neuron with absolute refractoriness to an external time dependent input potential $\mu(t)$. The differential equation for the input potential $h$ is given by Eq.\eqref{eq:h}, and the firing rate of the Poisson neurons is given by $\Phi(h)$ Eq.\eqref{eq:phi}. We will compare the population activity approximation given by Eq.\eqref{eq:A4}, to the theoretical one computed as
 
 \begin{equation}
@@ -1232,14 +1239,14 @@ A(t)=\Phi(h)\left(1-\int_{t-\Delta}^t A(s)\dd s\right)
 \end{equation}
 
 We will use as an error measure the normalized root-mean-square deviation NRMS.
-The NRMS of predicted values $\hat {y}_t$ for times $t$ of a regression's dependent variable $y_t$ with variables observed over $T$ times, is computed for $T$ different predictions as the square root of the mean of the squares of the deviations normalized by the range of value of $y$
+The NRMS of predicted values $\hat {y}_t$ for times $t$ of a variable $y_t$ with variables observed over $T$ times, is computed as the square root of the mean of the squares of the deviations normalized by the range of value of $y$
 
 \begin{equation}
 \label{eq:NRMS}
 NRMS=\frac{1}{y_{max}-y_{min}}\sqrt{\frac{\sum_{t=1}^T(\hat{y}_t-y_t)^2}{T}}
 \end{equation}
 
-Our approximation Eq.\eqref{eq:A4} only keeps the slowest mode, so we expect that the theory breaks down for too fast inputs. To study the accuracy of our approximation, we looked at the response of the model to a sinusoidal modulation of the external input potential $\mu(t)$ with an angular frequency $\omega_s$ 
+Our approximation Eq.\eqref{eq:A4} only keeps the slowest mode, so we expect that the theory breaks down for fast inputs. To study the accuracy of our approximation, we looked at the response of the model to a sinusoidal modulation of the external input potential $\mu(t)$ with an angular frequency $\omega_s$ 
 
 \begin{equation}
 \label{eq:mut}
@@ -1248,17 +1255,17 @@ Our approximation Eq.\eqref{eq:A4} only keeps the slowest mode, so we expect tha
 
 The input potential was initialized as if the population activity was at a stationary state with $h(0)=\mu_0=h_0$. 
 
-The results are summarize in Fig.\ref{fig:NRMSo}. For frequencies higher than $100$ Hz, the NRMS becomes high thus the approximation does not hold anymore. On Fig.\ref{fig:A_omega_t}, one can see that for a frequency of $150$ Hz the activity amplitude of the approximation becomes lower than the theoretical one.
+The results are summarized in Fig.\ref{fig:NRMSo}. For frequencies higher than $100$ Hz, the NRMS becomes high thus the approximation does not hold anymore. On Fig.\ref{fig:A_omega_t}, one can see that for a frequency of $150$ Hz the activity amplitude of the approximation becomes lower than the theoretical one.
 
 To study the population response to more complex signals we used as external input
 
 \begin{equation}
 \label{eq:mu2}
-\mu(t)=mu_0+\epsilon f_{cos}(t)
+\mu(t)=\mu_0+\epsilon f_{cos}(t)
 \end{equation} 
 
 
-Where $\mu_0$ and $\epsilon$ are constant and $f_{cos}(t)$  is a function composed of equal-amplitude sinusoidal oscillation with different frequencies. $f_{cos}(t)$ is represented of Fig.\ref{fig:fcos}. Fig.\ref{fig:NRMSo} illustrates the response for different $\mu_0$ and $\epsilon$. In the sub threshold $mu_0<<h_0$ the activity is shut down due the sigmoid rate function $\Phi(h)$. In the suprathreshold limit $\mu_0>>h_0$ the activity goes toward the value $\frac{\nu_{max}}{1+\Delta\nu_{max}}$. Fig.\ref{fig:NRMSe} illustrates the accuracy of the approximation for the different input. For the different input the NRMS stays below $2.5\%$ which highlight the validity of the approximation.
+Where $\mu_0$ and $\epsilon$ are constant and $f_{cos}(t)$  is a function composed of equal-amplitude sinusoidal oscillation with different frequencies. $f_{cos}(t)$ is represented of Fig.\ref{fig:fcos}. Fig.\ref{fig:A_t} illustrates the response for different $\mu_0$ and $\epsilon$. In the sub threshold $\mu_0<<h_0$ the activity is shut down due the sigmoid rate function $\Phi(h)$. In the suprathreshold limit $\mu_0>>h_0$ the activity goes toward the value $\frac{\nu_{max}}{1+\Delta\nu_{max}}$. Fig.\ref{fig:NRMSe} illustrates the accuracy of the approximation for the different input. For the different input the NRMS stays below $2.5\%$ which highlight the validity of the approximation.
 
 \begin{figure}[h!]
 	\centering
@@ -1268,8 +1275,9 @@ Where $\mu_0$ and $\epsilon$ are constant and $f_{cos}(t)$  is a function compos
 	\label{fig:NRMSe}
 \end{figure}
 
+%TIODO W CHANGE rapid increase a w/2pi =100Hz why?
 
-Finally we analyzed the response of the population activity to an abrupt change in the external input with a step function, from $15$mV to $mu(t)=\mu_0$ for $t>0$. The response for two different value of $\mu_0$ are shown on Fig.\ref{fig:Astep}. The response shows an oscillatory behavior, the amplitude of the oscillation increases with $\mu_0$, as well as the NRMS as shown on Fig.\ref{fig:NRMSstep}.  As illustrated in Fig.\ref{fig:Astep} even for large step the response is rapidly well approximated by Eq.\ref{eq:A4}.
+Finally we analyzed the response of the population to an abrupt change in the external input with a step function, from $15$mV to $\mu(t)=\mu_0$ for $t>0$. The response for two different value of $\mu_0$ is shown on Fig.\ref{fig:Astep}. The response shows an oscillatory behavior, the amplitude of the oscillation increases with $\mu_0$, as well as the NRMS as shown on Fig.\ref{fig:NRMSstep}.  As illustrated in Fig.\ref{fig:Astep} even for large steps the response is rapidly well approximated by Eq.\eqref{eq:A4}.
 
 \begin{figure}[h!]
 	\centering
@@ -1289,8 +1297,6 @@ Finally we analyzed the response of the population activity to an abrupt change 
 
 \section{Effect of the refractoriness}
 
-
-
 To analyze the effect of the refractory period $\Delta$ on the transient response to an external input $\mu(t)$, we will compare the activity of a population of Poisson neuron with absolute refractoriness to an "equivalent" population of Poisson neuron. We know that the mean firing rate $R$ of a population of Poisson neuron with absolute refractoriness $\Delta$ is given by 
 
 \begin{equation}
@@ -1298,51 +1304,50 @@ To analyze the effect of the refractory period $\Delta$ on the transient respons
 R=\frac{\Phi(h)}{1+\Phi(h)}
 \end{equation}
 
-Therefore the "equivalent" population of Poisson neuron is defined as a population of Poisson neuron with firing rate given by Eq.\eqref{eq:eqfr}.
+Therefore the "equivalent" population of Poisson neurons is defined as a population of Poisson neuron with firing rate given by Eq.\eqref{eq:eqfr}.
 
 
-Fig.\ref{fig:refractory_rep} illustrates the difference in the response between a population of Poisson neurons with absolute refractoriness (blue line) and an "equivalent" population of Poisson neurons (red line) to abrupt change in the input potential $\mu(t)$. the external input $\mu(t)$ was a step function changing every $50$ ms ($30$ mV / $10$ mV / $30$ mV / $16$ mV). Note that the blue line was obtained using the approximation Eq.\ref{eq:A4}, with an $NMRS=0.02$. Contrary to the "equivalent" population of Poisson neuron, for the Poisson neurons with absolute refractoriness the response of the population activity to an abrupt change shows an oscillatory behavior in the approach to the new stationary state. The oscillations are absent in a quasi-stationary state and as expected the population becomes the same. When the input is lowered, the response of the population is delayed and doesn't show oscillation and the response of the population of Poisson neurons with absolute refractoriness is a bit faster.
+Fig.\ref{fig:refractory_rep} illustrates the difference in the response between a population of Poisson neurons with absolute refractoriness (blue line) and an "equivalent" population of Poisson neurons (red line) to abrupt change in the input potential $\mu(t)$. the external input $\mu(t)$ was a step function changing every $50$ ms ($30$ mV / $10$ mV / $30$ mV / $16$ mV). Note that the blue line was obtained using the approximation Eq.\eqref{eq:A4}, with an $NMRS=0.02$. Contrary to the "equivalent" population of Poisson neuron, for the Poisson neurons with absolute refractoriness the response of the population activity to an abrupt change shows an oscillatory behavior in the approach to the new stationary state. The oscillations are absent in a quasi-stationary state and as expected the population activity become identical. When the input is lowered, the response of the population is delayed and doesn't show oscillations and the response of the population of Poisson neurons with absolute refractoriness is a bit faster.
 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{refractory_rep.pdf}
-	\caption{Transient response of the population activity (bottom) receiving as external input an step function $\mu(t)$ (top). The blue line correspond to the response of poisson neuron with absolute refractory period .The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ , $h_0=15$ mV. The red line correspond to the "equivalent" poputaltion of poisson neuron with firing rate given by Eq.\eqref{eq:eqfr}
+	\caption{Transient response of the population activity (bottom) receiving as external input an step function $\mu(t)$ (top). The blue line correspond to the response of poisson neuron with absolute refractory period .The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ , $h_0=15$ mV. The red line correspond to the "equivalent" population of Poisson neuron with firing rate given by Eq.\eqref{eq:eqfr}
 	}
 	\label{fig:refractory_rep}
 \end{figure}
 
 
 
-
 \chapter{Population dynamics of coupled neurons}
 \label{chap:coupled}
 
-In this Chapter we consider an all-to-all coupled population of Poisson neuron with absolute refractoriness with firing rate given by $\Phi(h)$ Eq.\ref{eq:phi}. The dynamic of the input potential $h$ is given by
+In this Chapter we consider an all-to-all coupled population of Poisson neuron with absolute refractoriness with firing rate given by $\Phi(h)$ Eq.\eqref{eq:phi}. The dynamics of the input potential $h$ are given by
 
 \begin{equation}
 \label{eq:h2}
 \tau_m\dot{h}=-h+JA(t)+\mu(t)
 \end{equation}
 
-where $\mu(t)$ is an external input potential and $J$ is the coupling constant. For a sake of simplicity for the study, we will set some of the parameters constant. The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ , $h_0=0$ mV, and the time constant of the input potential $h$ is $\tau_m=10$ ms.
+where $\mu(t)$ is an external input potential and $J$ is the coupling constant. For the sake of simplicity for the study, we will set some of the parameters constant. The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ , $h_0=0$ mV, and the time constant of the input potential $h$ is $\tau_m=10$ ms.
 
 
 We use as an error measure the normalized root-mean-square deviation Eq.\eqref{eq:NRMS}
 
 \section{Response to time dependent input}
 
-In this section we analyze the Response to time dependent input, for a coupled population of excitatory neuron, i.e $J>0$. As for the uncoupled case Section \ref{sec:uncoupletimedep} we looked at the response of the model to a sinusoidal modulation of the external input potential $\mu(t)$ with an angular frequency $\omega_s$  Eq.\eqref{eq:mut}
+In this section we analyze the response similar to time dependent input, for a coupled population of excitatory neuron, i.e $J>0$. As for the uncoupled case Section \ref{sec:uncoupletimedep} we looked at the response of the model to a sinusoidal modulation of the external input potential $\mu(t)$ with an angular frequency $\omega_s$  Eq.\eqref{eq:mut}
 
 The input potential was initialized as if the population activity was at a stationary state with $\mu_0=-1$ mV and $J=50$ mV$\cdot$ ms.
 
-The results are summarize in Fig.\ref{fig:NRMSo_coupled}. As for the uncoupled case, for high frequency the approximation becomes poor. Fig.\ref{fig:A_omega_t_coupled} illustrates the response to a sinusoidal modulation with frequency $40$ Hz.
+The results are summarize in Fig.\ref{fig:NRMSo_coupled}. Just as in the uncoupled case, for high frequency the approximation becomes poor. Fig.\ref{fig:A_omega_t_coupled} illustrates the response to a sinusoidal modulation with frequency $40$ Hz.
 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{A_omega_t_coupled.pdf}
-	\caption{Population response to an oscillating input $\mu(t)$ with a frequency of 40Hz, for a large populations of coupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ and  $J=50$ mV$\cdot$ ms.
+	\caption{Population response to an oscillating input $\mu(t)$ with a frequency of $40$Hz, for a large populations of coupled Poisson neurons with absolute refractoriness. The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ and  $J=50$ mV$\cdot$ ms.
 	}
 	\label{fig:A_omega_t_coupled}
 \end{figure}
@@ -1357,17 +1362,16 @@ The results are summarize in Fig.\ref{fig:NRMSo_coupled}. As for the uncoupled c
 \end{figure}
 
 
-We analyzed the response of the population activity to an abrupt change in the external input with a step function, from $\mu(0)=-2$ mV to a fixed value between $-15$ mV and $30$ mV. Fig.\ref{fig:Astep_coupled}  illustrates the response for the extreme values of the step potential $\mu(t)$. For $\mu(t)=30mV$ The response shows an oscillatory behavior, which is rapidly well approximated by Eq.\ref{eq:A4}.  Because of the positive feedback the system goes to saturation, 
-the firing rate $\Phi(h)$ after the refractory period $\Delta$ goes immediately to $nu_{max}=100$Hz. With $\Delta=10ms$ this yields to a rate of $50$Hz as seen in stationary state. For the stationnary state the rate is indeed given by $\frac{\Phi(h)}{1+\Delta \Phi(h)}$
+We analyzed the response of the population activity to an abrupt change in the external input with a step function, from $\mu(0)=-2$ mV to a fixed value between $-15$ mV and $30$ mV. Fig.\ref{fig:Astep_coupled}  illustrates the response for the extreme values of the step potential $\mu(t)$. For $\mu(t)=30mV$ The response shows an oscillatory behavior, which is after $12\:$ms well approximated by Eq.\eqref{eq:A4}.  Because of the positive feedback the system goes to saturation, the firing rate $\Phi(h)$ after the refractory period $\Delta$ goes immediately to $\nu_{max}=100$Hz. With $\Delta=10ms$ this yields to a rate of $50$Hz as seen in stationary state. For the stationary state the rate is indeed given by $\frac{\Phi(h)}{1+\Delta \Phi(h)}$
 
-
+%TODO W change not very well explained
  For $\mu(t)=-15mV$ the coupling is not strong enough to compensate the strong negative external potential and the activity goes to $0$. We see that the response of the approximation is a bit slower than the theoretical one. Fig.\ref{fig:NRMSstep_coupled} shows that the bigger the step in the external input potential the higher the NRMS.
 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{Astep_coupled.pdf}
-	\caption{Transient response of the population activity for a population of coupled Poisson neuron with absolute refractoriness. receiving as external input a step function $\mu(t)$. The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ , $J=50$ mV$\cdot$ ms.
+	\caption{Transient response of the population activity for a population of coupled Poisson neurons with absolute refractoriness. receiving as external input a step function $\mu(t)$. The parameters of the neurons are $\nu_{max}=100$ Hz, $\Delta=10$ ms, $\beta=1$ mV$^{-1}$ , $J=50$ mV$\cdot$ ms.
 	}
 	\label{fig:Astep_coupled}
 \end{figure}
@@ -1381,51 +1385,58 @@ the firing rate $\Phi(h)$ after the refractory period $\Delta$ goes immediately 
 \end{figure}
 
 
-\section{Fixed points of the dynamical system} %TODO change the title 
+\section{Fixed points of the dynamical system} 
+\label{sec:fixpoint}
+In this section we are presenting preliminary results on the analysis of the fixed points of the model as a function of the coupling constant $J$ and the external constant input $\mu$. 
 
-In this section we are presenting preliminary results on the analyze of the fixed point of the model as function of the coupling constant $J$ and the external constant input $\mu$. 
+We have a system of three differential equation $\dot{X}$, $\dot{Y}$ and $\dot{h}$ Eq.\eqref{eq:X},\eqref{eq:Y},\eqref{eq:h2}, we are looking for the fixed point of this system. When the activity reach an stationary value, this imply that $a_1(t)=0$ an thus $X_{eq}=Y_{eq}=0$ and 
 
-We have a system of three differential equation $\dot{X}$, $\dot{Y}$ and $\dot{h}$ Eq.\eqref{eq:X},\eqref{eq:Y},\eqref{eq:h2}, we are looking for the fixed point of this system. When the activity reach an stationary value, this imply that $a_1(t)=0$ an thus $X_{eq}=Y_{eq}=0$ and $A_eq=\phi_0(0,h_{eq})=\frac{\Phi(h_{eq})}{1+\Delta \Phi(h_{eq}}$. 
+
+\begin{equation}
+A_eq=\phi_0(0,h_{eq})=\frac{\Phi(h_{eq})}{1+\Delta \Phi(h_{eq}} 
+\end{equation} 
 
 Note that looking at Eq.\eqref{eq:X},\eqref{eq:Y}, for $X=Y=0$ and $h_{eq}$ satisfying $\dot{h}=0$ implies that $\dot{X}=\dot{Y}$=0. Therefore we can find the fixed point $h_{eq}$ solving the equation
+%TODO wrong ? W change
 
 \begin{equation}
 \label{eq:hdot}
 \tau_m \dot{h}=0=-h_{eq}+J\frac{\Phi(h_{eq})}{1+\Delta \Phi(h_{eq}} +\mu
 \end{equation}
 
-Fig.\ref{fig:hdyn} illustrates the solution of Eq.\ref{eq:hdot} for different $J$. We see that for $J=250$ there are three fixed points (two stables and one unstable), but for $J=50$ and $J=-50$ there is just one stable fixed point. 
+Fig.\ref{fig:hdyn} illustrates the solution of Eq.\eqref{eq:hdot} for different $J$. We see that for $J=250$ there are three fixed points (two stables and one unstable), but for $J=50$ and $J=-50$ there is just one stable fixed point. 
 
-Eq.\eqref{eq:hdot} might have more than one fixed point if there are local maxima or minima. To find the condition to have more than 1 fixed point, one can derive Eq.\eqref{eq:hdot} with respect to $h$, this yields to
+Eq.\eqref{eq:hdot} might have more than one fixed point if there are local maxima or minima. To find the condition to have more than one fixed point, one can derive Eq.\eqref{eq:hdot} with respect to $h$, this yields
 
 \begin{equation}
 \label{eq:xeq}
 x^2+\left(2(1+\Delta \nu_{max}))-J\beta\right)x +\left(1+\Delta\nu_{max}\right)^2=0
 \end{equation}
 
-Where $x=\exp(-\beta(h-h_0))$. A real solutions exist for $x$ if $J>\frac{4(1+\Delta \nu_{max)}}{\beta\nu_{max}}$, indeed $J<0$ yields to negative solutions for $x$ which is impossible as $x$ is stricly positive, and $0<J<\frac{4(1+\Delta \nu_{max)}}{\beta\nu_{max}}$ yields to complex solutions for $x$ as the discriminant of Eq.\eqref{eq:xeq} would be negative which is also impossible.
-
-One can see on Fig.\ref{fig:hdyn} that changing $\mu$, just shift the line upward or downward. Thus for $J=250$ there is a saddle node bifurcation when we decrease or when we increase $\mu$. It is easy to compute numerically thevalues where the bifurcations occurs. Fig.\ref{fig:phase_plan} summarize the derivation showing the number of fixed point as a function of $J$ and $\mu$, the three dots corresponds to the pair of parameters $(J,\mu)$  used in Fig\ref{fig:hdyn}.
-
+Where $x=\exp(-\beta(h-h_0))$. A real solutions exist for $x$ if $J>\frac{4(1+\Delta \nu_{max)}}{\beta\nu_{max}}$, indeed, $J<0$ yields to negative solutions for $x$ which is impossible as $x$ is strictly positive, and $0<J<\frac{4(1+\Delta \nu_{max)}}{\beta\nu_{max}}$ yields to complex solutions for $x$ as the discriminant of Eq.\eqref{eq:xeq} would be negative which is also impossible.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{hdyn.pdf}
-	\caption{ $\tau_m \dot{h}$ as a function of $h$ for $mu=-6$ mV and for different J. The intersection with the $h-nullline$ corresponds to the fixed point of this dynamical system. For $J=-50$  and  $J=50$  there is only a  "low firing rate" fixed point (stable). For $J=250$ there is also an "high friring rate fixed point (stable) and an "intermediate firing rate" fixed point (unstable).
+	\caption{ $\tau_m \dot{h}$ as a function of $h$ for $mu=-6$ mV and for different J. The intersection with the $h-nullline$ corresponds to the fixed point of this dynamical system. For $J=-50$  and  $J=50$  there is only a  "low firing rate" fixed stable point respectively indicates by a blue and a green dot, they are under the yellow dot corresponding to low firing rate for $J=250$. For $J=250$ there is also an "high friring rate" stable fixed point (red dot)  and an "intermediate firing rate" unstable fixed point (orange dot).
 	}
 	\label{fig:hdyn}
 \end{figure}
 
+One can see on Fig.\ref{fig:hdyn} that changing $\mu$, just shift the line upward or downward. Thus for $J=250$ there is a saddle node bifurcation when we decrease or when we increase $\mu$. It is easy to compute numerically the values where the bifurcations occurs. Fig.\ref{fig:phase_plan} summarize the derivation showing the number of fixed point as a function of $J$ and $\mu$, the three dots corresponds to the pair of parameters $(J,\mu)$ used in Fig.\ref{fig:hdyn}.
+
+
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{phase_plan.pdf}
-	\caption{Number of fixed point and bifurcation for the parameters $J$ and $\mu$. The three dots corresponds to the pair of parameters $(J,\mu)$  used in Fig\ref{fig:hdyn}.
+	\caption{Number of fixed point and bifurcation for the parameters $J$ and $\mu$. The three dots corresponds to the pair of parameters $(J,\mu)$ used in Fig\ref{fig:hdyn}.
 	}
 	\label{fig:phase_plan}
 \end{figure}
 
 
-To verify the stability of the different fixed point one can compute the Jacobian  matrix of $(\dot{h},\dot{X},\dot{Y})$ evaluated in those fixed point.
+To verify the stability of the different fixed points one can compute the Jacobian matrix of $(\dot{h},\dot{X},\dot{Y})$ evaluated in those fixed points.
 
 \begin{equation}
 J_f(h_{eq},0,0)=
@@ -1436,9 +1447,10 @@ J_f(h_{eq},0,0)=
 \end{pmatrix}_{|(h_{eq},0,0)}
 \end{equation}
 
-This jacobian matrix is directly obtained differentiating  Eq.\eqref{eq:X},\eqref{eq:Y},\eqref{eq:h2} with respect to $h$, $X$ and $Y$ and using the notation introduced in Eq.\eqref{eq:first} to Eq.\eqref{eq:last}.
+This Jacobian matrix is directly obtained differentiating  Eq.\eqref{eq:X},\eqref{eq:Y},\eqref{eq:h2} with respect to $h$, $X$ and $Y$ and using the notation introduced in Eq.\eqref{eq:first} to Eq.\eqref{eq:last}.
 
 \begin{equation}
+\label{eq:jf}
 J_f=
 \begin{pmatrix}
 \frac{-1+J\partial_h\phi_0(0,h_{eq})}{\tau_m} & \frac{2J\Phi_r(h_{eq})}{\tau_m} & \frac{-2J\Phi_r(h_{eq})}{\tau_m}  \\
@@ -1447,15 +1459,31 @@ J_f=
 \end{pmatrix}
 \end{equation}
 
-If the real part of the three eigenvalue of the Jacobian matrix is negative then the fixed point is stable.
+If the real part of the three eigenvalues of the Jacobian matrix is negative then the fixed point is stable. The different eigenvalue are represented in the complex plane in Fig.\ref{fig:eigv}. We deduce that the "low firing rate" fixed point is a stable focus for $J=50$,$J=-50$, $J=250$, for $J=250$ the "high firing rate" fixed point is also a stable focus and the "intermediate firing rate" fixed point is unstable.
 
-On Fig.\ref{fig:hdyn} for the "low firing rate" fixed point is a stable focus for $J=50$,$J=-50$, $J=250$, for $J=250$ the "high firing rate" fixed point is also a stable focus and the "intermediate firing rate" fixed point is unstable.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{hdyn_eig.pdf}
+	\caption{Representation in the complex plane of the three eigenvalues of the Jacobian Matrix Eq.\eqref{eq:jf} for different fixed points. The colors of the different fixed points correspond to the fixed points in Fig.\ref{fig:hdyn}. Note that for $\Re{\lambda}\simeq-0.8$ the yellow, blue and green dots are superposed and for $\Re{\lambda}\simeq-0.1$ and $\Im{\lambda}\simeq-0.1$, the yellow, blue and green and red dots are superposed.
+	}
+	\label{fig:eigv}
+\end{figure}
 
 
-%TODO ABSTRACT + CONCLUSION
-%TODO ADD LAST GRAPH
+\chapter{Conclusions}
+
+We considered a large homogeneous populations of neurons modeled by a time dependent renewal process. We applied a probability density approach, which describes the evolution of the refractory density of states $q(\tau,t)$, where the age $\tau$ of a neuron is a state variable. We applied the eigenfunction expansion method presented in Section \ref{sec:spect} to the operator of the refractory density, and derived from it a condition for the spectrum $\lambda_n$, Eq.\eqref{eq:condition2}. We also found a general expression for the biorthonormal basis of the refractory operator Eq.\eqref{eq:phin},Eq.\eqref{eq:psin}  and Eq.\eqref{eq:normalization}.
+Keeping the slowest mode of the  expansion of the refractory density, we derived a three dimensional system Eq.\eqref{eq:X},\eqref{eq:Y} and\eqref{eq:h2}, and a low dimensional firing rate equation Eq.\eqref{eq:A4}. This three dimensional system has the advantages of being computationally efficient and mathematically tractable. For example in Section.\ref{sec:fixpoint} we analyzed the fixed point of the derived system, in the case of Poisson neurons with absolute refractoriness.\\
+
+To study the accuracy of our approximation we looked at the response of population of Poisson neuron with absolute refractory period $\Delta$ to time dependent input and compare it to the theoretical solution with the integral formulation. Chapter.\ref{chap:grene} emphasizes the validity of the approximation for low frequencies in both the uncoupled case and coupled case. The response to a step function is rapidly well approximated by Eq.\eqref{eq:A4}.\\
+
+They are nevertheless some limitations of the analytical results. For a general model defined by its hazard rate function, it's not always possible to find an analytical solution to the condition Eq.\eqref{eq:condition2}. That's why we tried to find an approximation of the first eigenvalue $\lambda_1$  as we want to keep only the two first mode. Using the cumulant expansion Section.\eqref{sec:eigv} we found an approximation which seems to be valid for low $C_V$, and is close to the one obtained in [\cite{SchOst13}], but more general. Another limitation is that it is not always possible to derive an analytical form of the eigenfunctions, especially  it is not easy to find a solution of the normalization condition Eq.\eqref{eq:normalization}, and also find an analytical form of the coupling coefficient. This has not been yet investigated, and would be a direction to continue this work. We also neglect in this model finite size effect, and the sparse coupling of neurons \cite{SchDeg17}. \\
+
+Despite those limitations, the analytical results have many advantages. We obtained the expected response of large homogeneous population of Poisson neurons with absolute refractory period, to different external inputs potential. This simple model is very useful to study the effect of absolute refractoriness. Furthermore we derived a low dimensional firing rate dynamics of spiking neuron network from properties of individual neurons, which is not a phenomenological firing rate model. As a future work it would be interesting to use this model to analyze the interaction between different populations of excitatory and inhibitory neurons.
 
 
+
+%
 
 %----------------------------------------------------------------------------------------
 %\printnomenclature

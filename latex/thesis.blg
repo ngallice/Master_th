@@ -5,16 +5,16 @@ The style file: abbrvnat.bst
 Database file #1: my.bib
 You've used 22 entries,
             2773 wiz_defined-function locations,
-            758 strings with 8145 characters,
-and the built_in function-call counts, 9191 in all, are:
-= -- 796
+            756 strings with 8127 characters,
+and the built_in function-call counts, 9165 in all, are:
+= -- 790
 > -- 501
 < -- 15
 + -- 171
 - -- 149
-* -- 734
-:= -- 1464
-add.period$ -- 74
+* -- 732
+:= -- 1458
+add.period$ -- 72
 call.type$ -- 22
 change.case$ -- 111
 chr.to.int$ -- 22
@@ -22,13 +22,13 @@ cite$ -- 44
 duplicate$ -- 447
 empty$ -- 787
 format.name$ -- 185
-if$ -- 1911
+if$ -- 1905
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 26
-newline$ -- 126
+newline$ -- 124
 num.names$ -- 90
-pop$ -- 214
+pop$ -- 216
 preamble$ -- 2
 purify$ -- 93
 quote$ -- 0
@@ -43,4 +43,4 @@ type$ -- 217
 warning$ -- 0
 while$ -- 81
 width$ -- 0
-write$ -- 307
+write$ -- 303

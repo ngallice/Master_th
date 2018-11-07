@@ -1,0 +1,214 @@
+
+Hi, and welcome to presentation of my master project .
+
+
+My work focus on the derivation a low dimensional population dynamics using eigenfunction expansion, and before I’ll show you the theoretical derivation I did during this project, I will introduce you, the goal of this project.
+
+
+In the brain billion of neurons form complex network, they communicate with each other by short electrical pulse called action potential. and we can describe those action potential at different level 
+
+ C) Biophysical  model, where we can describe The ion currents flowing through the cell membrane which can generate action potentials 
+
+At the next level of abstraction (B), action potentials are treated as events called spikes. Arrivals of spikes from other neurons generate postsynaptic potentials, and the neuron emit a spike whenever the membrane potential u  crosses a threshold ϑ 
+
+
+(A) at the macroscopic scale. We can identify groups of neurons having similar property and interacting by their population activity, 
+
+So it might be interesting to look the response of the neuronal population whether than the spikes of individual neurons, but can we….
+
+So we might ask…
+
+Before passing to macroscopic picture we will gave a description at the microscopic level.
+And to model the response to an input we introduce this input potential variable which is just a filtering of an external input mu and the synaptic input. 
+
+where δ denotes the Dirac δ function. The double sum runs over all firing times t(f)j of all neurons in the presynaptic set of neuron i. 
+
+The second variable is the age corresponding to the time since it’s last spike, and it describe the refractory state of each neuron. 
+
+
+Now the probability that this neuron spike between t and Dt knowing the age and the potential of the neuron is given by  the hazard rate rho times dt.
+And if a neuron spike it’s age is reset to 0
+
+So here I will give to example of hazard rate express as a product of the instantaneous rate $\Phi(h)$ with a recovery function $g(\tau)$
+
+This corresponds to a Poisson process with absolute refractory period $\Delta$: 
+
+the transition is smooth  due to the exponential which gives rise to relative refractoriness. The time course of the recovery function given approximate well the recovery function measured for auditory neurons of the guinea-pig [\cite{Prij93}]
+
+
+So here are two specific examples, however (nevertheless?) the theoretical derivation I will present works for any renewal process, for example Integre and fire model with white noise.
+
+
+A common approach to pass from this microscopic description, to a macroscopic picture, and thus recover the activity of a population is based on the refractory density.
+
+So we consider a large homogenous population of neurons and the state of each neurons is describe by it’s age
+
+Here is a scheme of the refractory density or the density of age at a certain time. So you can see this as an histogram where each bin would correspond to the number of neurons in the population with a similar age. And q goes to zero as it’s not likely that the neuron never fires.
+
+As long as a neuron does not fire, it’s age $\tau$ increase and so the evolution of the refractory density would be simply given by this continuity equation.
+
+When a neuron fires, it’s trajectory $\tau$ stops and "reappears" at $\tau=0$. The instantaneous probability to fire is given by the hazard function \rho(\tau,h)
+
+So the full dynamics is describe by this equation
+
+The sum of all trajectory that "disappear" at time $t$ due to firing, are "reappearing" at $\tau=0$
+Which correspond to this integral. And therefor it corresponds also to the activity
+
+The problem of this integral formulation is that infinite demential and not computationally efficient…
+
+Todo aim ….
+
+And so We will first introduce the spectral expansion of the refractory density
+From which we will derive a firing rate equation
+
+Then we will test the accuracy of the derived equation,
+
+Finally we will present an approximation of the first eigenvalue.
+
+
+
+So here is the refractory density equation we just rederived before, we can rewrite it introducing a this operator L 
+
+And we can expand the refractory density on the eigenfunction phi_n set of the operator
+
+Here an the time dependent coefficients. 
+
+
+
+Phi_n are the eigenfunction of the operator L, it means that the operator acting on th eigenfunction give the eigenfunction time its eigenvalue. 
+
+
+Now we can rewrite explicitly this operator and solving this equation we find an analytical form of the eigenfunction phi_n here h is consider a constant an to lighten the notation we will omit the dependence on this parameter .
+
+Note that 0 eigenvalue correspond to the stationnary state so when the time evolution of the refractory density is null.
+Because L is a real operator, if an eigenvalue $\lambda_n$ is complex, its complex conjugate $\bar{\lambda}_n$  is also an eigenvalue of L, with eigenfunction $\ket{\bar{\phi_n}}$. 
+
+
+Here is the boundary condition saw previously, and the eigenfunction have to satisfy this boundary condition 
+
+Inserting the solution phi_n in this equation we have 
+And dividing both dise by Phi_n(0), we obtained the following equation. And we can recognize here the Laplace transform of this function which is the Interspike interval density .
+
+So we finally derived an general condition valid for any renewal process, stating that the Laplace transform of the ISI density at the arguments lambda_n must be unity.
+
+Note that as expected lambda0=0 fullfied the condition becaucse the ISI density is normalized.
+
+
+
+
+
+
+Because L is not hermitian we also need to define the eigenfunctions $\ket{\psi_n}$ of the adjoint operator L^{+}. Defining inner product where here we use this braket notation, The adjoint operator is defined as. And using integration by part I derived an analytical form of the operator, and then using the property of the eigenfunction of the adjoint operator we derived as before for the phi_n an analytical form of the psi_n. We have thus an biothornormal basis. 
+
+And the normalisation of this biothortonormal basis imposed the initial condition.
+
+So here is an illustration of the two first mode for a Poisson process with absolute refractoriness…
+
+
+Now thanks to this formulation we will derive a low-dimensional firing rate dynamics 
+
+So here we are keeping the two slowest mode which dominates this sum
+
+0 mode is real …
+The first is complex and thus its complex  
+Know we can decompose the time coefficient a1 and the complex term phi1(0), in its real and imaginary part. 
+
+And now developing those two product the imaginary part will cancelled
+And we finally will obtained this equation.
+
+Those two three terms depends on h the input potential and we know the dynamics of h, 
+We now have to find the dynamic of X and Y which are the real and imaginary part of the first time coefficient 
+
+So we will look at the dynamics of the time coefficient
+An is the projection of the refractory on the eigenfunction psi_n
+
+
+Taking the time derivative we have those two terms
+The first can be rewritten as introducing the operator L here we have used the fact that the only time dependence of psi is implicitly due to h.
+
+Now we can expand q as the sum of am phi_m
+L acting on him give us lambda_m phi_m
+
+We recall that this is a biorthonormal basis, and we define this as coupling coefficient 
+
+Now we wanted the dynamics of the dominant mode so a1, and again we neglect the higher order terms … TODO Add explanation 
+
+And rewriting each term explicitly with it’s real part and imaginary part  
+
+We obtain two differential equation for x and Y.
+
+So finally
+
+The activity is given by this
+
+
+I derived a three dimensional system, which is easy to simulate so computationally efficient 
+
+Here in the dynamics of h we used a mean field approach were the synaptic input potential  is given by  the coupling constant J times the population activity.
+
+
+We now want to measure the accuracy of this approximation where we kept only the slowest modes, and for this we looked at the response of a population of poisson neuron with absolute refractoriness. 
+
+
+Here are the results of the approximation to a sinuoidal modulation of the external input.
+The dashed black line corresponds to the response obtained with the integral formulation and to the response obtained with the approximation I derived keeping only the two slowest mode.
+
+For frequencies higher than $100$ Hz, the NRMS becomes high thus the approximation does not hold anymore, this was expected that for too fast changes, the approximation does not hold because we are keeping only the slowest mode.
+
+
+for the response of a couple and uncoupled population of poisson neuron with absolute refractoriness, 
+
+Now we analyzed the response of the population to an abrupt change in the external input with a step function, 
+
+Again for a couple and uncoupled population of poisson neuron with absolute refractoriness, 
+
+The response shows an oscillatory behavior. Before stabilizing. And we doesn’t recover the first pic because the change is too fast nevertheless the dashed line is rapidly well approximated
+
+
+Now here are some results on the analyse of fixed point of the system. We know that when the activity reach en equilibrium point then the activity is given by … as it’s population of poisson neuron with absolute refractoriness.
+
+Now when the activity reach a stationary state, it’s simply given by the 0 mode, this imply that a1=0 and thus X and Y are therefore 0. And we see that to find the that satisfy the stationary state we just have to find a solution of this equation =0 replacing A by the activity at a stationary state
+
+So here is tau_m h as function of h for different J, and so in each situation we see that there a different number of fixed point.
+
+Now varying mu just shift up or downward this line so there critical valu where we have a saddle node bifurcation 
+
+And finally we can compute the jacobian matrix and from the eigenvalue of this fixed point deluxe it’s stability .
+
+
+
+We derive the a condition to find the spectrum of a particular renewal process defined by it’s hazard are or it’s ISI distribution.
+
+for a general ISI distribution $P(\tau)$, it is not always possible to obtained a analytical form of the Laplace transform $P_L(\lambda)$. Thats why we would like to find a method to approximate the first eigenvalue $\lambda_1$. 
+
+
+
+the Laplace transform of ISI distribution can be rewritten with the cumulant $\kappa_n$, The cumulants can be used to characterize the shape of the ISI density.
+
+Now we want this equal to 1 exp(2pin)
+
+If we neglect the higher order terms then we reduce it to simple equation and we just choose the roots with negative real parts because other a positive real part is not mathematically possible, is not physical. Indeed the solution of the refractory density equation is directly related to the eigenvalues of L and is expected to converge to $\phi_0$, instead of exploding which would be the case for positive eigenvalues. 
+
+The rate of a process $R$, An important measure that quantify the variability of ISI distribution, $C_V=1$ which indicate a highly irregular spike train. A value of $C_V>1$, implies that a given spike train is less regular than a Poisson process with the same firing rate. If $C_V<1$, then the spike train is more regular. Whereas $C_V=0$ indicates a perfectly regular spike train.
+
+TODO add explanation 
+
+In a paper where they were using IF model they found an empirical formula fitting it varying R and CV² ….  for small CV 
+
+
+
+And interestingly if we Taylor expand the relationship  we just get for small Cv we recover this expression which is really close from the empirical formula.
+
+
+Now here we compare the two approximation for a Gamma neuron model varying Cv , for a Gamma neuron model we can compute the spectrum as the Laplace transform is known…
+
+And we see that for small Cv the obtained approximation is better, but in the same order for large Cv.
+
+
+So We arrive towards the end of my presentation and Id like to summarize the different results I presented to you. 
+
+
+During this thesis, I have received great help from a lot of people and I would like to express my gratitudes for their time.\\
+
+So Id’ like to thanks Wulfram, Matthieu, and Tilo who even from the other side of the Atlantic Ocean was always there to offer his advice, and his ideas.
+
