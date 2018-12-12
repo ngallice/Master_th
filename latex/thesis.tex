@@ -182,7 +182,7 @@ One of the most common ways to model large neuronal networks is to use a simplif
 But can we predict the population activity $A(t)$ from the properties of its individual neurons? And how does the population activity respond to a novel input? Those are the question we might ask, when we pass from a microscopic description to a macroscopic description as illustrated in Fig.\ref{fig:x285}.
 
  Firing rate models provide simple models which are computationally efficient and are mathematically tractable to study the response of a population to an external input. The resulting models involves a compromise between accuracy and simplicity. Simple firing-rate models where the dynamics was governed by only one time constant fail to replicate certain dynamic features of populations of spiking neurons. To explain some phenomenological properties, heuristic model where developed but these model were not derived from the spiking neuron dynamics. [\cite{WilCow72},\cite{OstBru11}]. 
- %TODO W is! ? 
+ %Wcorr
 
 \begin{figure}[h!]
 	\centering
@@ -478,7 +478,7 @@ where $J$ denotes the coupling constant with the units of voltage seconds. For t
 \subsection{Refractory density equation}
 \label{secrefde}
 
-% TODO Wchange ? 
+%Wcorr
 An approach on the refractory density $q(\tau,t) $ let analyze the dynamic in an homogeneous population [\cite{GerKis02}]. $q(\tau,t)$ characterize the number of neuron at time $t$ that are in a similar state of activity, i.e with age $\tau=t-\hat{t}$, where $\hat{t}$ is the last spike time of the neuron. The population activity is thus given by
 \begin{equation}
 \label{eq:A}
@@ -629,7 +629,7 @@ The activity $A(t)$ can often be written as the action of some flux operator $\h
 A(t)=\hat{J}q(x,t)
 \end{equation}
 
-%TODO W changes
+%Wcorr
 
 Taking the membrane potential $v$ as state variable, the flux operator $\hat{J}$ is defined as
 \begin{equation}
@@ -679,7 +679,7 @@ The synaptic coupling are expressed in the matrix $\boldsymbol{C}$: $C_{nm}=\lan
 %\end{align}
 
 
-%TODO change W : Knight 2000 also
+%Wcorr
  In previous studies a prominent choice of the state variable was the membrane potential $v$ to analyze the dynamics of networks of integrate and fire neurons.  In this case the evolution operator $\mathcal{L}$ was the Fokker-Planck operator [\cite{MatGiu02}, \cite{GerKis02}, \cite{SchOst13}]. However neurons with different refractory state can have the same potential, and thus the membrane potential can be a weak predictor of the neurons complete state, whereas the age approximates quite well the refractory states. This encourage the use of a refractory approach. In this study, we re-evalute the spectral decomposition for the refractory density Eq.\eqref{eq:masterequation}. 
 
 
@@ -803,14 +803,14 @@ The un-normalized solution of Eq.\eqref{eq:Ldegaoperator} is thus
 \begin{align}
 \label{eq:psin}
 \psi_n(\tau)&=\exp\left(\lambda_n\tau+\int_0^\tau\rho(s)\dd s\right)\left[1-\int^\tau_0\dd x \rho(x) \exp\left(-\lambda_nx-\int_0^x\rho(s)\dd s\right)\right]\nonumber\\
-&=e^{\lambda_n\tau}(\tau)\big[1-\int^\tau_0 \dd x P(x) e^{-\lambda_nx}\big]\frac{1}{S(\tau)}
+&=e^{\lambda_n\tau}\big[1-\int^\tau_0 \dd x P(x) e^{-\lambda_nx}\big]\frac{1}{S(\tau)}
 \end{align}
 
 In particular for $n=0$, $\lambda_0=0$ and using Eq.\eqref{eq:S1}  we have 
 
 \begin{align}
 \label{eq:psi0}
-\psi_0(\tau)&=\frac{1}{S(\tau)}(\tau)\big[1-\int^\tau_0P(x) \dd x \big] \nonumber \\
+\psi_0(\tau)&=\frac{1}{S(\tau)}\big[1-\int^\tau_0P(x) \dd x \big] \nonumber \\
 &=1
 \end{align}
 
@@ -1029,7 +1029,7 @@ So far we considered constant $h$. For the general case of time-dependent input,
 The coupling coefficients are then given by
 \begin{align}
 C_{nn}=&\frac{\partial \nu}{\partial h}\int_0^\infty\frac{d\psi_n(\tau)}{d\nu}\phi_n(\tau)d\tau \nonumber\\
-=&\frac{\lambda_n\Delta(1+\frac{1}{2}\lambda_n(\nu+\lambda_n))}{\nu(1+\Delta(\nu+\lambda_n))}\frac{\partial \nu}{\partial h}
+=&\frac{\lambda_n\Delta(1+\frac{1}{2}\Delta(\nu+\lambda_n))}{\nu(1+\Delta(\nu+\lambda_n))^2}\frac{\partial \nu}{\partial h}
 \end{align}
 
 
@@ -1275,7 +1275,7 @@ Where $\mu_0$ and $\epsilon$ are constant and $f_{cos}(t)$  is a function compos
 	\label{fig:NRMSe}
 \end{figure}
 
-%TIODO W CHANGE rapid increase a w/2pi =100Hz why?
+%Wcorr
 
 Finally we analyzed the response of the population to an abrupt change in the external input with a step function, from $15$mV to $\mu(t)=\mu_0$ for $t>0$. The response for two different value of $\mu_0$ is shown on Fig.\ref{fig:Astep}. The response shows an oscillatory behavior, the amplitude of the oscillation increases with $\mu_0$, as well as the NRMS as shown on Fig.\ref{fig:NRMSstep}.  As illustrated in Fig.\ref{fig:Astep} even for large steps the response is rapidly well approximated by Eq.\eqref{eq:A4}.
 
@@ -1364,7 +1364,8 @@ The results are summarize in Fig.\ref{fig:NRMSo_coupled}. Just as in the uncoupl
 
 We analyzed the response of the population activity to an abrupt change in the external input with a step function, from $\mu(0)=-2$ mV to a fixed value between $-15$ mV and $30$ mV. Fig.\ref{fig:Astep_coupled}  illustrates the response for the extreme values of the step potential $\mu(t)$. For $\mu(t)=30mV$ The response shows an oscillatory behavior, which is after $12\:$ms well approximated by Eq.\eqref{eq:A4}.  Because of the positive feedback the system goes to saturation, the firing rate $\Phi(h)$ after the refractory period $\Delta$ goes immediately to $\nu_{max}=100$Hz. With $\Delta=10ms$ this yields to a rate of $50$Hz as seen in stationary state. For the stationary state the rate is indeed given by $\frac{\Phi(h)}{1+\Delta \Phi(h)}$
 
-%TODO W change not very well explained
+%Wcorr
+
  For $\mu(t)=-15mV$ the coupling is not strong enough to compensate the strong negative external potential and the activity goes to $0$. We see that the response of the approximation is a bit slower than the theoretical one. Fig.\ref{fig:NRMSstep_coupled} shows that the bigger the step in the external input potential the higher the NRMS.
 
 
@@ -1397,7 +1398,7 @@ A_eq=\phi_0(0,h_{eq})=\frac{\Phi(h_{eq})}{1+\Delta \Phi(h_{eq}}
 \end{equation} 
 
 Note that looking at Eq.\eqref{eq:X},\eqref{eq:Y}, for $X=Y=0$ and $h_{eq}$ satisfying $\dot{h}=0$ implies that $\dot{X}=\dot{Y}$=0. Therefore we can find the fixed point $h_{eq}$ solving the equation
-%TODO wrong ? W change
+%Wcorr
 
 \begin{equation}
 \label{eq:hdot}
